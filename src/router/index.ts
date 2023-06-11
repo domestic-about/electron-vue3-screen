@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 // import disclaimers from "@/pages/home/disclaimers.vue";
 const routes = [
   {
