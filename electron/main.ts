@@ -37,6 +37,7 @@ function createWindow() {
     // win.loadFile('dist/index.html')
     win.loadFile(path.join(process.env.DIST, 'index.html'))
   }
+  win.webContents.openDevTools();
 }
 
 app.on('window-all-closed', () => {

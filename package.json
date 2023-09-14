@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "vant": "^4.4.1",
+    "swiper": "^10.2.0",
+    "vant": "^4.6.8",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },
