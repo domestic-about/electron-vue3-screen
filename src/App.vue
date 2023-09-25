@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import MenuFloat from '@/components/MenuFloat.vue'
+import MenuFloat from "@/components/MenuFloat.vue";
+import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
 </script>
 
 <template>
   <div>
+    <AppHeader />
     <router-view v-slot="{ Component }">
       <transition name="fade">
         <component :is="Component" />
       </transition>
     </router-view>
+    <AppFooter />
     <MenuFloat />
   </div>
 </template>

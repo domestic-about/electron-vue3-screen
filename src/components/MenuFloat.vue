@@ -59,7 +59,7 @@ const clickItem = (item) => {
 </script>
 <template>
   <div class='wrap'>
-    <van-floating-bubble axis="xy" magnetic="x" icon="chat" @click="show = true" />
+    <van-floating-bubble axis="xy" magnetic="x" icon="apps-o" @click="show = true" />
     <van-popup v-model:show="show" position="right">
       <div class="menu-list">
         <div class="menu-item" v-for="item in list" @click="clickItem(item)">

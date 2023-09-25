@@ -1,52 +1,61 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { getImageUrl } from '@/utils'
+import { ref, onMounted, computed } from "vue";
+import { useRouter } from "vue-router";
+import { getImageUrl } from "@/utils";
 
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
 const props = defineProps({
   list: {
     default: () => [],
-    type: Array
-  }
-})
+    type: Array,
+  },
+});
 
-const modules = [FreeMode, Navigation, Thumbs, Autoplay]
+const modules = [FreeMode, Navigation, Thumbs, Autoplay];
 const thumbsSwiper = ref(null);
 const progressCircle = ref(null);
 const progressContent = ref(null);
 const onAutoplayTimeLeft = (s, time, progress) => {
-  progressCircle.value.style.setProperty('--progress', 1 - progress);
+  progressCircle.value.style.setProperty("--progress", 1 - progress);
   progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
 };
 const setThumbsSwiper = (swiper) => {
   thumbsSwiper.value = swiper;
 };
 
-
-onMounted(() => { })
-let queryParams = computed(() => { })
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <swiper :style="{
-      '--swiper-navigation-color': '#fff',
-      '--swiper-pagination-color': '#fff',
-    }" :autoplay="{
-  delay: 2500,
-  disableOnInteraction: false,
-}" @autoplayTimeLeft="onAutoplayTimeLeft" :loop="true" :spaceBetween="10" :navigation="true"
-      :thumbs="{ swiper: thumbsSwiper }" :modules="modules" class="mySwiper2">
-      <swiper-slide v-for="item in list"><img :src="getImageUrl(item.img)" /></swiper-slide>
+    <swiper
+      :style="{
+        '--swiper-navigation-color': '#fff',
+        '--swiper-pagination-color': '#fff',
+      }"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      @autoplayTimeLeft="onAutoplayTimeLeft"
+      :loop="true"
+      :spaceBetween="10"
+      :navigation="true"
+      :thumbs="{ swiper: thumbsSwiper }"
+      :modules="modules"
+      class="mySwiper2"
+    >
+      <swiper-slide v-for="item in list" :key="item.img">
+        <img :src="getImageUrl(item.img)" />
+      </swiper-slide>
       <template #container-end>
         <div class="autoplay-progress">
           <svg viewBox="0 0 48 48" ref="progressCircle">
@@ -56,15 +65,26 @@ let queryParams = computed(() => { })
         </div>
       </template>
     </swiper>
-    <swiper :autoPlay="true" :loop="true" @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="5" :freeMode="true"
-      :watchSlidesProgress="true" :modules="modules" class="mySwiper">
-      <swiper-slide v-for="item in list"><img :src="getImageUrl(item.img)" /></swiper-slide>
+    <swiper
+      :autoPlay="true"
+      :loop="true"
+      @swiper="setThumbsSwiper"
+      :spaceBetween="10"
+      :slidesPerView="5"
+      :freeMode="true"
+      :watchSlidesProgress="true"
+      :modules="modules"
+      class="mySwiper"
+    >
+      <swiper-slide v-for="item in list"
+        ><img :src="getImageUrl(item.img)"
+      /></swiper-slide>
     </swiper>
   </div>
 </template>
-<style scoped lang='less'>
+<style scoped lang="less">
 .wrap {
-  height: 100vh
+  height: 100vh;
 }
 
 .swiper {
@@ -87,12 +107,7 @@ let queryParams = computed(() => { })
       height: 100%;
     }
   }
-
-
 }
-
-
-
 
 .mySwiper2 {
   height: 85%;
@@ -127,7 +142,6 @@ let queryParams = computed(() => { })
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
   }
-
 }
 
 .mySwiper {
@@ -139,13 +153,10 @@ let queryParams = computed(() => { })
     width: 20%;
     height: 100%;
     opacity: 0.4;
-
   }
 
   .swiper-slide-thumb-active {
     opacity: 1;
   }
-
-
 }
 </style>
