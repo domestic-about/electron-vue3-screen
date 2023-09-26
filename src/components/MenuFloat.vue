@@ -57,7 +57,13 @@ const clickItem = (item) => {
 </script>
 <template>
   <div class="wrap">
-    <van-floating-bubble axis="xy" magnetic="x" @click="show = true" gap="40">
+    <van-floating-bubble
+      class="floating-bubble"
+      axis="xy"
+      magnetic="x"
+      @click="show = true"
+      gap="40"
+    >
       <img src="@img/common/icon-menu.png" alt="" />
       <span>目录</span>
     </van-floating-bubble>
@@ -90,7 +96,7 @@ const clickItem = (item) => {
 }
 </style>
 <style lang="less">
-.van-floating-bubble {
+.van-floating-bubble.floating-bubble {
   background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
   .flex-col;
   gap: 5px;

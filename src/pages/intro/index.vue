@@ -1,55 +1,116 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
-import History from './history.vue'
-import Agency from './agency.vue'
-import Dean from './dean.vue'
-import Clerk from './clerk.vue'
-import Lead from './lead.vue'
-import { getImageUrl } from '@/utils'
-const props = defineProps({})
+import { ref, onMounted, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-const tabList = computed(() => ([
+import { getImageUrl } from "@/utils";
+const router = useRouter();
+const props = defineProps({});
+const route = useRoute();
+
+const tabList = computed(() => [
   {
-    label: '历史沿革',
-    component: History,
-    img: 'intro/history.jpg'
+    label: "历史沿革",
+    route: "/intro/history",
   },
   {
-    label: '机构设置',
-    component: Agency,
-    img: 'intro/agency.jpg'
+    label: "机构设置",
+    route: "/intro/agency",
   },
   {
-    label: '历任院长',
-    component: Dean,
-    img: 'intro/dean.jpg'
+    label: "历任院长",
+    route: "/intro/dean",
   },
   {
-    label: '历任书记',
-    component: Clerk,
-    img: 'intro/clerk.jpg'
+    label: "历任书记",
+    route: "/intro/clerk",
   },
   {
-    label: '现任领导',
-    component: Lead,
-    img: 'intro/history.jpg'
+    label: "现任领导",
+    route: "/intro/lead",
   },
-]))
-onMounted(() => { })
-let queryParams = computed(() => { })
+]);
+
+onMounted(() => {});
 </script>
 <template>
-  <van-tabs v-model:active="active" swipeable type="card">
-    <van-tab v-for="tab in tabList" :title="tab.label">
-      <!-- <component :is="tab.component" /> -->
-      <img class="img" :src="getImageUrl(tab.img)" />
-    </van-tab>
-  </van-tabs>
+  <div class="intro-wrap">
+    <div class="bg"></div>
+    <div class="title-wrap">
+      <h3>学院概况</h3>
+      <div class="tab-list">
+        <van-button
+          :class="{ active: route.path === tab.route }"
+          v-for="tab in tabList"
+          :key="tab.label"
+          @click="router.push(tab.route)"
+        >
+          {{ tab.label }}
+        </van-button>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
+  </div>
 </template>
-<style scoped lang='less'>
-.img {
-  width: auto;
-  height: 100vh;
+<style scoped lang="less">
+.intro-wrap {
+  height: 100%;
+  position: relative;
+  padding: 24px;
+  .flex-col;
+  justify-content: flex-start;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.17;
+    background: linear-gradient(
+      0deg,
+      #d9d9d9 -13.91%,
+      rgba(217, 217, 217, 0) 83.33%
+    );
+    background-image: url("@img/intro/bg.png");
+    background-size: 100% 100%;
+  }
+
+  .title-wrap {
+    width: 100%;
+    .flex-row;
+    justify-content: space-between;
+    h3 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #000;
+    }
+    .tab-list {
+      .flex-row;
+      gap: 20px;
+      .van-button {
+        border-radius: 12px;
+        background: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        width: 204px;
+        height: 80px;
+        border: none;
+        &.active {
+          border-radius: 12px;
+          background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .content-wrap {
+    width: 100%;
+    flex: 1;
+  }
 }
 </style>

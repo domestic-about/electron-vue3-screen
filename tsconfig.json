@@ -28,6 +28,6 @@
     }
     
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "electron", "src/router/index.js", "src/router/index.js", "src/main.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "electron", "src/router/index.js", "src/router/index.js", "src/main.js", "src/utils/index.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

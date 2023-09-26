@@ -3,8 +3,10 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 const props = defineProps({});
 const route = useRoute();
-const isShowHeader = () =>
-  !route.meta || (route.meta && route.meta.header !== false);
+const isShowHeader = computed(
+  () => !route.meta || (route.meta && route.meta.header !== false),
+);
+console.log(isShowHeader.value, route, "isShowHeader");
 onMounted(() => {});
 </script>
 <template>

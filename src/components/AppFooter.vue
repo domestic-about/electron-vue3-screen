@@ -3,8 +3,10 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 const props = defineProps({});
 const route = useRoute();
-const isShowFooter = () =>
-  !route.meta || (route.meta && route.meta.footer !== false);
+const isShowFooter = computed(
+  () => !route.meta || (route.meta && route.meta.footer !== false),
+);
+
 onMounted(() => {});
 </script>
 <template>
@@ -14,6 +16,7 @@ onMounted(() => {});
 </template>
 <style scoped lang="less">
 .wrap {
+  width: 100%;
   img {
     width: 100%;
   }

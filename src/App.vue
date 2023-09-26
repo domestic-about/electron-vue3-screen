@@ -5,34 +5,34 @@ import AppFooter from "@/components/AppFooter.vue";
 </script>
 
 <template>
-  <div>
+  <div class="app-wrap">
     <AppHeader />
-    <router-view v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <div class="app-main-wrap">
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
+
     <AppFooter />
     <MenuFloat />
   </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+<style scoped lang="less">
+.app-wrap {
+  height: 100vh;
+  .flex-col;
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  .app-main-wrap {
+    flex: 1;
+    width: 100%;
+  }
 }
+</style>
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-
+<style>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

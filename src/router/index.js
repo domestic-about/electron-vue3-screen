@@ -10,7 +10,35 @@ const routes = [
   {
     path: "/intro",
     name: "intro",
+    redirect: "/intro/history",
     component: () => import("@/pages/intro/index.vue"),
+    children: [
+      {
+        path: "/intro/history",
+        name: "intro-history",
+        component: () => import("@/pages/intro/history.vue"),
+      },
+      {
+        path: "/intro/agency",
+        name: "intro-agency",
+        component: () => import("@/pages/intro/agency.vue"),
+      },
+      {
+        path: "/intro/dean",
+        name: "intro-dean",
+        component: () => import("@/pages/intro/dean.vue"),
+      },
+      {
+        path: "/intro/clerk",
+        name: "intro-clerk",
+        component: () => import("@/pages/intro/clerk.vue"),
+      },
+      {
+        path: "/intro/lead",
+        name: "intro-lead",
+        component: () => import("@/pages/intro/lead.vue"),
+      },
+    ],
   },
   {
     path: "/contact",
