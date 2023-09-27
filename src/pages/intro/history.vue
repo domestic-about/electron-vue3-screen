@@ -5,38 +5,54 @@ const props = defineProps({});
 
 const contentList = [
   {
+    time: "1898",
+    label: "创办湖北衣务学堂，“研求种植畜牧之学”",
+  },
+  {
     time: "1902",
-    label: "湖北农务学堂设立畜医科",
+    label: "学校更名为湖北高等农业学堂，始设畜医科",
   },
   {
     time: "1950",
-    label: "设立畜牧兽医系，招收兽医专业本科生",
+    label: "原湖北农学院增设畜牧兽医系，始招兽医专业学生",
   },
   {
-    time: "1902",
-    label: "院系调整，组建华中农学院，成立畜牧兽医系，招收畜牧专业本科生",
+    time: "1952",
+    label: "组建华中农学院，设畜牧兽医系，增设畜牧专业",
   },
   {
-    time: "1902",
-    label: "更名为畜牧兽医学院",
+    time: "1984",
+    label: "更名华中农业大学畜牧兽医系",
   },
   {
-    time: "1902",
-    label: "畜牧、兽医、动物营养与饲料科学专业调整为动物科学、动物医学专业",
+    time: "1995",
+    label: "改系建院，成立华中农业大学畜牧兽医学院",
   },
   {
-    time: "1902",
-    label: "成立动物科学技术学院和动物医学院",
+    time: "2002",
+    label: "学院更名为动物科学技术学院和动物医学院",
   },
 ];
-onMounted(() => {});
+onMounted(() => { });
 </script>
 <template>
   <div class="wrap">
-    <div class="content-list">
+    <!-- <div class="content-list">
       <div class="content-item" v-for="item in contentList" :key="item.label">
         <span>{{ item.time }}</span>
         <span>{{ item.label }}</span>
+      </div>
+    </div> -->
+    <div class="cen-wrap">
+      <div class="left-img-list-wrap">
+        <img src="@/assets/img/intro/list1.png" alt="">
+        <img src="@/assets/img/intro/list2.png" alt="">
+      </div>
+      <div class="content-list">
+        <div class="content-item" v-for="item in contentList" :key="item.label">
+          <span>{{ item.time }}</span>
+          <span>{{ item.label }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -45,19 +61,30 @@ onMounted(() => {});
 .wrap {
   height: 100%;
   .flex-col;
-  .content-list {
-    .flex-col;
-    align-items: flex-start;
 
-    gap: 28px;
-    .content-item {
-      .flex-row;
-      justify-content: flex-start;
-      gap: 50px;
-      color: #000;
-      font-size: 32px;
-      font-weight: 500;
+  .cen-wrap {
+    .flex-row;
+    gap: 110px;
+
+    .left-img-list-wrap {
+      .flex-col;
+      gap: 40px;
+    }
+
+    .content-list {
+      .flex-col;
+      align-items: flex-start;
+
+      gap: 28px;
+
+      .content-item {
+        .flex-row;
+        justify-content: flex-start;
+        gap: 50px;
+        color: #000;
+        font-size: 32px;
+        font-weight: 500;
+      }
     }
   }
-}
-</style>
+}</style>

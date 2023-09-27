@@ -1,13 +1,64 @@
 <script setup>
+import UserInfo from '@/components/UserInfo.vue';
 import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 const props = defineProps({})
 onMounted(() => { })
 let queryParams = computed(() => { })
+const list =[
+  { img:'@img/intro/clerk/list1.png',
+    name:'肖怡茂',
+    label:'任职时间：1956.01-1958.11'
+  },
+  { img:'@img/intro/clerk/list2.png',
+    name:'王恒',
+    label:'任职时间：1959.03 -1961.01'
+  },
+  { img:'@img/intro/clerk/list3.png',
+    name:'武枝生',
+    label:'任职时间：1961 -1966'
+  },
+  { img:'@img/intro/clerk/list4.png',
+    name:'赵声炳',
+    label:'任职时间：1980.02-1984.06'
+  },
+  { img:'@img/intro/clerk/list5.png',
+    name:'蒋贤文',
+    label:'任职时间：1984.06 - 1991.03'
+  },
+  { img:'@img/intro/clerk/list6.png',
+    name:'李洪祥',
+    label:'任职时间：1991.03 -1995.09'
+  },
+  { img:'@img/intro/clerk/list7.png',
+    name:'李名家',
+    label:'任职时间：1995.10-1998.10'
+  },
+  { img:'@img/intro/clerk/list8.png',
+    name:'陈焕春',
+    label:'任职时间：1998.10 -2000.08'
+  },
+  { img:'@img/intro/clerk/list9.png',
+    name:'张金洲',
+    label:'任职时间：2000.08 -2005.08'
+  },
+  { img:'@img/intro/clerk/list10.png',
+    name:'程国富',
+    label:'任职时间：2006.01-2014.04'
+  },
+  { img:'@img/intro/clerk/list11.png',
+    name:'刘兴斌',
+    label:'任职时间：1956.01-1958.11'
+  },
+]
 </script>
 <template>
   <div class='wrap'>
-    我是历任书记
+   <UserInfo :list="list"/>
   </div>
 </template>
-<style scoped lang='less'></style>
+<style scoped lang='less'>
+.wrap{
+  padding-top: 70px;
+}
+</style>

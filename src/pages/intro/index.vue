@@ -13,16 +13,16 @@ const tabList = computed(() => [
     route: "/intro/history",
   },
   {
-    label: "机构设置",
+    label: "组织机构",
     route: "/intro/agency",
-  },
-  {
-    label: "历任院长",
-    route: "/intro/dean",
   },
   {
     label: "历任书记",
     route: "/intro/clerk",
+  },
+  {
+    label: "历任院长",
+    route: "/intro/dean",
   },
   {
     label: "现任领导",

@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
+const router = useRouter()
 const modules = [EffectCoverflow, Autoplay];
 onMounted(() => {});
 const list = computed(() => [
@@ -26,6 +27,9 @@ const list = computed(() => [
     img: "home/swiper-3.png",
   },
 ]);
+function Navgator(){
+  router.push('/intro')
+}
 </script>
 <template>
   <div class="wrap">
@@ -57,6 +61,9 @@ const list = computed(() => [
         </swiper-slide>
       </swiper>
     </div>
+    <button class="btn" @click="Navgator()">
+      点击进入 >
+    </button>
   </div>
 </template>
 <style scoped lang="less">
@@ -83,6 +90,9 @@ const list = computed(() => [
         }
       }
     }
+  }
+  .btn{
+    margin: 0 auto;
   }
 }
 </style>
