@@ -1,4 +1,5 @@
 <script setup>
+import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 const props = defineProps({});
@@ -62,6 +63,22 @@ onMounted(() => { });
   height: 100%;
   .flex-col;
 
+  .content-list {
+    .flex-col;
+    align-items: flex-start;
+
+    gap: 28px;
+
+    .content-item {
+      .flex-row;
+      justify-content: flex-start;
+      gap: 50px;
+      color: #000;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
   .cen-wrap {
     .flex-row;
     gap: 110px;
@@ -71,20 +88,6 @@ onMounted(() => { });
       gap: 40px;
     }
 
-    .content-list {
-      .flex-col;
-      align-items: flex-start;
-
-      gap: 28px;
-
-      .content-item {
-        .flex-row;
-        justify-content: flex-start;
-        gap: 50px;
-        color: #000;
-        font-size: 32px;
-        font-weight: 500;
-      }
-    }
   }
-}</style>
+}
+</style>
