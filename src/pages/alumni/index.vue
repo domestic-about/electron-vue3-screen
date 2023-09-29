@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
+const route = useRoute();
 const props = defineProps({});
 onMounted(() => {});
 const tabList = computed(() => [
@@ -54,6 +55,7 @@ const tabList = computed(() => [
     right: 0;
     bottom: 0;
     opacity: 0.17;
+    z-index: -1;
     background: linear-gradient(
       0deg,
       #d9d9d9 -13.91%,
@@ -69,6 +71,5 @@ const tabList = computed(() => [
       color: #000;
     }
   }
-  
 }
 </style>

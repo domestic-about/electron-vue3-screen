@@ -1,32 +1,31 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import { getImageUrl } from '@/utils'
+import { getImageUrl } from "@/utils";
 const router = useRouter();
 const props = defineProps({});
 const route = useRoute();
-onMounted(() => { })
-let queryParams = computed(() => { })
+onMounted(() => {});
 const tabList = computed(() => [
   {
     label: "科研项目",
-    route: "/research/item1",
+    route: "/research/project",
   },
   {
     label: "科研领域",
-    route: "/research/item2",
+    route: "/research/area",
   },
   {
     label: "基地平台",
-    route: "/research/item3",
+    route: "/research/platform",
   },
   {
     label: "科研团队",
-    route: "/research/item4",
+    route: "/research/team",
   },
   {
     label: "科研成果",
-    route: "/research/item5",
+    route: "/research/result",
   },
 ]);
 </script>
@@ -34,7 +33,7 @@ const tabList = computed(() => [
   <div class="research-wrap">
     <div class="bg"></div>
     <div class="title-wrap">
-      <h3>学院概况</h3>
+      <h3>科学研究</h3>
       <div class="tab-list">
         <van-button
           :class="{ active: route.path === tab.route }"
@@ -55,7 +54,7 @@ const tabList = computed(() => [
     </div>
   </div>
 </template>
-<style scoped lang='less'>
+<style scoped lang="less">
 .research-wrap {
   height: 100%;
   position: relative;
@@ -69,6 +68,7 @@ const tabList = computed(() => [
     right: 0;
     bottom: 0;
     opacity: 0.17;
+    z-index: -1;
     background: linear-gradient(
       0deg,
       #d9d9d9 -13.91%,

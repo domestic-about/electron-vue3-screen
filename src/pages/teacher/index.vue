@@ -73,6 +73,7 @@ const list = [
     right: 0;
     bottom: 0;
     opacity: 0.17;
+    z-index: -1;
     background: linear-gradient(
       0deg,
       #d9d9d9 -13.91%,
@@ -128,8 +129,8 @@ const list = [
       .flex-col;
       gap: 17px;
       img {
-       width: 391px;
-       height: 591px;
+        width: 391px;
+        height: 591px;
       }
     }
     .right-img-text-list {
@@ -143,7 +144,7 @@ const list = [
         max-width: 400px;
         .flex-col;
         gap: 13px;
-        img{
+        img {
           width: 391px;
           height: 262px;
         }

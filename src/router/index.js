@@ -53,33 +53,33 @@ const routes = [
   {
     path: "/research",
     name: "research",
-    redirect: "/research/item1",
+    redirect: "/research/project",
     component: () => import("@/pages/research/index.vue"),
     children: [
       {
-        path: "/research/item1",
-        name: "research/item1",
-        component: () => import("@/pages/research/item1.vue"),
+        path: "/research/project",
+        name: "research-project",
+        component: () => import("@/pages/research/project.vue"),
       },
       {
-        path: "/research/item2",
-        name: "research/item2",
-        component: () => import("@/pages/research/item2.vue"),
+        path: "/research/area",
+        name: "research-area",
+        component: () => import("@/pages/research/area.vue"),
       },
       {
-        path: "/research/item3",
-        name: "research/item3",
-        component: () => import("@/pages/research/item3.vue"),
+        path: "/research/platform",
+        name: "research-platform",
+        component: () => import("@/pages/research/platform.vue"),
       },
       {
-        path: "/research/item4",
-        name: "research/item4",
-        component: () => import("@/pages/research/item4.vue"),
+        path: "/research/team",
+        name: "research-team",
+        component: () => import("@/pages/research/team.vue"),
       },
       {
-        path: "/research/item5",
-        name: "research/item5",
-        component: () => import("@/pages/research/item5.vue"),
+        path: "/research/result",
+        name: "research-result",
+        component: () => import("@/pages/research/result.vue"),
       },
     ],
   },
@@ -154,7 +154,7 @@ const routes = [
     name: "alumni",
     redirect: "/alumni/north",
     component: () => import("@/pages/alumni/index.vue"),
-    children:[
+    children: [
       {
         path: "/alumni/north",
         name: "alumni/north",
@@ -165,7 +165,7 @@ const routes = [
         name: "alumni/south",
         component: () => import("@/pages/alumni/south.vue"),
       },
-    ]
+    ],
   },
 ];
 

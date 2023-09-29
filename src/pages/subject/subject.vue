@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
 onMounted(() => {});
-let queryParams = computed(() => {});
 const list = [
   {
     title: "动物科学",

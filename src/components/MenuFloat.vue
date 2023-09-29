@@ -5,6 +5,8 @@ const router = useRouter();
 const route = useRoute();
 const show = ref(false);
 
+console.log(route);
+
 const list = computed(() => {
   return [
     {
@@ -50,6 +52,7 @@ const list = computed(() => {
   ];
 });
 const activeRouteIndex = computed(() => {
+  console.log(route.name);
   const moduleName = route.name.split("-")[0];
   return list.value.findIndex((item) => {
     return item.route.replace("/", "") === moduleName;

@@ -1,15 +1,10 @@
 <script setup>
-import { ref, reactive, toRefs, onBeforeMount, onMounted, watchEffect, computed } from 'vue';
-
+import { ref, onMounted, computed } from "vue";
+import { useRouter } from "vue-router";
+const props = defineProps({});
+onMounted(() => {});
 </script>
-
-
 <template>
-  <div >
-    hello
-  </div>
+  <div class="wrap"></div>
 </template>
-
-
-<style scoped lang='less'>
-</style>
+<style scoped lang="less"></style>

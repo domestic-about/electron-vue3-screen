@@ -57,6 +57,7 @@ onMounted(() => {});
     right: 0;
     bottom: 0;
     opacity: 0.17;
+    z-index: -1;
     background: linear-gradient(
       0deg,
       #d9d9d9 -13.91%,

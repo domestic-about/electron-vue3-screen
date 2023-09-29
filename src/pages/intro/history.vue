@@ -35,14 +35,18 @@ const contentList = [
     label: "学院更名为动物科学技术学院和动物医学院",
   },
 ];
-onMounted(() => { });
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
     <SwiperPage>
       <swiper-slide>
         <div class="content-list">
-          <div class="content-item" v-for="item in contentList" :key="item.label">
+          <div
+            class="content-item"
+            v-for="item in contentList"
+            :key="item.label"
+          >
             <span>{{ item.time }}</span>
             <span>{{ item.label }}</span>
           </div>
@@ -55,7 +59,11 @@ onMounted(() => { });
             <img src="@/assets/img/intro/list2.png" alt="" />
           </div>
           <div class="content-list">
-            <div class="content-item" v-for="item in contentList" :key="item.label">
+            <div
+              class="content-item"
+              v-for="item in contentList"
+              :key="item.label"
+            >
               <span>{{ item.time }}</span>
               <span>{{ item.label }}</span>
             </div>
