@@ -5,22 +5,50 @@ import { getImageUrl } from '@/utils'
 const props = defineProps({})
 onMounted(() => { })
 let queryParams = computed(() => { })
+const list = [
+  {
+    title: '动物科学',
+    label: '首批国家一流本科专业建设点国家卓越农林人才计划',
+    info: '本专业为国家级特色专业、湖北省品牌专业，培养学生掌握动物遗传育种、动物繁殖、动物营养与饲料加工、动物生产与管理、生态智慧养殖等方面的基本理论、基本知识，接受与动物科学相关的调查分析、评估、设计等方面的基本训练，具备从事动物遗传育种、繁殖、营养、生产与管理、开发与研究的基本能力，能够胜任畜牧行业内动物遗传育种与繁殖、动物营养与饲料、特种经济动物饲养、动物行为与福利、动物生产与管理、养殖环境控制等领域的教研、生产、推广、管理等工作。'
+  },
+  {
+    title: '动物医学',
+    label: '首批国家一流本科专业建设点',
+    info: '本专业为国家级特色专业、湖北省品牌专业，培养学生掌握动物遗传育种、动物繁殖、动物营养与饲料加工、动物生产与管理、生态智慧养殖等方面的基本理论、基本知识，接受与动物科学相关的调查分析、评估、设计等方面的基本训练，具备从事动物遗传育种、繁殖、营养、生产与管理、开发与研究的基本能力，能够胜任畜牧行业内动物遗传育种与繁殖、动物营养与饲料、特种经济动物饲养、动物行为与福利、动物生产与管理、养殖环境控制等领域的教研、生产、推广、管理等工作。'
+  },
+]
 </script>
 <template>
-  <div class='wrap'>
-    <img :src="getImageUrl('subject/1.jpg')" alt="">
+  <div class='subject-wrap'>
+    <div class="element-item" v-for="item in list">
+      <div class="title">{{ item.title }}</div>
+      <p class="lablel">{{ item.label }}</p>
+      <p class="info">{{ item.info }}</p>
+    </div>
   </div>
 </template>
 <style scoped lang='less'>
-.wrap {
-  width: 100vw;
-  height: 100vh;
+.subject-wrap {
   .flex-row;
-  justify-content: space-around;
+  gap: 148px;
+  padding-top: 91px;
 
-  img {
-    height: 100%;
-    width: auto;
+  .element-item {
+    width: 598px;
+    height: 503px;
+    .flex-col;
+   justify-content: space-between;
+    .title {
+      width: 379px;
+      font-size: 44px;
+      font-weight: 500;
+      border-radius: 7.443px;
+      background: linear-gradient(180deg, #006E2F 0%, #003A7D 100%);
+      color: #fff;
+      text-align: center;
+      padding: 18px 0;
+    }
+
   }
 }
 </style>

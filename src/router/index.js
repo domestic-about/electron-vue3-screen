@@ -63,7 +63,20 @@ const routes = [
   {
     path: "/subject",
     name: "subject",
+    redirect: "/subject/subjexst",
     component: () => import("@/pages/subject/index.vue"),
+    children: [
+      {
+        path: "/subject/subjexst",
+        name: "subject-subjexst",
+        component: () => import("@/pages/subject/subject.vue"),
+      },
+      {
+        path: "/subject/major",
+        name: "subject-major",
+        component: () => import("@/pages/subject/major.vue"),
+      },
+    ],
   },
   {
     path: "/talent",

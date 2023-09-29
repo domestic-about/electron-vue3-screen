@@ -25,15 +25,15 @@ const list = [
     <div class="title-wrap">
       <h3>师资队伍</h3>
     </div>
-    <div class="page1-wrap">
+    <!-- <div class="page1-wrap">
       <div class="left-img-text-wrap">
         <img src="@img/teacher/list1.png" alt="">
         <p>畜禽健康养殖教师团队合影</p>
       </div>
       <img src="@img/teacher/list2.png" alt="">
       <p class="label">华中农业大学畜禽健康养殖教师团队由家畜传染病学家陈焕春院士于上世纪90年代初组建，30多年来，团队坚持“以立德树人为根本，以强农兴农为己任”，聚焦畜禽健康养殖关键问题，深化科教产教融合，薪火传承、接续奋斗，书写了“人才立国、科技强国、产业兴国”的华农牧医华章，为我国农牧高等教育事业和畜牧业现代化建设作出了重要贡献。</p>
-    </div>
-    <!-- <div class="page2-wrap">
+    </div> -->
+    <div class="page2-wrap">
        <div class="left-img-text-wrap">
         <img src="@img/teacher/list3.png" alt="">
         <p>团队所在党支部获“全国先进基层党组织”称号，何启盖教授作为获奖代表进京受奖（何启盖 供图）</p>
@@ -44,7 +44,7 @@ const list = [
         <p>{{ item.label }}</p>
         </div>
        </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <style scoped lang='less'>
@@ -75,6 +75,7 @@ const list = [
     }
   }
   .page1-wrap{
+    margin-top: 31px;
     .flex-row;
     align-items: flex-start;
     p{
@@ -101,6 +102,7 @@ const list = [
    .flex-row;
    align-items: flex-start;
    gap: 55px;
+   margin-top: 31px;
    p{
         font-size: 24px;
         font-weight: 500;
@@ -122,12 +124,12 @@ const list = [
     justify-content: flex-start;
     gap: 35px;
     .img-text-item{
-      width: 398px;
+      width: 45%;
       .flex-col;
       gap: 13px;
-      &:last-child{
-      margin-right: auto;
-    }
+    //   &:last-child{
+    //   margin-right: auto;
+    // }
       img{
         width: 100%;
         height: 262px;
