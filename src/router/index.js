@@ -63,12 +63,12 @@ const routes = [
   {
     path: "/subject",
     name: "subject",
-    redirect: "/subject/subjexst",
+    redirect: "/subject/subject",
     component: () => import("@/pages/subject/index.vue"),
     children: [
       {
-        path: "/subject/subjexst",
-        name: "subject-subjexst",
+        path: "/subject/subject",
+        name: "subject-subject",
         component: () => import("@/pages/subject/subject.vue"),
       },
       {
@@ -82,6 +82,33 @@ const routes = [
     path: "/talent",
     name: "talent",
     component: () => import("@/pages/talent/index.vue"),
+    children: [
+      {
+        path: "/talent/system",
+        name: "talent-system",
+        component: () => import("@/pages/talent/system.vue"),
+      },
+      {
+        path: "/talent/condition",
+        name: "talent-condition",
+        component: () => import("@/pages/talent/condition.vue"),
+      },
+      {
+        path: "/talent/course",
+        name: "talent-course",
+        component: () => import("@/pages/talent/course.vue"),
+      },
+      {
+        path: "/talent/result",
+        name: "talent-result",
+        component: () => import("@/pages/talent/result.vue"),
+      },
+      {
+        path: "/talent/award",
+        name: "talent-award",
+        component: () => import("@/pages/talent/award.vue"),
+      },
+    ],
   },
   {
     path: "/teacher",

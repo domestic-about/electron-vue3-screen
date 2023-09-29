@@ -1,29 +1,28 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import Subject from './subject.vue'
-import Major from './major.vue'
+import Subject from "./subject.vue";
+import Major from "./major.vue";
 const router = useRouter();
-const props = defineProps({})
+const props = defineProps({});
 const route = useRoute();
 const tabList = computed(() => [
   {
     label: "专业介绍",
-    route: "/subject/subjexst",
+    route: "/subject/subject",
   },
   {
     label: "学科介绍",
     route: "/subject/major",
   },
 ]);
-onMounted(() => { })
-let queryParams = computed(() => { })
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
     <div class="bg"></div>
     <div class="title-wrap">
-      <h3>学院概况</h3>
+      <h3>学科专业</h3>
       <div class="tab-list">
         <van-button
           :class="{ active: route.path === tab.route }"
@@ -44,11 +43,13 @@ let queryParams = computed(() => { })
     </div>
   </div>
 </template>
-<style scoped lang='less'>
+<style scoped lang="less">
 .wrap {
   height: 100%;
   position: relative;
   padding: 24px;
+  .flex-col;
+  justify-content: flex-start;
   .bg {
     position: absolute;
     top: 0;
@@ -97,4 +98,5 @@ let queryParams = computed(() => { })
     width: 100%;
     flex: 1;
   }
-}</style>
+}
+</style>

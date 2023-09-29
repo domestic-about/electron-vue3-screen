@@ -14,6 +14,7 @@ import {
   Tabs,
   Tab,
   FloatingBubble,
+  Image,
 } from "vant";
 // 2. 引入组件样式
 import "vant/lib/index.css";
@@ -26,6 +27,7 @@ app.use(Popup);
 app.use(Tabs);
 app.use(Tab);
 app.use(FloatingBubble);
+app.use(Image);
 app.use(router);
 app
   .mount("#app")

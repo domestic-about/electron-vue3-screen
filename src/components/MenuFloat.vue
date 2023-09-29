@@ -1,15 +1,12 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
+const route = useRoute();
 const show = ref(false);
 
 const list = computed(() => {
   return [
-    {
-      label: "首页",
-      route: "/",
-    },
     {
       label: "学校概况",
       route: "/intro",
@@ -48,6 +45,12 @@ const list = computed(() => {
     },
   ];
 });
+const activeRouteIndex = computed(() => {
+  const moduleName = route.name.split("-")[0];
+  return list.value.findIndex((item) => {
+    return item.route.replace("/", "") === moduleName;
+  });
+});
 onMounted(() => {});
 
 const clickItem = (item) => {
@@ -71,11 +74,12 @@ const clickItem = (item) => {
       <div class="menu-list">
         <div
           class="menu-item"
-          v-for="item in list"
+          :class="{ active: activeRouteIndex === index }"
+          v-for="(item, index) in list"
           :key="item.label"
           @click="clickItem(item)"
         >
-          <van-button type="primary">{{ item.label }}</van-button>
+          {{ item.label }}
         </div>
       </div>
     </van-popup>
@@ -85,12 +89,28 @@ const clickItem = (item) => {
 .wrap {
   :deep(.van-popup) {
     height: 100%;
-    width: 30%;
-
+    width: 270px;
     .menu-list {
       padding: 20px;
       .flex-col;
       gap: 10px;
+      .menu-item {
+        border-radius: 12.786px;
+        background: #fff;
+        display: flex;
+        padding: 19.805px 20px;
+        justify-content: center;
+        align-items: center;
+        color: #006e2f;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+        &.active {
+          border-radius: 8px;
+          background: linear-gradient(180deg, #006e2f 0%, #003a7d 100%);
+          color: #fff;
+        }
+      }
     }
   }
 }

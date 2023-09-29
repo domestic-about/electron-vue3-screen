@@ -34,7 +34,7 @@ const contentList = [
     label: "学院更名为动物科学技术学院和动物医学院",
   },
 ];
-onMounted(() => { });
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
@@ -46,8 +46,8 @@ onMounted(() => { });
     </div> -->
     <div class="cen-wrap">
       <div class="left-img-list-wrap">
-        <img src="@/assets/img/intro/list1.png" alt="">
-        <img src="@/assets/img/intro/list2.png" alt="">
+        <img src="@/assets/img/intro/list1.png" alt="" />
+        <img src="@/assets/img/intro/list2.png" alt="" />
       </div>
       <div class="content-list">
         <div class="content-item" v-for="item in contentList" :key="item.label">
@@ -87,7 +87,6 @@ onMounted(() => { });
       .flex-col;
       gap: 40px;
     }
-
   }
 }
 </style>

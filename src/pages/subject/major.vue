@@ -1,26 +1,102 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { getImageUrl } from '@/utils'
-const props = defineProps({})
-onMounted(() => { })
-let queryParams = computed(() => { })
+import { ref, onMounted, computed } from "vue";
+import { useRouter } from "vue-router";
+import { getImageUrl } from "@/utils";
+import { SwiperSlide } from "swiper/vue";
+import SwiperPage from "@/components/swiper/SwiperPage.vue";
+const props = defineProps({});
+const list = [];
+onMounted(() => {});
 </script>
 <template>
-  <div class='wrap'>
-    <img :src="getImageUrl('subject/1.jpg')" alt="">
+  <div class="major-wrap">
+    <SwiperPage>
+      <swiper-slide>
+        <div class="swiper-item">
+          <div class="title">兽医学学科</div>
+          <div class="info-wrap">
+            <h4>一、兽医学学科简介</h4>
+            <p>
+              本学科起源于湖广总督张之洞1898年创办的湖北农务学堂畜医科，现具有兽医学一级学科博士学位授予权、博士后流动站。学科以保障动物和人类健康为宗旨，为畜牧业保驾护航，保障食品安全，维护环境与生态安全；设有基础兽医学、预防兽医学、临床兽医学、兽医公共卫生和食品安全4个学科方向。本学科在第四轮全国学科评估获得A+，2017年、2021年均入选国家“双一流”建设学科。猪病学、兽药残留检测与食品安全评价等优势领域国际一流；支撑农业科学进入ESI前1‰，植物学与动物学ESI前1‰，微生物学、分子生物学与遗传学、药理学与毒理学等三个学科进入ESI前1%。
+              本学科现有中国工程院院士1名，拥有我国兽医学科领域的第一个国家自然基金委创新研究群体及5个省部级创新团队，建有1个国家重点实验室（联合）、2个国家专业实验室及动物生物安全三级实验室等19个研究基地和平台。
+              动物医学院秉承“产学研相结合、协同创新”的发展理念，先后研发了30余种新型疫苗与诊断试剂，获国家重点新产品证书5项、新兽药证书26项，引领了我国动物生物制品行业技术创新；获得国家科技进步一等奖1项、国家科技进步二等奖4项、国家技术发明二等奖1项、何梁何利科技进步奖2项等；陈焕春院士等专家牵头组织的系列战略咨询与重大专项建议被国家自然科学基金委、科技部等部门采纳和实施；与英国剑桥大学、皇家兽医学院、澳大利亚默多克大学、美国佐治亚大学、明尼苏达大学等10余所大学建立了实质性合作关系。
+            </p>
+            <h4>二、兽医学二级学科简介</h4>
+            <h5>1.基础兽医学</h5>
+            <p>
+              本学科设有基础兽医学、预防兽医学、临床兽医学、兽医公共卫生与食品安全4个二级学科。
+              基础兽医学是从整体、细胞和分子水平研究动物的结构与功能、疾病发生与发展规律、药物开发及应用的学科。由动物解剖与组织胚胎学、动物生理学与生物化学、兽医病理学、兽医药理学及毒理学等分支学科组成。本学科是湖北省重点学科。依托本学科建有国家兽药安全评价实验室、国家兽药残留基准实验室、农业部兽药残留检测重点实验室、武汉市动物性食品残留检测工程技术研究中心等科技研究平台。
+            </p>
+            <h5>2.预防兽医学</h5>
+            <p>
+              预防兽医学是研究动物疫病发生与发展规律、致病与免疫机制、诊断与防控原理和技术的学科。本学科由兽医微生物学与免疫学、兽医传染病学、兽医寄生虫学与寄生虫病学、兽医流行病学等四个三级学科组成，研究内容涉及各种病原(病毒、细菌和寄生虫)及其与宿主（家畜、家禽、伴侣动物、实验动物、野生动物和人等）的相互作用关系等，研究层次从群体、个体、细胞水平深入到分子水平。本学科是“湖北省高校特色学科”，建有农业微生物学国家重点实验室、动物疫病防控技术国家地方联合工程实验室(湖北)、国家动物结核病专业实验室（武汉）、科技部动物疾病防控国际联合研究中心、动物生物药物教育部工程研究中心、农业部兽用诊断制剂创制重点实验室、湖北省兽医流行病学国际合作基地、湖北省预防兽医学重点实验室、动物疫病防控湖北省工程实验室、湖北省动物疫苗工程技术研究中心、生猪健康养殖协同创新中心（省部共建）、华中农业大学动物生物安全三级实验室、华中农业大学动物疫病诊断中心等科研平台。
+            </p>
+            <h5>3.临床兽医学</h5>
+            <p>
+              临床兽医学是从分子、细胞、组织器官和系统水平到个体和群体水平，研究动物临床疾病的病因、发病机理、诊断与防治的学科。本学科由兽医临床诊断学、兽医内科学、兽医外科学、兽医产科学及中兽医学等五个三级学科组成。研究内容包括家畜、家禽、伴侣动物、实验动物、野生动物疾病诊治与防控等。本学科是“湖北省重点学科”，建有教学动物医院、动物营养与代谢病研究中心、兽医针刺针麻培训基地、宠物药品临床试验基地（GCP）及药品非临床研究基地（GLP）。
+            </p>
+            <h5>4.兽医公共卫生与食品安全</h5>
+            <p>
+              兽医公共卫生与食品安全是在“一个健康”的理念下研究人兽共患病、动物源性食品安全、兽医流行病学、实验动物比较医学、动物生物安全等，从而保障人类健康、动物健康和环境健康的综合性学科。本学科目前包含人兽共患病、动物源性食品安全两个三级学科。研究内容包括人兽共患病病原生态学、流行病学、致病与免疫机制、综合防控新技术与新产品研发，动物源性食品风险监测、评估、预警和安全防控，病原耐药性风险监测及防控、病原耐药性形成及传播机制，实验动物比较医学等。本学科依托农业微生物学国家重点实验室、动物疾病防控国际联合研究中心、农业部畜禽产品质量安全风险评估实验室（武汉）、生猪健康养殖协同创新中心（省部共建）、湖北省兽医流行病学国际合作基地、华中农业大学动物生物安全三级实验室开展人才培养、科学研究和社会服务。
+            </p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-item">添加内容吧</div>
+      </swiper-slide>
+    </SwiperPage>
   </div>
 </template>
-<style scoped lang='less'>
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  .flex-row;
-  justify-content: space-around;
+<style scoped lang="less">
+.major-wrap {
+  padding-top: 30px;
+  .swiper-item {
+    .flex-row;
+    align-items: stretch;
+    gap: 40px;
+    .title {
+      display: flex;
+      width: 254px;
+      height: 80px;
+      padding: 18.425px 18.607px;
+      justify-content: center;
+      align-items: center;
+      gap: 18.425px;
+      flex-shrink: 0;
+      border-radius: 7.443px;
+      background: linear-gradient(180deg, #006e2f 0%, #003a7d 100%);
+      color: #fff;
+      font-family: PingFang SC;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .info-wrap {
+      height: 70vh;
+      overflow: auto;
 
-  img {
-    height: 100%;
-    width: 100%;
+      padding: 24px 24px 0px 24px;
+
+      border-radius: 12px;
+      background: #fff;
+      color: #000;
+      font-size: 24px;
+      font-weight: 400;
+      h4 {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+      h5 {
+        margin: 10px 0;
+        font-size: 24px;
+      }
+      p {
+        margin: 5px 0;
+        font-size: 18px;
+      }
+    }
   }
 }
 </style>

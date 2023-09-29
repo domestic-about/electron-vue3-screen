@@ -32,11 +32,6 @@ onMounted(() => {});
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#fff',
       }"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
-      @autoplayTimeLeft="onAutoplayTimeLeft"
       :loop="true"
       :spaceBetween="10"
       :navigation="true"
