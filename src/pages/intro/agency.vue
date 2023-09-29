@@ -11,7 +11,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="agency-wrap">
-    <van-image :src="getImageUrl('intro/agency.svg')"></van-image>
+    <img :src="getImageUrl('intro/agency.svg')" />
   </div>
 </template>
 <style scoped lang="less">

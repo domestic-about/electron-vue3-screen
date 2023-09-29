@@ -4,6 +4,8 @@ import router from "./router";
 import App from "./App.vue";
 import "./assets/css/index.less";
 import "@/utils/rem";
+import { Image, Table } from "ant-design-vue";
+import "ant-design-vue/dist/reset.css";
 
 // 1. 引入你需要的组件
 import {
@@ -14,7 +16,6 @@ import {
   Tabs,
   Tab,
   FloatingBubble,
-  Image,
 } from "vant";
 // 2. 引入组件样式
 import "vant/lib/index.css";
@@ -28,6 +29,7 @@ app.use(Tabs);
 app.use(Tab);
 app.use(FloatingBubble);
 app.use(Image);
+app.use(Table);
 app.use(router);
 app
   .mount("#app")
