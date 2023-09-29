@@ -53,7 +53,35 @@ const routes = [
   {
     path: "/research",
     name: "research",
+    redirect: "/research/item1",
     component: () => import("@/pages/research/index.vue"),
+    children: [
+      {
+        path: "/research/item1",
+        name: "research/item1",
+        component: () => import("@/pages/research/item1.vue"),
+      },
+      {
+        path: "/research/item2",
+        name: "research/item2",
+        component: () => import("@/pages/research/item2.vue"),
+      },
+      {
+        path: "/research/item3",
+        name: "research/item3",
+        component: () => import("@/pages/research/item3.vue"),
+      },
+      {
+        path: "/research/item4",
+        name: "research/item4",
+        component: () => import("@/pages/research/item4.vue"),
+      },
+      {
+        path: "/research/item5",
+        name: "research/item5",
+        component: () => import("@/pages/research/item5.vue"),
+      },
+    ],
   },
   {
     path: "/service",
@@ -81,6 +109,7 @@ const routes = [
   {
     path: "/talent",
     name: "talent",
+    redirect: "/talent/system",
     component: () => import("@/pages/talent/index.vue"),
     children: [
       {
@@ -114,6 +143,29 @@ const routes = [
     path: "/teacher",
     name: "teacher",
     component: () => import("@/pages/teacher/index.vue"),
+  },
+  {
+    path: "/thought",
+    name: "thought",
+    component: () => import("@/pages/thought/index.vue"),
+  },
+  {
+    path: "/alumni",
+    name: "alumni",
+    redirect: "/alumni/north",
+    component: () => import("@/pages/alumni/index.vue"),
+    children:[
+      {
+        path: "/alumni/north",
+        name: "alumni/north",
+        component: () => import("@/pages/alumni/north.vue"),
+      },
+      {
+        path: "/alumni/south",
+        name: "alumni/south",
+        component: () => import("@/pages/alumni/south.vue"),
+      },
+    ]
   },
 ];
 

@@ -1,26 +1,114 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import { getImageUrl } from '@/utils'
-const props = defineProps({})
+const router = useRouter();
+const props = defineProps({});
+const route = useRoute();
 onMounted(() => { })
 let queryParams = computed(() => { })
+const tabList = computed(() => [
+  {
+    label: "科研项目",
+    route: "/research/item1",
+  },
+  {
+    label: "科研领域",
+    route: "/research/item2",
+  },
+  {
+    label: "基地平台",
+    route: "/research/item3",
+  },
+  {
+    label: "科研团队",
+    route: "/research/item4",
+  },
+  {
+    label: "科研成果",
+    route: "/research/item5",
+  },
+]);
 </script>
 <template>
-  <div class='wrap'>
-    <img :src="getImageUrl('research/1.jpg')" alt="">
+  <div class="research-wrap">
+    <div class="bg"></div>
+    <div class="title-wrap">
+      <h3>学院概况</h3>
+      <div class="tab-list">
+        <van-button
+          :class="{ active: route.path === tab.route }"
+          v-for="tab in tabList"
+          :key="tab.label"
+          @click="router.push(tab.route)"
+        >
+          {{ tab.label }}
+        </van-button>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 <style scoped lang='less'>
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  .flex-row;
-  justify-content: space-around;
+.research-wrap {
+  height: 100%;
+  position: relative;
+  padding: 24px;
+  .flex-col;
+  justify-content: flex-start;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.17;
+    background: linear-gradient(
+      0deg,
+      #d9d9d9 -13.91%,
+      rgba(217, 217, 217, 0) 83.33%
+    );
+    background-image: url("@img/intro/bg.png");
+    background-size: 100% 100%;
+  }
 
-  img {
-    height: 100%;
-    width: auto;
+  .title-wrap {
+    width: 100%;
+    .flex-row;
+    justify-content: space-between;
+    h3 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #000;
+    }
+    .tab-list {
+      .flex-row;
+      gap: 20px;
+      .van-button {
+        border-radius: 12px;
+        background: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        width: 204px;
+        height: 80px;
+        border: none;
+        &.active {
+          border-radius: 12px;
+          background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .content-wrap {
+    width: 100%;
+    flex: 1;
   }
 }
 </style>

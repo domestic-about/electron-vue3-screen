@@ -41,7 +41,11 @@ const list = computed(() => {
     },
     {
       label: "党建与思政工作",
-      route: "/party",
+      route: "/thought",
+    },
+    {
+      label: "校友风采",
+      route: "/alumni",
     },
   ];
 });

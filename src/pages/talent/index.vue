@@ -10,30 +10,30 @@ const route = useRoute();
 const tabList = computed(() => [
   {
     label: "培养体系",
-    route: "/intro/history",
+    route: "/talent/system",
   },
   {
     label: "培养条件",
-    route: "/intro/agency",
+    route: "/talent-condition",
   },
   {
     label: "课程建设",
-    route: "/intro/clerk",
+    route: "/talent/course",
   },
   {
     label: "教学成果",
-    route: "/intro/dean",
+    route: "/talent/result",
   },
   {
     label: "竞赛获奖",
-    route: "/intro/lead",
+    route: "/talent/award",
   },
 ]);
 
 onMounted(() => {});
 </script>
 <template>
-  <div class="intro-wrap">
+  <div class="talent-wrap">
     <div class="bg"></div>
     <div class="title-wrap">
       <h3>学院概况</h3>
@@ -58,7 +58,7 @@ onMounted(() => {});
   </div>
 </template>
 <style scoped lang="less">
-.intro-wrap {
+.talent-wrap {
   height: 100%;
   position: relative;
   padding: 24px;

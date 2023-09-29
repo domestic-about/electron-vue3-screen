@@ -4,116 +4,84 @@ import { useRouter } from "vue-router";
 const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
-onMounted(() => {});
+import { getImageUrl } from "@/utils";
+onMounted(() => { });
 const list = [
-  [
-    {
-      img: "",
-      name: "刘兴斌",
-      admin: "职务：党委书记",
-      email: "E-mail：xbl2001@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D319",
-      phone: "办公电话：87281238（办）",
-      info: "责任分工：主持党委全面工作。负责组织统战、思想政治、意识形态、党风廉政、班子建设、人力资源、离退休等工作。对接职能部门：组织部、统战部、人力资源部、教师工作部。联系党支部、系（中心、室）：动物遗传育种学系教工党支部、动物遗传育种学系",
-    },
-    {
-      img: "",
-      name: "赵书红",
-      admin: "职务：院长",
-      email: "E-mail：shzhao@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D319",
-      phone: "办公电话：87280471（办） 87389480（实）",
-      info: "责任分工：主持行政全面工作。负责发展规划、学科与专业建设等工作。对接职能部门：发展规划部。联系党支部、系（中心、室）：预防兽医学系第一教工党支部、国家家畜工程技术研究中心教工党支部、预防兽医学系、国家家畜工程技术研究中心",
-    },
-  ],
-  [
-    {
-      img: "",
-      name: "杨冬凯",
-      admin: "职务：党委副书记",
-      email: "E-mail：xbl2001@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D310",
-      phone: "办公电话：87280730（办）",
-      info: "责任分工：协助书记负责组织统战、思想政治、意识形态、党风廉政等工作。负责文化建设、学生教育管理、宣传、网络安全与信息化、纪检监察、共青团等工作。协管人才培养、校友与基金会。对接职能部门：组织部、统战部、宣传部、网络安全和信息化办公室（信息技术中心）、纪委办公室、监察室、巡察工作办公室、本科生院（学生工作部、武装部）、研究生院（研究生工作部）、团委、图书馆。联系党支部、系（中心、室）：基础兽医学系教工党支部、基础兽医学系",
-    },
-    {
-      img: "",
-      name: "晏向华",
-      admin: "职务：党委副书记",
-      email: "E-mail：xhyan@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D305",
-      phone: "87280302（办）87287685（实）",
-      info: "责任分工：协助院长负责畜牧学科建设。负责科学研究、学术交流、科研平台基地等工作。协管动物科学专业建设。对接职能部门：科学技术发展研究院、农业微生物重大基础设施建设办公室。联系党支部、系（中心、室）：公共卫生学系教工党支部、公共卫生学系",
-    },
-  ],
-  [
-    {
-      img: "",
-      name: "彭贵青",
-      admin: "职务：副院长",
-      email: "E-mail：penggq@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D308",
-      phone: "办公电话：87281303（办）87285816（实））",
-      info: "责任分工：协助院长负责兽医学科建设。负责研究生人才培养、博士后、国际合作与交流等工作。协管动物医学专业建设。",
-    },
-    {
-      img: "",
-      name: "任竹青",
-      admin: "职务：副院长",
-      email: "E-mail：renzq@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D309",
-      phone: "办公电话：87280730（办）",
-      info: "责任分工：协助院长负责动物科学专业建设。负责本科生人才培养、实验教学中心、教学基地等工作。协管畜牧学科建设。",
-    },
-  ],
-  [
-    {
-      img: "",
-      name: "李家奎",
-      admin: "职务：副院长",
-      email: "E-mail：lijk210@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D307",
-      phone: "办公电话：87281303（办）",
-      info: "责任分工：协助院长负责动物医学专业建设。负责仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等工作。协管兽医学科建设。",
-    },
-    {
-      img: "",
-      name: "胡丽华",
-      admin: "职务：副院长",
-      email: "E-mail：hulh@mail.hzau.edu.cn",
-      adrgess: "办公地点：第四综合楼D306",
-      phone: "办公电话：87280302（办）",
-      info: "责任分工：协助书记负责离退休工作。负责社会服务、财务与审计、教育培训、校友与基金会、实验动物基地管理、安全保卫、保密、学院办公室、动物医院、纪检监察日常事务等工作。协管科学研究、仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等。",
-    },
-  ],
-  [
-    {
-      img: "",
-      name: "易丹",
-      admin: "职务：副院长",
-      email: "E-mail：yidan810204@163.com",
-      adrgess: "办公地点：第四综合楼D304",
-      phone: "办公电话：87280302（办）",
-      info: "责任分工：协助分管人才培养工作",
-    },
-  ],
-];
+  {
+    img: 'talent/award/list1.png',
+    text: '武进人才杯”江苏省第十七届大学生职业规划大赛（本科组）-二等奖-杨依晨'
+  },
+  {
+    img: 'talent/award/list2.png',
+    text: '2023年中国（浙江·江山）蜂业博览会暨全国蜂产品市场信息交流会-优秀论文-王振、刘嘉维、方芳等'
+  },
+  {
+    img: 'talent/award/list3.png',
+    text: '中国研究生乡村振兴科技强农+创新大赛“强国杯”第五届牛精英挑战赛-二等奖-李天尊、敖英男、蔡文韬、姜琦'
+  },
+  {
+    img: 'talent/award/list4.png',
+    text: '中国研究生乡村振兴科技强农+创新大赛“强国杯”第五届牛精英挑战赛-二等奖-耿阳、张博、杜雯鹃、杜宇峰'
+  },
+  {
+    img: 'talent/award/list5.png',
+    text: '第六届中国大学生5分钟科研英语演讲竞赛-全国一等奖-陶卓琳、欧阳和昊、王天娇、庞雯元'
+  },
+  {
+    img: 'talent/award/list6.png',
+    text: '第六届中国大学生5分钟科研英语演讲竞赛-全国三等奖-李晓燕（研究生）'
+  },
+  {
+    img: 'talent/award/list7.png',
+    text: '第六届中国大学生5分钟科研英语演讲竞赛-全国三等奖-漆明雨、罗茹雪'
+  },
+  {
+    img: 'talent/award/list8.png',
+    text: '2022年全国农科研究生乡村振兴志愿服务活动优秀成果奖-特等奖-方芳、冯小娟、李鸿屹、吕洁、刘嘉维、王振、黎骏钊、吴家旭'
+  },
+  {
+    img: 'talent/award/list9.png',
+    text: '2023年全国大学生英语竞赛（NECCS）-A类二等奖-胡雅文'
+  },
+  {
+    img: 'talent/award/list10.png',
+    text: '中国大学生广告艺术节2023春季征集大赛-入围类-李晓燕'
+  },
+]
 </script>
 <template>
   <div class="wrap">
     <SwiperPage>
-      <swiper-slide v-for="(group, index) in list" :key="index">
-        <div class="admin-list">
-          <div class="admin-item" v-for="item in group" :key="item.name">
-            <img :src="item.img" alt="" />
-            <div class="admin-info">
-              <h4 class="admin-name">{{ item.name }}</h4>
-              <p>{{ item.admin }}</p>
-              <p>{{ item.email }}</p>
-              <p>{{ item.adrgess }}</p>
-              <p>{{ item.phone }}</p>
-              <p>{{ item.info }}</p>
-            </div>
+      <swiper-slide>
+        <div class="card-list">
+          <div class="card-item" v-for="item in list.slice(0, 3)">
+            <img :src="getImageUrl(`${item.img}`)" alt="">
+            <p class="label">{{ item.text }}</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card-list">
+          <div class="card-item" v-for="item in list.slice(3, 6)">
+            <img :src="getImageUrl(`${item.img}`)" alt="">
+            <p class="label">{{ item.text }}</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card-list">
+          <div class="card-item" v-for="item in list.slice(6, 9)">
+            <img :src="getImageUrl(`${item.img}`)" alt="">
+            <p class="label">{{ item.text }}</p>
+          </div>
+        </div>
+
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card-list">
+          <div class="card-item" v-for="item in list.slice(9, 10)">
+            <img :src="getImageUrl(`${item.img}`)" alt="">
+            <p class="label">{{ item.text }}</p>
           </div>
         </div>
       </swiper-slide>
@@ -124,36 +92,22 @@ const list = [
 <style scoped lang="less">
 .wrap {
   padding-top: 110px;
-  .admin-list {
+  .card-list{
     .flex-row;
     align-items: flex-start;
-    gap: 88px;
-    .admin-item {
-      .flex-row;
-      align-items: flex-start;
+    gap:94px ;
+    .card-item{
+      width: 449px;
+      .flex-col;
       gap: 33px;
-      flex: 1;
-      &:last-child {
-        margin-right: auto;
-      }
-      img {
-        width: 145px;
-        height: 200px;
-      }
-      .admin-info {
-        width: 626px;
-        .admin-name {
-          font-size: 26px;
-          color: #006e2f;
-          margin-bottom: 24px;
-        }
-        p {
-          color: #000;
-          font-size: 26px;
-          font-weight: 600;
-          margin-top: 10px;
-        }
-      }
+      img{
+      width: 100%;
+      height: auto;
+    }
+    p{
+      font-size: 24px;
+      font-weight: 500;
+    }
     }
   }
 }

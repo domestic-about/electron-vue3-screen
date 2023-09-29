@@ -1,5 +1,6 @@
 <script setup>
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
+import { SwiperSlide } from "swiper/vue";
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 const props = defineProps({});
@@ -34,28 +35,34 @@ const contentList = [
     label: "学院更名为动物科学技术学院和动物医学院",
   },
 ];
-onMounted(() => {});
+onMounted(() => { });
 </script>
 <template>
   <div class="wrap">
-    <!-- <div class="content-list">
-      <div class="content-item" v-for="item in contentList" :key="item.label">
-        <span>{{ item.time }}</span>
-        <span>{{ item.label }}</span>
-      </div>
-    </div> -->
-    <div class="cen-wrap">
-      <div class="left-img-list-wrap">
-        <img src="@/assets/img/intro/list1.png" alt="" />
-        <img src="@/assets/img/intro/list2.png" alt="" />
-      </div>
-      <div class="content-list">
-        <div class="content-item" v-for="item in contentList" :key="item.label">
-          <span>{{ item.time }}</span>
-          <span>{{ item.label }}</span>
+    <SwiperPage>
+      <swiper-slide>
+        <div class="content-list">
+          <div class="content-item" v-for="item in contentList" :key="item.label">
+            <span>{{ item.time }}</span>
+            <span>{{ item.label }}</span>
+          </div>
         </div>
-      </div>
-    </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="cen-wrap">
+          <div class="left-img-list-wrap">
+            <img src="@/assets/img/intro/list1.png" alt="" />
+            <img src="@/assets/img/intro/list2.png" alt="" />
+          </div>
+          <div class="content-list">
+            <div class="content-item" v-for="item in contentList" :key="item.label">
+              <span>{{ item.time }}</span>
+              <span>{{ item.label }}</span>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </SwiperPage>
   </div>
 </template>
 <style scoped lang="less">
@@ -66,8 +73,9 @@ onMounted(() => {});
   .content-list {
     .flex-col;
     align-items: flex-start;
-
     gap: 28px;
+    margin-top: 136px;
+    padding: 0 120px;
 
     .content-item {
       .flex-row;
@@ -82,6 +90,7 @@ onMounted(() => {});
   .cen-wrap {
     .flex-row;
     gap: 110px;
+    margin-top: 120px;
 
     .left-img-list-wrap {
       .flex-col;

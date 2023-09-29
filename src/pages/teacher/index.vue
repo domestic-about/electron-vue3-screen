@@ -128,6 +128,8 @@ const list = [
       .flex-col;
       gap: 17px;
       img {
+       width: 391px;
+       height: 591px;
       }
     }
     .right-img-text-list {
@@ -141,9 +143,10 @@ const list = [
         max-width: 400px;
         .flex-col;
         gap: 13px;
-        //   &:last-child{
-        //   margin-right: auto;
-        // }
+        img{
+          width: 391px;
+          height: 262px;
+        }
       }
     }
   }
