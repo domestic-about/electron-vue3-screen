@@ -11,7 +11,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="agency-wrap">
-    <a-image :src="getImageUrl('intro/agency.svg')" />
+    <img :src="getImageUrl('intro/agency.svg')" />
   </div>
 </template>
 <style scoped lang="less">
@@ -19,19 +19,8 @@ onMounted(() => {});
   width: 100%;
   height: 100%;
   .flex-col;
-  .content-list {
-    .flex-col;
-    align-items: flex-start;
-
-    gap: 28px;
-    .content-item {
-      .flex-row;
-      justify-content: flex-start;
-      gap: 50px;
-      color: #000;
-      font-size: 32px;
-      font-weight: 500;
-    }
+  img {
+    width: 70%;
   }
 }
 </style>

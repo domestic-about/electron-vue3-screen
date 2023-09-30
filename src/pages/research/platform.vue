@@ -200,6 +200,7 @@ const columns = [
   .cen-wrap {
     padding-top: 70px;
     .flex-row;
+    align-items: stretch;
     gap: 50px;
   }
 }

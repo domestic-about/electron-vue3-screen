@@ -11,11 +11,11 @@ import "swiper/css";
 
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css/pagination";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 const props = defineProps({});
 
-const modules = [Navigation, Autoplay];
+const modules = [Navigation, Autoplay, Pagination];
 const progressCircle = ref(null);
 const progressContent = ref(null);
 const onAutoplayTimeLeft = (s, time, progress) => {
@@ -29,8 +29,11 @@ onMounted(() => {});
   <div class="swiper-page">
     <swiper
       :style="{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#fff',
+        '--swiper-navigation-color': '#006E2F',
+        '--swiper-pagination-color': '#006E2F',
+      }"
+      :pagination="{
+        type: 'progressbar',
       }"
       :spaceBetween="10"
       :navigation="true"
@@ -53,11 +56,23 @@ onMounted(() => {});
 <style scoped lang="less">
 .swiper-page {
   width: 100%;
-}
-
-.mySwiper2 {
-  width: 100%;
   height: 100%;
+  :deep(.swiper) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      background-color: #fff;
+      filter: drop-shadow(
+        0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
+      );
+      &:after {
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
 
   .autoplay-progress {
     position: absolute;

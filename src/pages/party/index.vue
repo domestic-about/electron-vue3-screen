@@ -119,7 +119,7 @@ const list = [
         height: 321px;
         padding: 12px;
         background-color: #fff;
-        img {
+        :deep(.ant-image) {
           width: 386px;
           height: 217px;
         }

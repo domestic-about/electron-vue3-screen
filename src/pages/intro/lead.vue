@@ -137,7 +137,7 @@ const list = [
       &:last-child {
         margin-right: auto;
       }
-      img {
+      :deep(.ant-image) {
         width: 145px;
         height: 200px;
       }

@@ -29,11 +29,11 @@ const imgWidth = computed(() => {
 });
 const imgHeight = computed(() => {
   if (props.imgLength === 1) {
-    return "auto";
+    return "60vh";
   } else if (props.imgLength > 3) {
     return "25vh";
   } else {
-    return "auto";
+    return "60vh";
   }
 });
 

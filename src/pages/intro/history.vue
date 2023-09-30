@@ -3,6 +3,7 @@ import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { SwiperSlide } from "swiper/vue";
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
+import { getImageUrl } from "@/utils";
 const props = defineProps({});
 
 const contentList = [
@@ -39,51 +40,39 @@ onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <SwiperPage>
-      <swiper-slide>
-        <div class="content-list">
-          <div
-            class="content-item"
-            v-for="item in contentList"
-            :key="item.label"
-          >
-            <span>{{ item.time }}</span>
-            <span>{{ item.label }}</span>
-          </div>
+    <div class="cen-wrap">
+      <div class="left-img-list-wrap">
+        <a-image :src="getImageUrl('intro/list1.png')" alt="" />
+        <a-image :src="getImageUrl('intro/list2.png')" alt="" />
+      </div>
+      <div class="content-list">
+        <div class="content-item" v-for="item in contentList" :key="item.label">
+          <span>{{ item.time }}</span>
+          <span>{{ item.label }}</span>
         </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="cen-wrap">
-          <div class="left-img-list-wrap">
-            <a-image src="@/assets/img/intro/list1.png" alt="" />
-            <a-image src="@/assets/img/intro/list2.png" alt="" />
-          </div>
-          <div class="content-list">
-            <div
-              class="content-item"
-              v-for="item in contentList"
-              :key="item.label"
-            >
-              <span>{{ item.time }}</span>
-              <span>{{ item.label }}</span>
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-    </SwiperPage>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
 .wrap {
   height: 100%;
-  .flex-col;
 
+  .cen-wrap {
+    .flex-row;
+    gap: 110px;
+    margin-top: 120px;
+    padding: 0 100px;
+
+    .left-img-list-wrap {
+      .flex-col;
+      gap: 40px;
+    }
+  }
   .content-list {
     .flex-col;
     align-items: flex-start;
     gap: 28px;
-    margin-top: 136px;
-    padding: 0 120px;
 
     .content-item {
       .flex-row;
@@ -92,17 +81,6 @@ onMounted(() => {});
       color: #000;
       font-size: 32px;
       font-weight: 500;
-    }
-  }
-
-  .cen-wrap {
-    .flex-row;
-    gap: 110px;
-    margin-top: 120px;
-
-    .left-img-list-wrap {
-      .flex-col;
-      gap: 40px;
     }
   }
 }
