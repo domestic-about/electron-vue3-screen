@@ -106,7 +106,7 @@ const list = [
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
           <div class="admin-item" v-for="item in group" :key="item.name">
-            <img :src="getImageUrl(`${item.img}`)" alt="" />
+            <a-image :src="getImageUrl(`${item.img}`)" alt="" />
             <div class="admin-info">
               <h4 class="admin-name">{{ item.name }}</h4>
               <p>{{ item.admin }}</p>

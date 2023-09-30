@@ -5,132 +5,108 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => { });
+onMounted(() => {});
 const dataSource1 = [
   {
-
-    name: '动物育种与健康养殖前沿科学中心',
-    person: '陈焕春',
+    name: "动物育种与健康养殖前沿科学中心",
+    person: "陈焕春",
   },
   {
-
-    name: '国家生物育种产教融合创新平台（生猪）',
-    person: '赵书红',
+    name: "国家生物育种产教融合创新平台（生猪）",
+    person: "赵书红",
   },
   {
-
-    name: '国家家畜工程技术研究中心',
-    person: '赵书红',
+    name: "国家家畜工程技术研究中心",
+    person: "赵书红",
   },
   {
-
-    name: '省部共建生猪健康养殖协同创新中心',
-    person: '陈焕春',
+    name: "省部共建生猪健康养殖协同创新中心",
+    person: "陈焕春",
   },
   {
-
-    name: '农业动物遗传育种与繁殖教育部重点实验室',
-    person: '赵书红',
+    name: "农业动物遗传育种与繁殖教育部重点实验室",
+    person: "赵书红",
   },
   {
-
-    name: '国家生物产业基地（武汉）实验动物中心',
-    person: '胡丽华',
+    name: "国家生物产业基地（武汉）实验动物中心",
+    person: "胡丽华",
   },
   {
-
-    name: '生猪精准饲养与饲料安全技术湖北省工程实验室',
-    person: '晏向华',
+    name: "生猪精准饲养与饲料安全技术湖北省工程实验室",
+    person: "晏向华",
   },
   {
-
-    name: '动物生物药物教育部工程研究中心',
-    person: '陈焕春',
+    name: "动物生物药物教育部工程研究中心",
+    person: "陈焕春",
   },
   {
-
-    name: '湖北省动物疫苗工程技术研究中心',
-    person: '陈焕春',
+    name: "湖北省动物疫苗工程技术研究中心",
+    person: "陈焕春",
   },
   {
-
-    name: '动物疫病防控技术国家地方联合工程实验室(湖北)',
-    person: '肖少波',
+    name: "动物疫病防控技术国家地方联合工程实验室(湖北)",
+    person: "肖少波",
   },
   {
-
-    name: '预防兽医学湖北省重点实验室',
-    person: '肖少波',
+    name: "预防兽医学湖北省重点实验室",
+    person: "肖少波",
   },
   {
-
-    name: '农业部种猪质量监督检验测试中心(武汉)',
-    person: '赵书红',
+    name: "农业部种猪质量监督检验测试中心(武汉)",
+    person: "赵书红",
   },
   {
-
-    name: '农业部猪遗传育种重点开放实验室',
-    person: '赵书红',
+    name: "农业部猪遗传育种重点开放实验室",
+    person: "赵书红",
   },
   {
-
-    name: '动物疾病防控国际联合研究中心',
-    person: '周锐',
+    name: "动物疾病防控国际联合研究中心",
+    person: "周锐",
   },
   {
-
-    name: '动物遗传育种与繁殖国际联合研究中心',
-    person: '杨利国',
+    name: "动物遗传育种与繁殖国际联合研究中心",
+    person: "杨利国",
   },
   {
-
-    name: '国家兽药残留基准实验室',
-    person: '黄玲利',
+    name: "国家兽药残留基准实验室",
+    person: "黄玲利",
   },
   {
-
-    name: '国家兽药安全评价实验室',
-    person: '黄玲利',
+    name: "国家兽药安全评价实验室",
+    person: "黄玲利",
   },
   {
-
-    name: '农业农村部兽药残留检测重点实验室',
-    person: '黄玲利',
+    name: "农业农村部兽药残留检测重点实验室",
+    person: "黄玲利",
   },
   {
-
-    name: '农业部畜禽产品质量安全风险评估实验室（武汉）',
-    person: '黄玲利',
+    name: "农业部畜禽产品质量安全风险评估实验室（武汉）",
+    person: "黄玲利",
   },
   {
-
-    name: '农业农村部农业微生物资源利用重点实验室',
-    person: '陈焕春',
+    name: "农业农村部农业微生物资源利用重点实验室",
+    person: "陈焕春",
   },
   {
-
-    name: '农业农村部兽用诊断制剂创制重点实验室',
-    person: '何启盖',
+    name: "农业农村部兽用诊断制剂创制重点实验室",
+    person: "何启盖",
   },
-
-]
+];
 
 const columns = [
   {
-    title: '基地名称',
-    dataIndex: 'name',
-    key: 'name',
-    align: "center"
-
+    title: "基地名称",
+    dataIndex: "name",
+    key: "name",
+    align: "center",
   },
   {
-    title: '负责人',
-    dataIndex: 'person',
-    key: 'person',
-    align: "center"
+    title: "负责人",
+    dataIndex: "person",
+    key: "person",
+    align: "center",
   },
-]
-
+];
 </script>
 
 <template>
@@ -138,7 +114,7 @@ const columns = [
     <SwiperPage>
       <swiper-slide>
         <div class="card-item">
-          <img :src="getImageUrl('research/platform/list1.png')" alt="" />
+          <a-image :src="getImageUrl('research/platform/list1.png')" alt="" />
           <div class="right-text-wrap">
             <h5>华中农业大学动物育种与健康养殖前沿科学中心简介</h5>
             <p>
@@ -151,8 +127,16 @@ const columns = [
       </swiper-slide>
       <swiper-slide>
         <div class="img-list">
-          <img class="left-img" :src="getImageUrl('research/platform/list2.svg')" alt="" />
-          <img class="right-img" :src="getImageUrl('research/platform/list3.svg')" alt="" />
+          <a-image
+            class="left-img"
+            :src="getImageUrl('research/platform/list2.svg')"
+            alt=""
+          />
+          <a-image
+            class="right-img"
+            :src="getImageUrl('research/platform/list3.svg')"
+            alt=""
+          />
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -176,10 +160,11 @@ const columns = [
 
     img {
       width: 756px;
-      height: 503px;
+      height: auto;
     }
 
     .right-text-wrap {
+      flex: 1;
       color: #000;
 
       h5 {
@@ -217,5 +202,5 @@ const columns = [
     .flex-row;
     gap: 50px;
   }
-
-}</style>
+}
+</style>

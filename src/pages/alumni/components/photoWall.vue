@@ -27,6 +27,15 @@ const imgWidth = computed(() => {
     return Math.floor(90 / props.imgLength);
   }
 });
+const imgHeight = computed(() => {
+  if (props.imgLength === 1) {
+    return "auto";
+  } else if (props.imgLength > 3) {
+    return "25vh";
+  } else {
+    return "auto";
+  }
+});
 
 console.log(props, "props");
 onMounted(() => {});
@@ -37,7 +46,7 @@ onMounted(() => {});
       <a-image-preview-group>
         <div
           class="img-item"
-          :style="{ width: `${imgWidth}%` }"
+          :style="{ width: `${imgWidth}%`, maxHeight: `${imgHeight}` }"
           v-for="i in imgLength"
           :key="i"
         >
@@ -58,7 +67,6 @@ onMounted(() => {});
     flex-wrap: wrap;
     gap: 10px;
     .img-item {
-      max-height: 25vh;
       .flex-row;
       align-items: flex-start;
     }

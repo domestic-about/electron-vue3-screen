@@ -32,7 +32,6 @@ onMounted(() => {});
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#fff',
       }"
-      :loop="true"
       :spaceBetween="10"
       :navigation="true"
       :modules="modules"
@@ -54,7 +53,6 @@ onMounted(() => {});
 <style scoped lang="less">
 .swiper-page {
   width: 100%;
-  height: 100%;
 }
 
 .mySwiper2 {
@@ -64,7 +62,7 @@ onMounted(() => {});
   .autoplay-progress {
     position: absolute;
     right: 16px;
-    bottom: 16px;
+    top: 16px;
     z-index: 10;
     width: 48px;
     height: 48px;

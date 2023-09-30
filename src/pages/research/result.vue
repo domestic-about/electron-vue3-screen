@@ -56,7 +56,7 @@ const list = [
     <SwiperPage>
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="img-list">
-          <img
+          <a-image
             v-for="item in group"
             :key="item.name"
             :src="getImageUrl(`${item.img}`)"
@@ -71,7 +71,7 @@ const list = [
 <style lang="less" scoped>
 .wrap {
   .img-list {
-    width: 866px;
+    width: 1000px;
     margin: 40px auto 0;
     .flex-row;
     gap: 24px;

@@ -9,6 +9,11 @@ onMounted(() => {});
 const list = [
   [
     {
+      img: "talent/condition/list1.png",
+      label: "农业部种猪质量监督检验测试中心",
+      line: 2,
+    },
+    {
       img: "talent/condition/list2.png",
       label: "动物医院",
     },
@@ -29,10 +34,12 @@ const list = [
     {
       img: "talent/condition/list6.png",
       label: "第四综合楼",
+      line: 2,
     },
     {
       img: "talent/condition/list7.png",
       label: "生猪健康养殖协同创新中心",
+      line: 2,
     },
     {
       img: "talent/condition/list8.png",
@@ -47,6 +54,7 @@ const list = [
     {
       img: "talent/condition/list10.png",
       label: "四综会议室1",
+      line: 2,
     },
     {
       img: "talent/condition/list11.png",
@@ -59,12 +67,14 @@ const list = [
     {
       img: "talent/condition/list13.png",
       label: "四综会议室4",
+      line: 2,
     },
   ],
   [
     {
       img: "talent/condition/list14.jpg",
       label: "标本馆1",
+      line: 2,
     },
     {
       img: "talent/condition/list15.jpg",
@@ -77,10 +87,12 @@ const list = [
     {
       img: "talent/condition/list17.jpg",
       label: "四综实验室1",
+      line: 2,
     },
     {
       img: "talent/condition/list18.jpg",
       label: "四综实验室2",
+      line: 2,
     },
   ],
 ];
@@ -92,11 +104,11 @@ const list = [
         <div class="admin-list">
           <div
             class="admin-item"
-            :class="{ isBig: item.isBig }"
+            :class="{ line2: item.line === 2 }"
             v-for="item in group"
             :key="item.name"
           >
-            <img :src="getImageUrl(item.img)" alt="" />
+            <a-image :src="getImageUrl(item.img)" alt="" />
             <p>{{ item.label }}</p>
           </div>
         </div>
@@ -110,11 +122,13 @@ const list = [
   padding-top: 110px;
   .admin-list {
     .flex-row;
+    width: 100%;
     align-items: flex-start;
-    gap: 88px;
     .admin-item {
       background-color: #fff;
       padding: 10px;
+      &.line2 {
+      }
       img {
         max-width: 300px;
       }

@@ -71,7 +71,7 @@ const list = [
             v-for="item in list.slice(0, 6)"
             :key="item.text"
           >
-            <img :src="getImageUrl(`${item.img}`)" alt="" />
+            <a-image :src="getImageUrl(`${item.img}`)" alt="" />
             <p>{{ item.text }}</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ const list = [
             v-for="item in list.slice(6, 9)"
             :key="item.text"
           >
-            <img :src="getImageUrl(`${item.img}`)" alt="" />
+            <a-image :src="getImageUrl(`${item.img}`)" alt="" />
             <p>{{ item.text }}</p>
           </div>
         </div>
@@ -122,7 +122,7 @@ const list = [
     }
   }
   .text-wrap {
-    padding-top: 82px;
+    padding: 82px 100px;
     p {
       font-size: 32px;
       font-weight: 500;

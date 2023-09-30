@@ -36,7 +36,7 @@ onMounted(() => {});
   <div class="talent-wrap">
     <div class="bg"></div>
     <div class="title-wrap">
-      <h3>学院概况</h3>
+      <h3>人才培养</h3>
       <div class="tab-list">
         <van-button
           :class="{ active: route.path === tab.route }"

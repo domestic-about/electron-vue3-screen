@@ -46,9 +46,9 @@ const routes = [
     component: () => import("@/pages/contact/index.vue"),
   },
   {
-    path: "/party",
-    name: "party",
-    component: () => import("@/pages/party/index.vue"),
+    path: "/culture",
+    name: "culture",
+    component: () => import("@/pages/culture/index.vue"),
   },
   {
     path: "/research",
@@ -145,9 +145,9 @@ const routes = [
     component: () => import("@/pages/teacher/index.vue"),
   },
   {
-    path: "/thought",
-    name: "thought",
-    component: () => import("@/pages/thought/index.vue"),
+    path: "/party",
+    name: "party",
+    component: () => import("@/pages/party/index.vue"),
   },
   {
     path: "/alumni",

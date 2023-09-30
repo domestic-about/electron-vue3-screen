@@ -39,11 +39,11 @@ const list = computed(() => {
     },
     {
       label: "文化活动",
-      route: "/party",
+      route: "/culture",
     },
     {
       label: "党建与思政工作",
-      route: "/thought",
+      route: "/party",
     },
     {
       label: "校友风采",

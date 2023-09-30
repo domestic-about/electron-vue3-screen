@@ -55,8 +55,8 @@ onMounted(() => {});
       <swiper-slide>
         <div class="cen-wrap">
           <div class="left-img-list-wrap">
-            <img src="@/assets/img/intro/list1.png" alt="" />
-            <img src="@/assets/img/intro/list2.png" alt="" />
+            <a-image src="@/assets/img/intro/list1.png" alt="" />
+            <a-image src="@/assets/img/intro/list2.png" alt="" />
           </div>
           <div class="content-list">
             <div

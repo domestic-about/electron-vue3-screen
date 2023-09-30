@@ -23,7 +23,7 @@ const tabList = computed(() => [
   <div class="teacher-wrap">
     <div class="bg"></div>
     <div class="title-wrap">
-      <h3>党建与思想政治教育</h3>
+      <h3>校友风采</h3>
       <div class="tab-list">
         <van-button
           :class="{ active: route.path === tab.route }"

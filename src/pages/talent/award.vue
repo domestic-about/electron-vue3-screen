@@ -63,7 +63,7 @@ const list = [
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="card-list">
           <div class="card-item" v-for="item in group" :key="item.text">
-            <img :src="getImageUrl(`${item.img}`)" alt="" />
+            <a-image :src="getImageUrl(item.img)" alt="" />
             <p class="label">{{ item.text }}</p>
           </div>
         </div>

@@ -37,7 +37,7 @@ const list = [
       学院注重打造“校-省-国家”三级一流课程体系，“十三五”以来，入选国家级一流课程9门，省级一流课程8门。
     </p>
     <div class="img-list">
-      <img
+      <a-image
         :src="getImageUrl(item.img)"
         alt=""
         v-for="(item, index) in list"

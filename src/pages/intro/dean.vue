@@ -48,7 +48,7 @@ const list = [
     <div class="user-info">
       <div class="admin-list">
         <div class="admin-item" v-for="item in list" :key="item.name">
-          <img :src="getImageUrl(item.img)" alt="" />
+          <a-image :src="getImageUrl(item.img)" alt="" />
           <h5>{{ item.name }}</h5>
           <p>{{ item.label }}</p>
         </div>
