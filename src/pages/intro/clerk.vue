@@ -81,6 +81,7 @@ const list = [
   height: 100%;
   .user-info {
     height: 100%;
+    padding: 0 120px;
     .flex-row;
     .admin-list {
       .flex-row;

@@ -4,11 +4,12 @@ import { useRouter } from "vue-router";
 const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
+import { getImageUrl } from "@/utils";
 onMounted(() => {});
 const list = [
   [
     {
-      img: "",
+      img: "intro/lead/list1.png",
       name: "刘兴斌",
       admin: "职务：党委书记",
       email: "E-mail：xbl2001@mail.hzau.edu.cn",
@@ -17,7 +18,7 @@ const list = [
       info: "责任分工：主持党委全面工作。负责组织统战、思想政治、意识形态、党风廉政、班子建设、人力资源、离退休等工作。对接职能部门：组织部、统战部、人力资源部、教师工作部。联系党支部、系（中心、室）：动物遗传育种学系教工党支部、动物遗传育种学系",
     },
     {
-      img: "",
+      img: "intro/lead/list2.png",
       name: "赵书红",
       admin: "职务：院长",
       email: "E-mail：shzhao@mail.hzau.edu.cn",
@@ -28,7 +29,7 @@ const list = [
   ],
   [
     {
-      img: "",
+      img: "intro/lead/list3.png",
       name: "杨冬凯",
       admin: "职务：党委副书记",
       email: "E-mail：xbl2001@mail.hzau.edu.cn",
@@ -37,7 +38,7 @@ const list = [
       info: "责任分工：协助书记负责组织统战、思想政治、意识形态、党风廉政等工作。负责文化建设、学生教育管理、宣传、网络安全与信息化、纪检监察、共青团等工作。协管人才培养、校友与基金会。对接职能部门：组织部、统战部、宣传部、网络安全和信息化办公室（信息技术中心）、纪委办公室、监察室、巡察工作办公室、本科生院（学生工作部、武装部）、研究生院（研究生工作部）、团委、图书馆。联系党支部、系（中心、室）：基础兽医学系教工党支部、基础兽医学系",
     },
     {
-      img: "",
+      img: "intro/lead/list4.png",
       name: "晏向华",
       admin: "职务：党委副书记",
       email: "E-mail：xhyan@mail.hzau.edu.cn",
@@ -48,7 +49,7 @@ const list = [
   ],
   [
     {
-      img: "",
+      img: "intro/lead/list5.png",
       name: "彭贵青",
       admin: "职务：副院长",
       email: "E-mail：penggq@mail.hzau.edu.cn",
@@ -57,7 +58,7 @@ const list = [
       info: "责任分工：协助院长负责兽医学科建设。负责研究生人才培养、博士后、国际合作与交流等工作。协管动物医学专业建设。",
     },
     {
-      img: "",
+      img: "intro/lead/list6.png",
       name: "任竹青",
       admin: "职务：副院长",
       email: "E-mail：renzq@mail.hzau.edu.cn",
@@ -68,7 +69,7 @@ const list = [
   ],
   [
     {
-      img: "",
+      img: "intro/lead/list7.png",
       name: "李家奎",
       admin: "职务：副院长",
       email: "E-mail：lijk210@mail.hzau.edu.cn",
@@ -77,7 +78,7 @@ const list = [
       info: "责任分工：协助院长负责动物医学专业建设。负责仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等工作。协管兽医学科建设。",
     },
     {
-      img: "",
+      img: "intro/lead/list8.png",
       name: "胡丽华",
       admin: "职务：副院长",
       email: "E-mail：hulh@mail.hzau.edu.cn",
@@ -88,7 +89,7 @@ const list = [
   ],
   [
     {
-      img: "",
+      img: "intro/lead/list9.png",
       name: "易丹",
       admin: "职务：副院长",
       email: "E-mail：yidan810204@163.com",
@@ -105,7 +106,7 @@ const list = [
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
           <div class="admin-item" v-for="item in group" :key="item.name">
-            <img :src="item.img" alt="" />
+            <img :src="getImageUrl(`${item.img}`)" alt="" />
             <div class="admin-info">
               <h4 class="admin-name">{{ item.name }}</h4>
               <p>{{ item.admin }}</p>

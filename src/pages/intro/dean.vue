@@ -7,37 +7,37 @@ const props = defineProps({});
 onMounted(() => {});
 const list = [
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list1.png",
     name: "秦礼让",
     label: "任职时间：1952.09-1984.05",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list2.png",
     name: "彭宏泽",
     label: "任职时间：1984.06- 1991.03",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list3.png",
     name: "胡幼初",
     label: "任职时间：1991.03-1995.10",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list4.png",
     name: "陈焕春",
     label: "任职时间：1995.10-2002.12",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list5.png",
     name: "毕丁仁",
     label: "任职时间：2003.01 -2010.11",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list6.png",
     name: "赵俊龙",
     label: "任职时间：2010.12- 2017.04",
   },
   {
-    img: "intro/clerk/list6.png",
+    img: "intro/dean/list7.png",
     name: "曹胜波",
     label: "任职时间：2017.04-",
   },
