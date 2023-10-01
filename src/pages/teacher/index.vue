@@ -81,6 +81,7 @@ const list = [
     h3 {
       font-size: 32px;
       text-align: center;
+      font-weight: 600;
     }
     p {
       font-size: 24px;

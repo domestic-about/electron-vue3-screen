@@ -17,8 +17,10 @@ onMounted(() => {});
 <style scoped lang="less">
 .wrap {
   width: 100%;
+  height: 64px;
   img {
     width: 100%;
+    height: 64px;
   }
 }
 </style>

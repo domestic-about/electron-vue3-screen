@@ -10,6 +10,10 @@ console.log(route);
 const list = computed(() => {
   return [
     {
+      label: "首页",
+      route: "/home",
+    },
+    {
       label: "学校概况",
       route: "/intro",
     },
@@ -100,17 +104,18 @@ const clickItem = (item) => {
     .menu-list {
       padding: 20px;
       .flex-col;
-      gap: 10px;
+      gap: 5px;
       .menu-item {
-        border-radius: 12.786px;
+        cursor: pointer;
+        border-radius: 12px;
         background: #fff;
         display: flex;
-        padding: 19.805px 20px;
+        padding: 15px 20px;
         justify-content: center;
         align-items: center;
         color: #006e2f;
         text-align: center;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 500;
         &.active {
           border-radius: 8px;

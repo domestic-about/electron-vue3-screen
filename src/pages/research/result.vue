@@ -9,43 +9,43 @@ onMounted(() => {});
 const list = [
   [
     {
-      img: "research/item5/list1.png",
+      img: "research/item5/1.jpg",
     },
     {
-      img: "research/item5/list2.png",
+      img: "research/item5/2.jpg",
     },
     {
-      img: "research/item5/list3.png",
+      img: "research/item5/3.jpg",
     },
     {
-      img: "research/item5/list4.png",
+      img: "research/item5/4.jpg",
     },
     {
-      img: "research/item5/list5.png",
+      img: "research/item5/5.jpg",
     },
     {
-      img: "research/item5/list6.png",
+      img: "research/item5/6.jpg",
     },
     {
-      img: "research/item5/list7.png",
+      img: "research/item5/7.jpg",
     },
   ],
   [
     {
-      img: "research/item5/list8.png",
+      img: "research/item5/8.png",
     },
     {
-      img: "research/item5/list9.png",
+      img: "research/item5/9.jpg",
     },
     {
-      img: "research/item5/list10.png",
+      img: "research/item5/10.jpg",
     },
 
     {
-      img: "research/item5/list11.png",
+      img: "research/item5/11.jpg",
     },
     {
-      img: "research/item5/list12.png",
+      img: "research/item5/12.png",
     },
   ],
 ];
@@ -76,9 +76,9 @@ const list = [
     .flex-row;
     gap: 24px;
     flex-wrap: wrap;
-    img {
+    :deep(.ant-image) {
       width: 196px;
-      height: 279px;
+      height: auto;
     }
   }
 }

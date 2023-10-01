@@ -61,7 +61,7 @@ onMounted(() => {});
   .cen-wrap {
     .flex-row;
     gap: 110px;
-    margin-top: 120px;
+    margin-top: 40px;
     padding: 0 100px;
 
     .left-img-list-wrap {

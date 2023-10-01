@@ -158,7 +158,7 @@ const columns = [
     align-items: flex-start;
     gap: 61px;
 
-    img {
+    :deep(.ant-image) {
       width: 756px;
       height: auto;
     }

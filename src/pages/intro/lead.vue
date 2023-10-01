@@ -124,8 +124,9 @@ const list = [
 
 <style scoped lang="less">
 .wrap {
-  padding-top: 110px;
+  padding-top: 40px;
   .admin-list {
+    padding: 0 100px;
     .flex-row;
     align-items: flex-start;
     gap: 88px;
@@ -153,6 +154,7 @@ const list = [
           font-size: 26px;
           font-weight: 600;
           margin-top: 10px;
+          margin-bottom: 0;
         }
       }
     }

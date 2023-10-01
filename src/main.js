@@ -5,7 +5,6 @@ import App from "./App.vue";
 import "./assets/css/index.less";
 import "@/utils/rem";
 import { Image, Table, Empty } from "ant-design-vue";
-import "ant-design-vue/dist/reset.css";
 
 // 1. 引入你需要的组件
 import {

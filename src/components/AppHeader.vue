@@ -18,7 +18,7 @@ onMounted(() => {});
 <style scoped lang="less">
 .wrap {
   width: 100%;
-  height: 107px;
+  height: 106px;
   background-image: linear-gradient(180deg, #006e2f 0%, #003a7d 100%);
   background-size: 100% 100%;
   .flex-row;

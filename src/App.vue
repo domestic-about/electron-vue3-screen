@@ -29,10 +29,13 @@ const route = useRoute();
   .flex-col;
 
   .app-main-wrap {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 170px);
     overflow: scroll;
     width: 100%;
     color: #000;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &.home {
       height: 100%;
     }

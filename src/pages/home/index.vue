@@ -61,7 +61,7 @@ function Navgator() {
         </swiper-slide>
       </swiper>
     </div>
-    <button class="btn" @click="Navgator()">点击进入 ></button>
+    <button class="btn" @click="Navgator()">动科动医欢迎你 ></button>
   </div>
 </template>
 <style scoped lang="less">

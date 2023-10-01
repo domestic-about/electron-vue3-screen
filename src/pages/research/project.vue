@@ -330,6 +330,6 @@ onMounted(() => {});
 
 <style lang="less" scoped>
 .wrap {
-  padding: 40px 150px;
+  padding: 40px 200px;
 }
 </style>

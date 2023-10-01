@@ -74,7 +74,7 @@ const list = [
 
 <style scoped lang="less">
 .wrap {
-  padding-top: 110px;
+  padding-top: 60px;
   .card-list {
     .flex-row;
     align-items: flex-start;

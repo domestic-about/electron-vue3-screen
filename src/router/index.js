@@ -2,7 +2,11 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // import disclaimers from "@/pages/home/disclaimers.vue";
 const routes = [
   {
-    path: "",
+    path: "/",
+    redirect: "/home",
+  },
+  {
+    path: "/home",
     name: "home",
     meta: { header: false, footer: false },
     component: () => import("@/pages/home/index.vue"),
@@ -157,12 +161,12 @@ const routes = [
     children: [
       {
         path: "/alumni/north",
-        name: "alumni/north",
+        name: "alumni-north",
         component: () => import("@/pages/alumni/north.vue"),
       },
       {
         path: "/alumni/south",
-        name: "alumni/south",
+        name: "alumni-south",
         component: () => import("@/pages/alumni/south.vue"),
       },
     ],

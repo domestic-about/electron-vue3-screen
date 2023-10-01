@@ -141,7 +141,7 @@ const list = [
 
 <style scoped lang="less">
 .wrap {
-  padding-top: 110px;
+  padding-top: 60px;
   .admin-list {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -152,6 +152,7 @@ const list = [
     .admin-item {
       background-color: #fff;
       padding: 10px;
+      .flex-col;
       .img-list {
         &.row {
           .flex-row;

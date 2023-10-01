@@ -24,7 +24,8 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
-    fullscreen: true
+    fullscreen: true,
+    frame:false
   })
 
   // Test active push message to Renderer-process.
@@ -38,7 +39,7 @@ function createWindow() {
     // win.loadFile('dist/index.html')
     win.loadFile(path.join(process.env.DIST, 'index.html'))
   }
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
 
 app.on('window-all-closed', () => {

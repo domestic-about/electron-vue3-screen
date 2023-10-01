@@ -17,7 +17,7 @@ onMounted(() => {});
 
 <style scoped lang="less">
 .wrap {
-  padding-top: 110px;
+  padding-top: 60px;
   text-align: center;
   p {
     font-size: 32px;
