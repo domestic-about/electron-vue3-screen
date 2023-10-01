@@ -139,6 +139,28 @@ const twoList = [
     ],
   },
 ];
+const meetingList = [
+  {
+    img: "party/page7/1.png",
+    text: "与会人员在中美联合培养执业兽医博士（DVM）学术交流会进行研讨交流 2023",
+  },
+  {
+    img: "party/page7/2.png",
+    text: "会后合影",
+  },
+  {
+    img: "party/page7/3.jpg",
+    text: "加拿大阿尔伯塔大学Leluo Guan教授在反刍动物大数据与应用生物信息学国际研讨会上作报告 2023",
+  },
+  {
+    img: "party/page7/4.png",
+    text: "部分志愿者合影One Health世界青年兽医大会 2023",
+  },
+  {
+    img: "party/page7/5.png",
+    text: "陈焕春院士在One Health世界青年兽医大会开幕式上致辞 2023",
+  },
+];
 const fiveList = [
   {
     img: "party/page5/list1.png",
@@ -208,15 +230,14 @@ const jiuList = [
 </script>
 <template>
   <div class="wrap">
-    <div class="bg"></div>
     <div class="title-wrap">
       <h3>文化活动</h3>
     </div>
 
     <SwiperPage>
-      <swiper-slide v-for="item in list" :key="item.label">
+      <swiper-slide v-for="(item, index) in list" :key="item.label">
         <div class="page1-wrap">
-          <button class="btn">一、两季三节</button>
+          <button class="btn" v-if="index === 0">一、两季三节</button>
           <h5>{{ item.title }}</h5>
           <p class="label">{{ item.label }}</p>
           <div class="img-list">
@@ -230,7 +251,6 @@ const jiuList = [
 
       <swiper-slide>
         <div class="page2-wrap">
-          <button class="btn">一、两季三节</button>
           <div class="cen-wrap">
             <div class="img-item">
               <a-image :src="getImageUrl('party/list5.png')" alt="" />
@@ -247,7 +267,6 @@ const jiuList = [
       </swiper-slide>
       <swiper-slide>
         <div class="page2-wrap">
-          <button class="btn">一、两季三节</button>
           <div class="cen-wrap">
             <div class="img-item">
               <a-image :src="getImageUrl('party/list6.png')" alt="" />
@@ -265,7 +284,6 @@ const jiuList = [
       </swiper-slide>
       <swiper-slide>
         <div class="page2-wrap">
-          <button class="btn">一、两季三节</button>
           <div class="cen-wrap">
             <div class="img-item">
               <a-image :src="getImageUrl('party/list7.png')" alt="" />
@@ -299,6 +317,12 @@ const jiuList = [
             近年来，学院主导并承办了多项国际或国内重要学术会议，其中包括第二届One
             Health世界青年兽医大会、首届反刍动物大数据与应用生物信息学国际研讨会等，同时学院鼓励同学们参加相关会议，聆听学术大咖的讲座，了解学术前沿最新进展，领略畜牧兽医学科魅力。
           </p>
+          <div class="img-list">
+            <div class="img-item" v-for="item in meetingList" :key="item.text">
+              <a-image :src="getImageUrl(`${item.img}`)" alt="" />
+              <p>{{ item.text }}</p>
+            </div>
+          </div>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -321,7 +345,6 @@ const jiuList = [
       </swiper-slide>
       <swiper-slide>
         <div class="page6-wrap">
-          <button class="btn">八、文体活动</button>
           <div class="cen-wrap">
             <div class="img-item">
               <a-image :src="getImageUrl('party/page6/list1.png')" alt="" />
@@ -341,7 +364,6 @@ const jiuList = [
       </swiper-slide>
       <swiper-slide>
         <div class="page7-wrap">
-          <button class="btn">八、文体活动</button>
           <div class="card-list">
             <div class="card-item" v-for="item in sevenList" :key="item.label">
               <div class="img-item">
@@ -355,7 +377,6 @@ const jiuList = [
       </swiper-slide>
       <swiper-slide>
         <div class="page8-wrap">
-          <button class="btn">八、文体活动</button>
           <div class="cen-wrap">
             <div class="img-item">
               <a-image :src="getImageUrl('party/page6/list4.png')" alt="" />
@@ -391,22 +412,6 @@ const jiuList = [
   position: relative;
   padding: 24px;
 
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.17;
-    background: linear-gradient(
-      0deg,
-      #d9d9d9 -13.91%,
-      rgba(217, 217, 217, 0) 83.33%
-    );
-    background-image: url("@img/intro/bg.png");
-    background-size: 100% 100%;
-  }
-
   .title-wrap {
     h3 {
       font-size: 48px;
@@ -430,6 +435,7 @@ const jiuList = [
       font-size: 24px;
       font-weight: 500;
       margin-top: 12px;
+      text-align: center;
     }
   }
 
@@ -500,6 +506,22 @@ const jiuList = [
     .label {
       margin-top: 40px;
       font-size: 24px;
+    }
+    .img-list {
+      .flex-row;
+      align-items: stretch;
+      gap: 16px;
+      .img-item {
+        width: auto;
+        height: auto;
+        padding: 12px;
+        background-color: #fff;
+
+        :deep(.ant-image) {
+          width: 300px;
+          height: auto;
+        }
+      }
     }
   }
 

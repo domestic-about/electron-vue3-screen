@@ -33,7 +33,7 @@ onMounted(() => {});
         '--swiper-pagination-color': '#006E2F',
       }"
       :pagination="{
-        type: 'progressbar',
+        type: 'fraction',
       }"
       :spaceBetween="10"
       :navigation="true"
@@ -57,7 +57,9 @@ onMounted(() => {});
 .swiper-page {
   width: 100%;
   height: 100%;
+
   :deep(.swiper) {
+    padding-bottom: 40px;
     .swiper-button-prev,
     .swiper-button-next {
       width: 64px;

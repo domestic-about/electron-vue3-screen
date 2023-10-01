@@ -24,7 +24,7 @@ onMounted(() => {});
     font-weight: 500;
     padding: 0 40px;
   }
-  img {
+  :deep(.ant-image) {
     width: 689px;
     height: 464px;
     margin-top: 34px;

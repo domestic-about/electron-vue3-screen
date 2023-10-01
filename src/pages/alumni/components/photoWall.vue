@@ -20,7 +20,7 @@ const props = defineProps({
 
 const imgWidth = computed(() => {
   if (props.imgLength === 1) {
-    return 50;
+    return 80;
   } else if (props.imgLength > 3) {
     return Math.floor(160 / props.imgLength);
   } else {
@@ -31,7 +31,7 @@ const imgHeight = computed(() => {
   if (props.imgLength === 1) {
     return "60vh";
   } else if (props.imgLength > 3) {
-    return "25vh";
+    return "30vh";
   } else {
     return "60vh";
   }
@@ -43,7 +43,7 @@ onMounted(() => {});
 <template>
   <div class="photo-wall">
     <div class="img-list">
-      <a-image-preview-group>
+      <a-image-preview-group v-if="imgLength">
         <div
           class="img-item"
           :style="{ width: `${imgWidth}%`, maxHeight: `${imgHeight}` }"
@@ -56,6 +56,9 @@ onMounted(() => {});
           />
         </div>
       </a-image-preview-group>
+      <div class="empty-wrap" v-else>
+        <a-empty description="暂无数据" />
+      </div>
     </div>
   </div>
 </template>
@@ -71,6 +74,16 @@ onMounted(() => {});
       align-items: flex-start;
     }
     .ant-image {
+    }
+  }
+  .empty-wrap {
+    margin-top: 100px;
+    :deep(.ant-empty) {
+      font-size: 32px;
+      color: #666;
+      .ant-empty-image {
+        height: 250px;
+      }
     }
   }
 }

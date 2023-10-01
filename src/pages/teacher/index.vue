@@ -23,7 +23,6 @@ const list = [
 </script>
 <template>
   <div class="teacher-wrap">
-    <div class="bg"></div>
     <div class="title-wrap">
       <h3>师资队伍</h3>
     </div>
@@ -66,22 +65,7 @@ const list = [
   height: 100%;
   position: relative;
   padding: 24px;
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.17;
-    z-index: -1;
-    background: linear-gradient(
-      0deg,
-      #d9d9d9 -13.91%,
-      rgba(217, 217, 217, 0) 83.33%
-    );
-    background-image: url("@img/intro/bg.png");
-    background-size: 100% 100%;
-  }
+
   .title-wrap {
     h3 {
       font-size: 48px;

@@ -34,7 +34,6 @@ onMounted(() => {});
 </script>
 <template>
   <div class="talent-wrap">
-    <div class="bg"></div>
     <div class="title-wrap">
       <h3>人才培养</h3>
       <div class="tab-list">

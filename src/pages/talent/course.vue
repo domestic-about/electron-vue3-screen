@@ -60,7 +60,7 @@ const list = [
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 34px;
-    img {
+    :deep(.ant-image) {
       width: 380px;
       height: 258px;
     }

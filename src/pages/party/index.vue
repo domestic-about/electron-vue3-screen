@@ -55,7 +55,6 @@ const list = [
 </script>
 <template>
   <div class="teacher-wrap">
-    <div class="bg"></div>
     <div class="title-wrap">
       <h3>党建与思想政治教育</h3>
     </div>
@@ -80,22 +79,7 @@ const list = [
   height: 100%;
   position: relative;
   padding: 24px;
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.17;
-    z-index: -1;
-    background: linear-gradient(
-      0deg,
-      #d9d9d9 -13.91%,
-      rgba(217, 217, 217, 0) 83.33%
-    );
-    background-image: url("@img/intro/bg.png");
-    background-size: 100% 100%;
-  }
+
   .title-wrap {
     h3 {
       font-size: 48px;
@@ -104,7 +88,7 @@ const list = [
     }
   }
   .cen-wrap {
-    margin: 102px auto 0;
+    margin: 40px auto 0;
     padding: 0 100px;
     color: #000;
     p {
@@ -118,14 +102,22 @@ const list = [
         width: 410px;
         height: 321px;
         padding: 12px;
+
         background-color: #fff;
+        border-radius: 10px;
         :deep(.ant-image) {
           width: 386px;
           height: 217px;
+          border-radius: 10px;
+          img {
+            border-radius: 10px;
+          }
         }
         p {
           font-size: 24px;
           font-weight: 500;
+          margin-top: 10px;
+          text-align: center;
         }
       }
     }
