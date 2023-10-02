@@ -14,7 +14,7 @@ const list = computed(() => {
       route: "/home",
     },
     {
-      label: "学校概况",
+      label: "学院概况",
       route: "/intro",
     },
     {
