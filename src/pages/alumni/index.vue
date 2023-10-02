@@ -23,7 +23,7 @@ const tabList = computed(() => [
   <div class="teacher-wrap">
     <div class="title-wrap">
       <h3>校友风采</h3>
-      <div class="tab-list">
+      <!-- <div class="tab-list">
         <van-button
           :class="{ active: route.path === tab.route }"
           v-for="tab in tabList"
@@ -32,7 +32,7 @@ const tabList = computed(() => [
         >
           {{ tab.label }}
         </van-button>
-      </div>
+      </div> -->
     </div>
     <div class="content-wrap">
       <router-view v-slot="{ Component }">
