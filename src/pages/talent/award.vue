@@ -9,11 +9,11 @@ onMounted(() => {});
 const list = [
   [
     {
-      img: "talent/award/list1.png",
+      img: "talent/award/list1.jpg",
       text: "武进人才杯”江苏省第十七届大学生职业规划大赛（本科组）-二等奖-杨依晨",
     },
     {
-      img: "talent/award/list2.png",
+      img: "talent/award/list2.jpg",
       text: "2023年中国（浙江·江山）蜂业博览会暨全国蜂产品市场信息交流会-优秀论文-王振、刘嘉维、方芳等",
     },
     {
@@ -23,7 +23,7 @@ const list = [
   ],
   [
     {
-      img: "talent/award/list4.png",
+      img: "talent/award/list4.jpg",
       text: "中国研究生乡村振兴科技强农+创新大赛“强国杯”第五届牛精英挑战赛-二等奖-耿阳、张博、杜雯鹃、杜宇峰",
     },
     {
@@ -45,7 +45,7 @@ const list = [
       text: "2022年全国农科研究生乡村振兴志愿服务活动优秀成果奖-特等奖-方芳、冯小娟、李鸿屹、吕洁、刘嘉维、王振、黎骏钊、吴家旭",
     },
     {
-      img: "talent/award/list9.png",
+      img: "talent/award/list9.jpg",
       text: "2023年全国大学生英语竞赛（NECCS）-A类二等奖-胡雅文",
     },
   ],

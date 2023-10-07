@@ -13,9 +13,20 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
-const props = defineProps({});
+const props = defineProps({
+  isPagination: { default: true },
+  isAuto: { default: false },
+});
+const emit = defineEmits(["onSlideChange"]);
 
-const modules = [Navigation, Autoplay, Pagination];
+const modules = [Navigation];
+if (props.isPagination) {
+  modules.push(Pagination);
+}
+if (props.isAuto) {
+  modules.push(Autoplay);
+}
+const swiperRef = ref(null);
 const progressCircle = ref(null);
 const progressContent = ref(null);
 const onAutoplayTimeLeft = (s, time, progress) => {
@@ -24,6 +35,22 @@ const onAutoplayTimeLeft = (s, time, progress) => {
 };
 
 onMounted(() => {});
+
+const slideTo = (index) => {
+  console.log(swiperRef.value, "swiperRef.value");
+  swiperRef.value.slideTo(index);
+};
+
+const onSwiper = (swiper) => {
+  console.log(swiper, "onSwiper");
+  swiperRef.value = swiper;
+};
+const onSlideChange = (swiper) => {
+  emit("onSlideChange", swiper);
+};
+console.log(props, "props");
+
+defineExpose({ slideTo });
 </script>
 <template>
   <div class="swiper-page">
@@ -32,13 +59,29 @@ onMounted(() => {});
         '--swiper-navigation-color': '#006E2F',
         '--swiper-pagination-color': '#006E2F',
       }"
-      :pagination="{
-        type: 'fraction',
-      }"
+      :autoplay="
+        props.isAuto
+          ? {
+              delay: 2500,
+              disableOnInteraction: false,
+            }
+          : false
+      "
+      @autoplayTimeLeft="onAutoplayTimeLeft"
+      :pagination="
+        props.isPagination
+          ? {
+              type: 'fraction',
+            }
+          : null
+      "
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
       :spaceBetween="10"
       :navigation="true"
       :modules="modules"
       class="mySwiper2"
+      ref="swiperRef"
     >
       <slot />
 
@@ -74,6 +117,9 @@ onMounted(() => {});
         font-weight: 700;
       }
     }
+    .swiper-pagination {
+      font-size: 16px;
+    }
   }
 
   .autoplay-progress {
@@ -87,7 +133,7 @@ onMounted(() => {});
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--swiper-theme-color);
+    color: var(--primary-color);
   }
 
   .autoplay-progress svg {
@@ -99,7 +145,7 @@ onMounted(() => {});
     width: 100%;
     height: 100%;
     stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
+    stroke: var(--primary-color);
     fill: none;
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
     stroke-dasharray: 125.6;

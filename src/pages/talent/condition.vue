@@ -87,12 +87,12 @@ const list = [
     {
       img: [
         "talent/condition/list14.jpg",
-        "talent/condition/list15.jpg",
+        // "talent/condition/list15.jpg",
         "talent/condition/list16.jpg",
       ],
       label: "标本馆",
       flex: "col",
-      gridColumn: "1 / 3",
+      gridColumn: "2 / 4",
       gridRow: " 1 / 3",
     },
 
@@ -100,7 +100,7 @@ const list = [
       img: ["talent/condition/list17.jpg", "talent/condition/list18.jpg"],
       label: "四综实验室",
       flex: "row",
-      gridColumn: "3 / 9",
+      gridColumn: "4 / 8",
       gridRow: " 1 / 3",
     },
   ],
@@ -108,7 +108,7 @@ const list = [
 </script>
 <template>
   <div class="wrap">
-    <SwiperPage>
+    <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
           <div
@@ -156,6 +156,7 @@ const list = [
       .img-list {
         &.row {
           .flex-row;
+          align-items: flex-start;
         }
         &.col {
           .flex-col;

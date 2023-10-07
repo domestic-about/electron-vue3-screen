@@ -36,10 +36,10 @@ const list = [
           </p>
           <div class="img-list">
             <div class="left-img-text-wrap">
-              <a-image :src="getImageUrl('teacher/list1.png')" alt="" />
+              <a-image :src="getImageUrl('teacher/list1.jpg')" alt="" />
               <p>畜禽健康养殖教师团队合影</p>
             </div>
-            <a-image :src="getImageUrl('teacher/list2.png')" alt="" />
+            <a-image :src="getImageUrl('teacher/list2.jpg')" alt="" />
           </div>
         </div>
       </swiper-slide>
@@ -77,11 +77,13 @@ const list = [
     }
   }
   .page1-wrap {
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 0 100px;
     h3 {
       font-size: 32px;
       text-align: center;
       font-weight: 600;
+      margin-bottom: 10px;
     }
     p {
       font-size: 24px;

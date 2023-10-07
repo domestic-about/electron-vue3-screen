@@ -102,7 +102,7 @@ const list = [
 </script>
 <template>
   <div class="wrap">
-    <SwiperPage>
+    <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
           <div class="admin-item" v-for="item in group" :key="item.name">

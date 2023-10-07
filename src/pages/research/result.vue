@@ -12,13 +12,13 @@ const list = [
       img: "research/item5/1.jpg",
     },
     {
-      img: "research/item5/2.jpg",
+      img: "research/item5/2.png",
     },
     {
       img: "research/item5/3.jpg",
     },
     {
-      img: "research/item5/4.jpg",
+      img: "research/item5/4.png",
     },
     {
       img: "research/item5/5.jpg",
@@ -42,7 +42,7 @@ const list = [
     },
 
     {
-      img: "research/item5/11.jpg",
+      img: "research/item5/11.png",
     },
     {
       img: "research/item5/12.png",
@@ -71,13 +71,13 @@ const list = [
 <style lang="less" scoped>
 .wrap {
   .img-list {
-    width: 1000px;
+    width: 1200px;
     margin: 40px auto 0;
     .flex-row;
     gap: 24px;
     flex-wrap: wrap;
     :deep(.ant-image) {
-      width: 196px;
+      width: 20%;
       height: auto;
     }
   }
