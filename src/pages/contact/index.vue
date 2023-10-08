@@ -61,17 +61,15 @@ const list = [
             “从干细胞、系统生物学到猪生产”中英双边学术研讨会、华中农大-美国依阿华州立大学Ensminger动物科学双边学术研讨会、中加动物基因组学学术研讨会、
             “中美加三边反刍动物环境生理与健康”学术研讨会、猪营养与肠道健康国际学术研讨会、亚洲猪病学会第8次学术会议等国际会议。
           </p>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="img-list">
-          <div
-            class="img-item"
-            v-for="item in list.slice(0, 6)"
-            :key="item.text"
-          >
-            <a-image :src="getImageUrl(`${item.img}`)" alt="" />
-            <p>{{ item.text }}</p>
+          <div class="img-list">
+            <div
+              class="img-item"
+              v-for="item in list.slice(0, 3)"
+              :key="item.text"
+            >
+              <a-image :src="getImageUrl(`${item.img}`)" alt="" />
+              <p>{{ item.text }}</p>
+            </div>
           </div>
         </div>
       </swiper-slide>
@@ -79,7 +77,7 @@ const list = [
         <div class="img-list">
           <div
             class="img-item"
-            v-for="item in list.slice(6, 9)"
+            v-for="item in list.slice(3, 9)"
             :key="item.text"
           >
             <a-image :src="getImageUrl(`${item.img}`)" alt="" />
@@ -104,9 +102,10 @@ const list = [
     }
   }
   .text-wrap {
-    padding: 82px 100px;
+    padding: 40px 100px;
     p {
-      font-size: 32px;
+      font-size: 24px;
+      line-height: 40px;
       font-weight: 500;
       color: #000;
     }
@@ -124,9 +123,15 @@ const list = [
       height: 321px;
       padding: 12px;
       background-color: #fff;
+      border-radius: 10px;
       :deep(.ant-image) {
         width: 386px;
         height: 217px;
+        .ant-image-img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
       }
       p {
         font-size: 24px;

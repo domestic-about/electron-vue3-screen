@@ -4,7 +4,7 @@ import router from "./router";
 import App from "./App.vue";
 import "./assets/css/index.less";
 import "@/utils/rem";
-import { Image, Table, Empty } from "ant-design-vue";
+import { Image, Table, Empty, Modal } from "ant-design-vue";
 
 // 1. 引入你需要的组件
 import {
@@ -29,6 +29,7 @@ app.use(Tab);
 app.use(FloatingBubble);
 app.use(Image);
 app.use(Empty);
+app.use(Modal);
 app.use(Table);
 app.use(router);
 app

@@ -141,8 +141,16 @@ const columns = [
       </swiper-slide>
       <swiper-slide>
         <div class="cen-wrap">
-          <a-table :dataSource="dataSource1.slice(0, 11)" :columns="columns" />
-          <a-table :dataSource="dataSource1.slice(11, 21)" :columns="columns" />
+          <a-table
+            :dataSource="dataSource1.slice(0, 10)"
+            :columns="columns"
+            :pagination="false"
+          />
+          <a-table
+            :dataSource="dataSource1.slice(10, 21)"
+            :columns="columns"
+            :pagination="false"
+          />
         </div>
       </swiper-slide>
     </SwiperPage>

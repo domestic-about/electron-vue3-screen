@@ -13,11 +13,11 @@ const list = [
       "为了让新生快速了解学校和专业，学院立足于“动科动医，永创第一”口号，在迎新季举办了“狮山寻宝”、“狮山寻蜜”、“狮山寻灵”等一系列融合牧医专业特色学科体验活动，旨在提升新生专业兴趣，感受学科魅力，在更人文、更开放、更自在的校园氛围中提升新生专业兴趣，感受学科魅力。",
     imgList: [
       {
-        img: "party/list1.png",
+        img: "culture/list1.jpg",
         text: "新生开学典礼暨“筑梦青春”导师面对面活动",
       },
       {
-        img: "party/list2.png",
+        img: "culture/list2.jpg",
         text: "狮山寻蜜活动",
       },
     ],
@@ -28,11 +28,11 @@ const list = [
       "学院积极响应学校号召，鼓励全院毕业生参加毕业典礼、毕业巡游、毕业荧光跑以及毕业集市等系列活动，同时，学院结合自身专业特色，在毕业巡游队伍中增加了独特的马队，祝福毕业生们在未来的学习中一马当先、马到成功，给学生的大学生涯画上完美句号。",
     imgList: [
       {
-        img: "party/list3.png",
+        img: "culture/list3.jpg",
         text: "高翅书记在毕业典礼上发言",
       },
       {
-        img: "party/list4.png",
+        img: "culture/list4.jpg",
         text: "动科动医学院毕业巡游马队",
       },
     ],
@@ -45,15 +45,15 @@ const twoList = [
       "牧医三人行2012年3月正式启动运行，是基于学院大学生成长、发展的需要创建的师生互动交流平台，由学院学生工作办公室负责建设和管理，根据不同生涯阶段、不同学生群体、不同个性特点的多样化需求，搭建学生与专家教授、知名校友、朋辈学长的“面对面”平台，帮助学生释疑解惑，提升综合素质，促进学生全面发展和成长成才。",
     list: [
       {
-        img: "party/page3/list1.png",
+        img: "culture/page3/list1.jpg",
         text: "彭贵青教授同牧医学子畅谈生涯规划",
       },
       {
-        img: "party/page3/list2.png",
+        img: "culture/page3/list2.jpg",
         text: "高嘉秀学姐分享保研经验",
       },
       {
-        img: "party/page3/list3.png",
+        img: "culture/page3/list3.jpg",
         text: "刘兴斌书记和同学们畅谈",
       },
     ],
@@ -64,15 +64,15 @@ const twoList = [
       "动科动医学院始终牢记习近平总书记的殷殷嘱托，以强农兴牧为己任，通过搭建暑期社会实践、生产实习等平台，鼓励牧医学子深入基层和生产一线，助力乡村振兴。我院社会实践立项团队内容丰富、形式多样，足迹遍布十余省市，在各级媒体发表千余篇新闻稿，其中，多项先进事迹被学习强国、人民日报客户端、中国青年网等多家媒体报道。",
     list: [
       {
-        img: "party/page3/list4.png",
+        img: "culture/page3/list4.jpg",
         text: "同学们在进行社会实践访谈",
       },
       {
-        img: "party/page3/list5.png",
+        img: "culture/page3/list5.png",
         text: "社会实践深入稻田现场",
       },
       {
-        img: "party/page3/list6.png",
+        img: "culture/page3/list6.png",
         text: "动物园社会实践现场",
       },
     ],
@@ -83,15 +83,15 @@ const twoList = [
       "学院以陈焕春院士的“创新、创造、创业”三创理念为指导，通过设立本科生导师制度并搭建SRF、本创、省创、国创等系列创新训练平台，致力于为学生打造创新创业“蓄水池”，积极引导本科生进入实验室、鼓励学生参加创新创业大赛，提升我院大学生实践和自主创新能力。",
     list: [
       {
-        img: "party/page3/list7.png",
+        img: "culture/page3/list7.jpg",
         text: "动科动医学子参加“互联网+”比赛",
       },
       {
-        img: "party/page3/list8.png",
+        img: "culture/page3/list8.png",
         text: "动科动医团队创新创业大赛获金奖",
       },
       {
-        img: "party/page3/list9.png",
+        img: "culture/page3/list9.jpg",
         text: "动科动医学子参加“挑战杯”",
       },
     ],
@@ -102,19 +102,19 @@ const twoList = [
       "学院立足于培养学生的专业兴趣，扩展学生的专业眼界，举办了骨骼拼装大赛、动物基础技能大赛、宠物美容技能大赛等系列学科特色活动，将专业知识融入到实际操作中，在丰富学生课余生活的同时，提高牧医学子的专业技术水平。",
     list: [
       {
-        img: "party/page3/list10.png",
+        img: "culture/page3/list10.jpg",
         text: "研究生学长为大家讲解蜜蜂相关知识",
       },
       {
-        img: "party/page3/list11.png",
+        img: "culture/page3/list11.jpg",
         text: "宠物基础技能大赛现场",
       },
       {
-        img: "party/page3/list12.png",
+        img: "culture/page3/list12.png",
         text: "骨骼拼装大赛现场",
       },
       {
-        img: "party/page3/list13.png",
+        img: "culture/page3/list13.jpg",
         text: "幼儿园志愿服务",
       },
     ],
@@ -125,15 +125,15 @@ const twoList = [
       "学院坚持奉行“奉献、友爱、互助、进步”的志愿精神，依托成立的青年志愿者工作中心和牧医阳光志愿服务队，联合武汉动物园、明星幼儿园、武汉市小动物保护协会以及西苑社区等多个志愿服务基地，策划举办了“动物义诊”“流浪动物救助”“武汉动物园志愿者讲解”等系列活动服务15000余人次，累计服务时长达7万余小时，荣获多项志愿服务奖项。",
     list: [
       {
-        img: "party/page3/list14.png",
+        img: "culture/page3/list14.jpg",
         text: "闵婧介绍学院学科特色实物展品",
       },
       {
-        img: "party/page3/list15.png",
+        img: "culture/page3/list15.jpg",
         text: "“人畜共患病”科普宣讲",
       },
       {
-        img: "party/page3/list16.png",
+        img: "culture/page3/list16.png",
         text: "宠物医院志愿服务",
       },
     ],
@@ -141,53 +141,53 @@ const twoList = [
 ];
 const meetingList = [
   {
-    img: "party/page7/1.png",
+    img: "culture/page7/1.png",
     text: "与会人员在中美联合培养执业兽医博士（DVM）学术交流会进行研讨交流 2023",
   },
   {
-    img: "party/page7/2.png",
+    img: "culture/page7/2.png",
     text: "会后合影",
   },
   {
-    img: "party/page7/3.jpg",
+    img: "culture/page7/3.jpg",
     text: "加拿大阿尔伯塔大学Leluo Guan教授在反刍动物大数据与应用生物信息学国际研讨会上作报告 2023",
   },
   {
-    img: "party/page7/4.png",
+    img: "culture/page7/4.png",
     text: "部分志愿者合影One Health世界青年兽医大会 2023",
   },
   {
-    img: "party/page7/5.png",
+    img: "culture/page7/5.png",
     text: "陈焕春院士在One Health世界青年兽医大会开幕式上致辞 2023",
   },
 ];
 const fiveList = [
   {
-    img: "party/page5/list1.png",
+    img: "culture/page5/list1.jpg",
     text: "礼仪队",
   },
   {
-    img: "party/page5/list2.png",
+    img: "culture/page5/list2.jpg",
     text: "合唱团深情演唱《丹顶鹤》",
   },
   {
-    img: "party/page5/list3.png",
+    img: "culture/page5/list3.jpg",
     text: "牧艺年华舞蹈团",
   },
   {
-    img: "party/page5/list4.png",
+    img: "culture/page5/list4.jpg",
     text: "瑧行剧社演出话剧《十二公民》",
   },
 ];
 const sevenList = [
   {
-    img: "party/page6/list2.png",
+    img: "culture/page6/list2.jpg",
     text: "合唱团深情演唱《丹顶鹤》",
     label:
       "牧艺年华合唱团是一支热爱音乐的团体，他们用情感连接着每一个音符,曾多次参加“五月的花海”合唱比赛并多次获一等奖佳绩。",
   },
   {
-    img: "party/page6/list3.png",
+    img: "culture/page6/list3.jpg",
     text: "牧艺年华舞蹈团",
     label:
       "牧艺年华舞蹈团由一群对舞蹈充满热忱的同学们组成，除了提升舞蹈技巧和探索各种风格，他们还致力于在舞蹈中传达情感，舞动青春。",
@@ -199,11 +199,11 @@ const jiuList = [
       "动科动医学院立足于“无体育不狮山，无体育不青春，无体育不人生”的运动理念，积极营造“动科动医、永创第一”的运动氛围，鼓励全院师生积极参与到体育运动中。其中，学院运动健将们多次在狮子山杯系列赛事中取得优异成绩。",
     list: [
       {
-        img: "party/page6/list5.png",
+        img: "culture/page6/list5.jpg",
         text: "女足夺冠",
       },
       {
-        img: "party/page6/list6.png",
+        img: "culture/page6/list6.jpg",
         text: "“狮子山杯”足球赛夺冠",
       },
     ],
@@ -213,15 +213,15 @@ const jiuList = [
       "目前，我院下设9个体育俱乐部，并以“狮子山杯”和“牧医杯”系列赛事为出发点，鼓励同学们“走出寝室、走向运动场、走近体育”。",
     list: [
       {
-        img: "party/page6/list7.png",
+        img: "culture/page6/list7.jpg",
         text: "女足夺冠",
       },
       {
-        img: "party/page6/list8.png",
+        img: "culture/page6/list8.jpg",
         text: "“狮子山杯”足球赛夺冠",
       },
       {
-        img: "party/page6/list9.png",
+        img: "culture/page6/list9.jpg",
         text: "“狮子山杯”足球赛夺冠",
       },
     ],
@@ -253,7 +253,7 @@ const jiuList = [
         <div class="page2-wrap">
           <div class="cen-wrap">
             <div class="img-item">
-              <a-image :src="getImageUrl('party/list5.png')" alt="" />
+              <a-image :src="getImageUrl('culture/list5.jpg')" alt="" />
               <p>“朗读者”决赛现场</p>
             </div>
             <div class="text-wrap">
@@ -269,7 +269,7 @@ const jiuList = [
         <div class="page2-wrap">
           <div class="cen-wrap">
             <div class="img-item">
-              <a-image :src="getImageUrl('party/list6.png')" alt="" />
+              <a-image :src="getImageUrl('culture/list6.jpg')" alt="" />
               <p>“五月的花海”比赛现场</p>
             </div>
 
@@ -286,7 +286,7 @@ const jiuList = [
         <div class="page2-wrap">
           <div class="cen-wrap">
             <div class="img-item">
-              <a-image :src="getImageUrl('party/list7.png')" alt="" />
+              <a-image :src="getImageUrl('culture/list7.jpg')" alt="" />
               <p>“狮山欢乐节”现场</p>
             </div>
             <div class="text-wrap">
@@ -347,7 +347,7 @@ const jiuList = [
         <div class="page6-wrap">
           <div class="cen-wrap">
             <div class="img-item">
-              <a-image :src="getImageUrl('party/page6/list1.png')" alt="" />
+              <a-image :src="getImageUrl('culture/page6/list1.jpg')" alt="" />
               <p>礼仪队</p>
             </div>
             <div class="text-wrap">
@@ -379,7 +379,7 @@ const jiuList = [
         <div class="page8-wrap">
           <div class="cen-wrap">
             <div class="img-item">
-              <a-image :src="getImageUrl('party/page6/list4.png')" alt="" />
+              <a-image :src="getImageUrl('culture/page6/list4.jpg')" alt="" />
               <p>瑧行剧社演出话剧《十二公民》</p>
             </div>
             <div class="text-wrap">
@@ -425,10 +425,15 @@ const jiuList = [
     height: 321px;
     padding: 12px;
     background-color: #fff;
-
+    border-radius: 10px;
     :deep(.ant-image) {
       width: 386px;
       height: 217px;
+      .ant-image-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
 
     p {
