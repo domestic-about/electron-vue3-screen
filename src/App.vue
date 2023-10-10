@@ -27,10 +27,10 @@ const route = useRoute();
 .app-wrap {
   height: 100vh;
   .flex-col;
-
+  overflow: hidden;
   .app-main-wrap {
     height: calc(100vh - 170px);
-    overflow: scroll;
+    overflow: hidden;
     width: 100%;
     color: #000;
     &::-webkit-scrollbar {

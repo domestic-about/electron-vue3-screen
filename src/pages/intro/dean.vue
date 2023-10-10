@@ -42,7 +42,7 @@ const list = [
     {
       img: "intro/dean/list7.jpg",
       name: "曹胜波",
-      label: "任职时间：2017.04 -",
+      label: "任职时间：2017.04 - 2019.06",
     },
     {
       img: "intro/dean/list8.jpg",

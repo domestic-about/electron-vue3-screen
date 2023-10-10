@@ -2,20 +2,30 @@
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { ipcRenderer } from "electron";
 
 // Import Swiper styles
 import "swiper/css";
 
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import {
+  FullscreenOutlined,
+  FullscreenExitOutlined,
+  CloseOutlined,
+} from "@ant-design/icons-vue";
+import { useCommonStore } from "@/store";
 
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { getImageUrl } from "@/utils";
+const store = useCommonStore();
+const isMax = computed(() => store.isMax);
 const props = defineProps({});
 const router = useRouter();
 const modules = [EffectCoverflow, Autoplay];
 onMounted(() => {});
+
 const list = computed(() => [
   {
     img: "home/swiper-1.png",
@@ -30,6 +40,19 @@ const list = computed(() => [
 function Navgator() {
   router.push("/intro");
 }
+const changeMax = () => {
+  console.log(window, "window");
+  store.changeSize(true);
+  ipcRenderer.send("maximize");
+};
+const changeMin = () => {
+  console.log(window, "window");
+  store.changeSize(false);
+  ipcRenderer.send("unmaximize");
+};
+const changeClose = () => {
+  ipcRenderer.send("window-close");
+};
 </script>
 <template>
   <div class="wrap">
@@ -62,6 +85,24 @@ function Navgator() {
       </swiper>
     </div>
     <button class="btn" @click="Navgator()">动科动医欢迎你 ></button>
+    <a-float-button-group shape="circle" :style="{ left: '24px' }">
+      <a-float-button v-if="isMax" @click="changeMin">
+        <template #icon>
+          <FullscreenExitOutlined />
+        </template>
+      </a-float-button>
+      <a-float-button v-else @click="changeMax">
+        <template #icon>
+          <FullscreenOutlined />
+        </template>
+      </a-float-button>
+
+      <a-float-button @click="changeClose">
+        <template #icon>
+          <CloseOutlined />
+        </template>
+      </a-float-button>
+    </a-float-button-group>
   </div>
 </template>
 <style scoped lang="less">
