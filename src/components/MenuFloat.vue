@@ -76,7 +76,7 @@ const clickItem = (item) => {
       axis="xy"
       magnetic="x"
       @click="show = true"
-      gap="40"
+      gap="80"
     >
       <img src="@img/common/icon-menu.png" alt="" />
       <span>目录</span>

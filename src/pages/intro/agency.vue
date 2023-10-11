@@ -11,7 +11,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="agency-wrap">
-    <img :src="getImageUrl('intro/agency.svg')" />
+    <img :src="getImageUrl('intro/agency.png')" />
   </div>
 </template>
 <style scoped lang="less">
@@ -20,7 +20,8 @@ onMounted(() => {});
   height: 100%;
   .flex-col;
   img {
-    width: 70%;
+    height: calc(100vh - 420px);
+    width: auto;
   }
 }
 </style>

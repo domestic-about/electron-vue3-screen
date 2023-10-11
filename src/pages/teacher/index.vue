@@ -26,41 +26,42 @@ const list = [
     <div class="title-wrap">
       <h3>师资队伍</h3>
     </div>
-
-    <SwiperPage>
-      <swiper-slide>
-        <div class="page1-wrap">
-          <h3>全国高校黄大年式教师团队</h3>
-          <p class="label">
-            华中农业大学畜禽健康养殖教师团队由家畜传染病学家陈焕春院士于上世纪90年代初组建，30多年来，团队坚持“以立德树人为根本，以强农兴农为己任”，聚焦畜禽健康养殖关键问题，深化科教产教融合，薪火传承、接续奋斗，书写了“人才立国、科技强国、产业兴国”的华农牧医华章，为我国农牧高等教育事业和畜牧业现代化建设作出了重要贡献。
-          </p>
-          <div class="img-list">
-            <div class="left-img-text-wrap">
-              <a-image :src="getImageUrl('teacher/list1.jpg')" alt="" />
-              <p>畜禽健康养殖教师团队合影</p>
-            </div>
-            <a-image :src="getImageUrl('teacher/list2.jpg')" alt="" />
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="page2-wrap">
-          <div class="left-img-text-wrap">
-            <a-image :src="getImageUrl('teacher/list3.png')" alt="" />
-            <p>
-              团队所在党支部获“全国先进基层党组织”称号，何启盖教授作为获奖代表进京受奖（何启盖
-              供图）
+    <div class="content-wrap">
+      <SwiperPage>
+        <swiper-slide>
+          <div class="page1-wrap">
+            <h3>全国高校黄大年式教师团队</h3>
+            <p class="label">
+              华中农业大学畜禽健康养殖教师团队由家畜传染病学家陈焕春院士于上世纪90年代初组建，30多年来，团队坚持“以立德树人为根本，以强农兴农为己任”，聚焦畜禽健康养殖关键问题，深化科教产教融合，薪火传承、接续奋斗，书写了“人才立国、科技强国、产业兴国”的华农牧医华章，为我国农牧高等教育事业和畜牧业现代化建设作出了重要贡献。
             </p>
-          </div>
-          <div class="right-img-text-list">
-            <div class="img-text-item" v-for="item in list" :key="item.label">
-              <a-image :src="getImageUrl(item.img)" alt="" />
-              <p>{{ item.label }}</p>
+            <div class="img-list">
+              <div class="left-img-text-wrap">
+                <a-image :src="getImageUrl('teacher/list1.jpg')" alt="" />
+                <p>畜禽健康养殖教师团队合影</p>
+              </div>
+              <a-image :src="getImageUrl('teacher/list2.jpg')" alt="" />
             </div>
           </div>
-        </div>
-      </swiper-slide>
-    </SwiperPage>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="page2-wrap">
+            <div class="left-img-text-wrap">
+              <a-image :src="getImageUrl('teacher/list3.png')" alt="" />
+              <p>
+                团队所在党支部获“全国先进基层党组织”称号，何启盖教授作为获奖代表进京受奖（何启盖
+                供图）
+              </p>
+            </div>
+            <div class="right-img-text-list">
+              <div class="img-text-item" v-for="item in list" :key="item.label">
+                <a-image :src="getImageUrl(item.img)" alt="" />
+                <p>{{ item.label }}</p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </SwiperPage>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
@@ -75,6 +76,9 @@ const list = [
       font-weight: 600;
       color: #000;
     }
+  }
+  .content-wrap {
+    height: calc(100% - 60px);
   }
   .page1-wrap {
     margin-top: 10px;
@@ -91,20 +95,22 @@ const list = [
       color: #000;
     }
     .img-list {
+      margin-top: 20px;
       .flex-row;
       align-items: stretch;
       .left-img-text-wrap {
         .flex-col;
         gap: 33px;
-        :deep(.ant-image) {
-          width: 896px;
+        :deep(.ant-image-img) {
+          width: auto;
+          height: 30vh;
         }
       }
     }
 
-    :deep(.ant-image) {
-      width: 399px;
-      height: 522px;
+    :deep(.ant-image-img) {
+      width: auto;
+      height: 30vh;
     }
     .label {
       flex: 1;
@@ -115,7 +121,7 @@ const list = [
     .flex-row;
     align-items: flex-start;
     gap: 55px;
-    margin-top: 31px;
+    margin-top: 20px;
     padding: 0 120px;
     p {
       font-size: 24px;
@@ -127,8 +133,8 @@ const list = [
       .flex-col;
       gap: 17px;
       :deep(.ant-image) {
-        width: 391px;
-        height: 591px;
+        width: 380px;
+        height: 560px;
       }
     }
     .right-img-text-list {
@@ -143,7 +149,7 @@ const list = [
         .flex-col;
         gap: 13px;
         :deep(.ant-image) {
-          width: 391px;
+          width: 380px;
           height: 262px;
         }
       }

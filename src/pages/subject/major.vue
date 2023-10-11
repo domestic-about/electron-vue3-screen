@@ -120,7 +120,7 @@ onMounted(() => {});
     }
 
     .info-wrap {
-      height: 70vh;
+      height: calc(100vh - 340px);
       overflow: auto;
 
       padding: 24px 24px 0px 24px;

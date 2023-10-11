@@ -62,7 +62,7 @@ defineExpose({ slideTo });
       :autoplay="
         props.isAuto
           ? {
-              delay: 2500,
+              delay: 5000,
               disableOnInteraction: false,
             }
           : false
