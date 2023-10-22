@@ -30,3 +30,28 @@
   border-radius: 12.786px;
   background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
 }
+
+.tab-list {
+  .flex-row;
+  gap: 20px;
+  .tab-item {
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    &::after {
+      display: block;
+      content: '/';
+      color: #000;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+    &.active {
+      border-radius: 12px;
+      color: #006B5E;
+    }
+  }
+}

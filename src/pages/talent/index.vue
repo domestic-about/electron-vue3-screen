@@ -35,16 +35,17 @@ onMounted(() => {});
 <template>
   <div class="talent-wrap">
     <div class="title-wrap">
-      <h3>人才培养</h3>
+      <div class="title-info">
+        <h3>人才培养</h3>
+      <span>Personnel training</span>
+      </div>
       <div class="tab-list">
-        <van-button
-          :class="{ active: route.path === tab.route }"
+        <div class="tab-item"  :class="{ active: route.path === tab.route }"
           v-for="tab in tabList"
           :key="tab.label"
-          @click="router.push(tab.route)"
-        >
+          @click="router.push(tab.route)">
           {{ tab.label }}
-        </van-button>
+        </div>
       </div>
     </div>
     <div class="content-wrap">

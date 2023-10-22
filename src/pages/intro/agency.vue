@@ -20,8 +20,7 @@ onMounted(() => {});
   height: 100%;
   .flex-col;
   img {
-    height: calc(100vh - 420px);
-    width: auto;
+    width: 100%;
   }
 }
 </style>

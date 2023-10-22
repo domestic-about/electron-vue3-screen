@@ -19,7 +19,7 @@ const route = useRoute();
     </div>
 
     <AppFooter />
-    <MenuFloat />
+    <!-- <MenuFloat /> -->
   </div>
 </template>
 
@@ -47,13 +47,14 @@ const route = useRoute();
       bottom: 0;
       opacity: 0.17;
       z-index: -1;
-      background: linear-gradient(
-        0deg,
-        #d9d9d9 -13.91%,
-        rgba(217, 217, 217, 0) 83.33%
-      );
-      background-image: url("@img/intro/bg.png");
-      background-size: 100% 100%;
+      background-color: #fff;
+      // background: linear-gradient(
+      //   0deg,
+      //   #d9d9d9 -13.91%,
+      //   rgba(217, 217, 217, 0) 83.33%
+      // );
+      // background-image: url("@img/intro/bg.png");
+      // background-size: 100% 100%;
     }
   }
 }

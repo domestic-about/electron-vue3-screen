@@ -11,16 +11,15 @@ onMounted(() => {});
 </script>
 <template>
   <div class="wrap" v-if="isShowFooter">
-    <img src="@img/common/footer-bg.svg" alt="" />
+    <h5>HUAZHONG AGRICULTURAL UNIVERSITY</h5>
   </div>
 </template>
 <style scoped lang="less">
 .wrap {
   width: 100%;
   height: 64px;
-  img {
-    width: 100%;
-    height: 64px;
-  }
+  padding: 26px 34px;
+  color: rgba(0, 0, 0, 0.10);
+  font-size: 24px;
 }
 </style>

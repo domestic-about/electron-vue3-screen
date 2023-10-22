@@ -93,6 +93,7 @@ onMounted(() => {});
       .flex-col;
       justify-content: flex-start;
       gap: 20px;
+      border-right: 1px solid #D9D9D9;
       .title {
         display: flex;
         width: 254px;
@@ -102,19 +103,19 @@ onMounted(() => {});
         align-items: center;
         gap: 18.425px;
         flex-shrink: 0;
-        border-radius: 7.443px;
-        background-color: #fff;
+        background: transparent;
         font-family: PingFang SC;
         font-size: 32px;
         font-style: normal;
         font-weight: 500;
+        color: rgba(0, 0, 0, 0.60);
+        cursor: pointer;
         filter: drop-shadow(
           0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
         );
         line-height: normal;
         &.active {
-          background: linear-gradient(180deg, #006e2f 0%, #003a7d 100%);
-          color: #fff;
+          color: #006B5E;
         }
       }
     }
