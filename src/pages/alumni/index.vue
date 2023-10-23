@@ -7,7 +7,7 @@ import { getImageUrl } from "@/utils";
 const router = useRouter();
 const route = useRoute();
 const props = defineProps({});
-onMounted(() => {});
+onMounted(() => { });
 const tabList = computed(() => [
   {
     label: "北区（本部）校友",
@@ -53,14 +53,17 @@ const tabList = computed(() => [
     width: 100%;
     .flex-row;
     justify-content: space-between;
+
     h3 {
       font-size: 48px;
       font-weight: 600;
       color: #000;
     }
+
     .tab-list {
       .flex-row;
       gap: 20px;
+
       .van-button {
         border-radius: 12px;
         background: #fff;
@@ -68,6 +71,7 @@ const tabList = computed(() => [
         font-weight: 500;
         height: 80px;
         border: none;
+
         &.active {
           border-radius: 12px;
           background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
@@ -80,6 +84,6 @@ const tabList = computed(() => [
   .content-wrap {
     width: 100%;
     flex: 1;
+    padding-top: 200px;
   }
-}
-</style>
+}</style>

@@ -319,30 +319,17 @@ const dataSource = [
     date: "2022",
   },
 ];
-onMounted(() => {});
+onMounted(() => { });
 </script>
 
 <template>
   <div class="wrap">
-    <p class="label">
-      2016年1月-2023年6月，学院共获批纵向课题988项，经费11.65亿元，其中国家级课题529项、省部级307项；获批横向课题779项，经费3.75亿元。
-    </p>
-    <a-table
-      :columns="column"
-      :data-source="dataSource"
-      :pagination="{ defaultPageSize: 8 }"
-    ></a-table>
+    <a-table :columns="column" :data-source="dataSource" :pagination="{ defaultPageSize: 8 }"></a-table>
   </div>
 </template>
 
 <style lang="less" scoped>
 .wrap {
   padding: 40px 200px;
-
-  .label {
-    font-size: 24px;
-    color: #000;
-    margin-bottom: 20px;
-  }
 }
 </style>

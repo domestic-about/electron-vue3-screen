@@ -179,13 +179,13 @@ const goToSlide = (index) => {
             <div class="admin-item" v-for="item in group" :key="item.name">
               <div class="top-admin">
                 <a-image :src="getImageUrl(`${item.img}`)" alt="" />
-              <div class="admin-info">
-                <h4 class="admin-name">{{ item.name }}</h4>
-                <p>{{ item.admin }}</p>
-                <p>{{ item.email }}</p>
-                <p>{{ item.adrgess }}</p>
-                <p>{{ item.phone }}</p>
-              </div>
+                <div class="admin-info">
+                  <h4 class="admin-name">{{ item.name }}</h4>
+                  <p>{{ item.admin }}</p>
+                  <p>{{ item.email }}</p>
+                  <p>{{ item.adrgess }}</p>
+                  <p>{{ item.phone }}</p>
+                </div>
               </div>
               <h5>责任分工：</h5>
               <p class="label">{{ item.info }}</p>
@@ -222,37 +222,6 @@ const goToSlide = (index) => {
       }
     }
 
-    .tab-list {
-      .flex-row;
-
-      .tab-item {
-        display: flex;
-
-        &::after {
-          display: block;
-          content: '/';
-        }
-
-        &:last-child::after {
-          content: '';
-        }
-      }
-
-      .van-button {
-        border-radius: 12px;
-        font-size: 32px;
-        font-weight: 500;
-        width: 204px;
-        height: 80px;
-        border: none;
-        background: transparent;
-
-        &.active {
-          border-radius: 12px;
-          color: #006B5E;
-        }
-      }
-    }
   }
 
   .content-wrap {
@@ -272,10 +241,11 @@ const goToSlide = (index) => {
     background: #E9F3EF;
     padding: 68px 48px;
     position: relative;
-    transition: top 0.3s ease; /* 添加过渡效果 */
+    transition: top 0.3s ease;
+    /* 添加过渡效果 */
 
     &:hover {
-        top: -30px;
+      top: -30px;
     }
 
 
@@ -283,38 +253,42 @@ const goToSlide = (index) => {
       margin-right: auto;
     }
 
-  .top-admin{
-    .flex-row;
-    gap: 33px;
-    align-items: flex-start;
-    :deep(.ant-image) {
-      width: 145px;
-      height: 200px;
-    }
+    .top-admin {
+      .flex-row;
+      gap: 33px;
+      align-items: flex-start;
 
-    .admin-info {
-      width: 626px;
-
-      .admin-name {
-        font-size: 36px;
-        margin-bottom: 24px;
+      :deep(.ant-image) {
+        width: 145px;
+        height: 200px;
       }
 
-      p {
-        color: #000;
-        font-size: 26px;
-        font-weight: 600;
-        margin-top: 10px;
-        margin-bottom: 0;
+      .admin-info {
+        width: 626px;
+
+        .admin-name {
+          font-size: 36px;
+          margin-bottom: 24px;
+        }
+
+        p {
+          color: #000;
+          font-size: 26px;
+          font-weight: 600;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
       }
     }
+
+    h5 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    .label {
+      font-size: 20px;
+    }
   }
-  h5{
-    margin-top: 20px;
-    font-size: 20px;
-  }
-  .label{
-font-size: 20px;
-  }
-  }
-}</style>
+}
+</style>

@@ -7,7 +7,7 @@ const isShowFooter = computed(
   () => !route.meta || (route.meta && route.meta.footer !== false),
 );
 
-onMounted(() => {});
+onMounted(() => { });
 </script>
 <template>
   <div class="wrap" v-if="isShowFooter">
@@ -18,7 +18,7 @@ onMounted(() => {});
 .wrap {
   width: 100%;
   height: 64px;
-  padding: 26px 34px;
+  padding: 0 34px;
   color: rgba(0, 0, 0, 0.10);
   font-size: 24px;
 }

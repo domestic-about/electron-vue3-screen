@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => {});
+onMounted(() => { });
 const list = [
   [
     {
@@ -111,23 +111,10 @@ const list = [
     <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
-          <div
-            class="admin-item"
-            :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }"
-            v-for="item in group"
-            :key="item.name"
-          >
-            <div
-              class="img-list"
-              :class="[item.flex]"
-              v-if="Array.isArray(item.img)"
-            >
-              <a-image
-                v-for="imgItem in item.img"
-                :key="imgItem"
-                :src="getImageUrl(imgItem)"
-                alt=""
-              />
+          <div class="admin-item" :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }" v-for="item in group"
+            :key="item.name">
+            <div class="img-list" :class="[item.flex]" v-if="Array.isArray(item.img)">
+              <a-image v-for="imgItem in item.img" :key="imgItem" :src="getImageUrl(imgItem)" alt="" />
             </div>
             <a-image v-else :src="getImageUrl(item.img)" alt="" />
 
@@ -142,6 +129,7 @@ const list = [
 <style scoped lang="less">
 .wrap {
   padding-top: 60px;
+
   .admin-list {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -149,24 +137,30 @@ const list = [
     grid-gap: 20px;
     width: 100%;
     padding: 0 100px;
+
     .admin-item {
       background-color: #fff;
       padding: 10px;
       .flex-col;
+      align-items: flex-start;
+
       .img-list {
         &.row {
           .flex-row;
           align-items: flex-start;
         }
+
         &.col {
           .flex-col;
         }
 
         gap: 10px;
       }
+
       img {
         max-width: 300px;
       }
+
       p {
         margin-top: 10px;
         text-align: center;
