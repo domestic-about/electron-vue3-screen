@@ -59,15 +59,6 @@ defineExpose({ slideTo });
         '--swiper-navigation-color': '#006E2F',
         '--swiper-pagination-color': '#006E2F',
       }"
-      :autoplay="
-        props.isAuto
-          ? {
-              delay: 5000,
-              disableOnInteraction: false,
-            }
-          : false
-      "
-      @autoplayTimeLeft="onAutoplayTimeLeft"
       :pagination="
         props.isPagination
           ? {
@@ -102,6 +93,7 @@ defineExpose({ slideTo });
   height: 100%;
 
   :deep(.swiper) {
+    height: 100%;
     padding-bottom: 40px;
     .swiper-button-prev,
     .swiper-button-next {

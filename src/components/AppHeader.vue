@@ -75,8 +75,8 @@ const clickItem = (item) => {
 <template>
   <div class="wrap" v-if="isShowHeader">
     <img class="logo" src="@img/common/logo-white.svg" alt="" />
-    <div class="right-menu"  @click="show = true">
-      <img :src="getImageUrl('home/menu.png')" alt="">
+    <div class="right-menu" @click="show = true">
+      <img :src="getImageUrl('home/menu.png')" alt="" />
       <span>目录</span>
     </div>
     <van-popup v-model:show="show" position="right">
@@ -97,22 +97,22 @@ const clickItem = (item) => {
 <style scoped lang="less">
 .wrap {
   width: 100%;
-  height: 106px;
-  background: #005047;
+  height: 100px;
+  background: #00a08e;
   .flex-row;
   justify-content: space-between;
-  padding:0px 0 0px 26px;
+  padding: 0px 0 0px 26px;
   .logo {
     height: 68px;
   }
-  .right-menu{
+  .right-menu {
     padding: 30px 46px;
     .flex-row;
     gap: 7px;
     height: 100%;
-    background: #006B5E;
+    background: #00bda6;
     cursor: pointer;
-    span{
+    span {
       font-size: 30px;
       color: #fff;
     }
@@ -125,7 +125,7 @@ const clickItem = (item) => {
     height: 100%;
     width: 270px;
     .menu-list {
-      padding:10px 20px;
+      padding: 10px 20px;
       .flex-col;
       gap: 5px;
       .menu-item {
@@ -141,7 +141,7 @@ const clickItem = (item) => {
         font-size: 32px;
         font-weight: 500;
         &.active {
-          background: #006B5E;
+          background: #006b5e;
           color: #fff;
         }
       }

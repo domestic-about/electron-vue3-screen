@@ -27,7 +27,7 @@ function createWindow() {
       contextIsolation: false,
     },
     // fullscreen: true,
-    frame:false
+    // frame:false
   })
   win.webContents.openDevTools()
 

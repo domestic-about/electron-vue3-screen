@@ -29,7 +29,7 @@ const route = useRoute();
   .flex-col;
   overflow: hidden;
   .app-main-wrap {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 100px);
     overflow: hidden;
     width: 100%;
     color: #000;
