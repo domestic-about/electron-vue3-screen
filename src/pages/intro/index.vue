@@ -204,26 +204,6 @@ const goToSlide = (index) => {
   .flex-col;
   justify-content: flex-start;
 
-  .title-wrap {
-    width: 100%;
-    .flex-row;
-    justify-content: space-between;
-
-    .title-info {
-      h3 {
-        font-size: 48px;
-        font-weight: 600;
-        color: #000;
-      }
-
-      span {
-        font-size: 20px;
-        font-weight: 500;
-      }
-    }
-
-  }
-
   .content-wrap {
     width: 100%;
     flex: 1;

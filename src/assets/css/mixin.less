@@ -31,36 +31,57 @@
   background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
 }
 
-.tab-list {
+.title-wrap {
+  width: 100%;
   .flex-row;
-  gap: 20px;
+  justify-content: space-between;
 
-  .tab-item {
-    display: flex;
-    gap: 20px;
-    font-size: 30px;
-    font-weight: 600;
-    cursor: pointer;
 
-    &::after {
-      display: block;
-      content: '/';
+  .title-info {
+    h3 {
+      font-size: 48px;
+      font-weight: 600;
       color: #000;
     }
 
-    &:last-child::after {
-      content: '';
-    }
-
-    &.active {
-      border-radius: 12px;
-      color: #006B5E;
+    span {
+      font-size: 20px;
+      font-weight: 500;
     }
   }
+
+  .tab-list {
+    .flex-row;
+    gap: 20px;
+
+    .tab-item {
+      display: flex;
+      gap: 20px;
+      font-size: 30px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &::after {
+        display: block;
+        content: '/';
+        color: #000;
+      }
+
+      &:last-child::after {
+        content: '';
+      }
+
+      &.active {
+        border-radius: 12px;
+        color: #006B5E;
+      }
+    }
+  }
+
 }
 
 .content-wrap {
   width: 100%;
   flex: 1;
-  padding-top: 100px;
+  padding-top: 200px;
 }
