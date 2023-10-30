@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
+import PageTitle from "@/components/PageTitle.vue";
 import { getImageUrl } from "@/utils";
 import History from "./history.vue";
 import Agency from "./agency.vue";
@@ -136,7 +137,7 @@ const tabList = computed(() => [
   },
 ]);
 
-onMounted(() => { });
+onMounted(() => {});
 const onSlideChange = (swiper) => {
   const index = swiper.activeIndex;
   if (index > 3) {
@@ -147,27 +148,27 @@ const onSlideChange = (swiper) => {
   console.log(swiper.activeIndex, "activeIndex");
 };
 const goToSlide = (index) => {
-  console.log(swiperRef.value, "value");
-  swiperRef.value.slideTo(index);
+  console.log(swiperRef.value, index, "value");
+  swiperRef.value && swiperRef.value.slideTo(index);
 };
 </script>
 <template>
   <div class="intro-wrap">
-    <div class="title-wrap">
-      <div class="title-info">
-        <h3>学院概况</h3>
-        <span>College Overview</span>
-      </div>
-      <div class="tab-list">
-        <div class="tab-item" :class="{ active: index === activeIndex }" v-for="(tab, index) in tabList" :key="tab.label"
-          @click="goToSlide(index)">
-          {{ tab.label }}
-        </div>
-      </div>
-    </div>
+    <PageTitle
+      title="学院概况"
+      subTitle="College Overview"
+      :tabList="tabList"
+      :activeIndex="activeIndex"
+      @changeIndex="goToSlide"
+    />
 
     <div class="content-wrap">
-      <SwiperPage @onSlideChange="onSlideChange" :isAuto="isAuto" :isPagination="false" ref="swiperRef">
+      <SwiperPage
+        @onSlideChange="onSlideChange"
+        :isAuto="isAuto"
+        :isPagination="false"
+        ref="swiperRef"
+      >
         <template v-for="(item, index) in tabList" :key="index">
           <swiper-slide v-if="item.component">
             <component :is="item.component" />
@@ -200,14 +201,10 @@ const goToSlide = (index) => {
 .intro-wrap {
   height: 100%;
   position: relative;
-  padding: 24px;
-  .flex-col;
-  justify-content: flex-start;
 
   .content-wrap {
     width: 100%;
-    flex: 1;
-    padding-top: 100px;
+    height: calc(100% - 106px);
   }
 }
 
@@ -218,7 +215,7 @@ const goToSlide = (index) => {
   gap: 88px;
 
   .admin-item {
-    background: #E9F3EF;
+    background: #e9f3ef;
     padding: 68px 48px;
     position: relative;
     transition: top 0.3s ease;
@@ -227,7 +224,6 @@ const goToSlide = (index) => {
     &:hover {
       top: -30px;
     }
-
 
     &:last-child {
       margin-right: auto;

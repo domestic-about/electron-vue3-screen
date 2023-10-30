@@ -17,7 +17,7 @@ const isMax = computed(() => store.isMax);
 const props = defineProps({});
 const router = useRouter();
 const modules = [EffectCoverflow, Autoplay];
-onMounted(() => { });
+onMounted(() => {});
 
 function Navgator() {
   router.push("/intro");
@@ -39,14 +39,14 @@ const changeClose = () => {
 <template>
   <div class="wrap">
     <div class="school-wrap">
-      <img :src="getImageUrl('home/home-logo.png')" alt="">
+      <img :src="getImageUrl('home/home-logo.png')" alt="" />
       <div class="welcome" @click="Navgator">
         <h3>欢迎进入主页</h3>
       </div>
       <p>HUAZHONG AGRICULTURAL UNIVERSITY</p>
     </div>
     <div class="swiper-wrap">
-      <img :src="getImageUrl('home/home-swiper.png')" alt="">
+      <img :src="getImageUrl('home/home-swiper.png')" alt="" />
     </div>
   </div>
 </template>
@@ -54,7 +54,7 @@ const changeClose = () => {
 .wrap {
   width: 100vw;
   height: 100vh;
-  background: #006B5E;
+  background: #006b5e;
   .flex-row;
 
   .school-wrap {

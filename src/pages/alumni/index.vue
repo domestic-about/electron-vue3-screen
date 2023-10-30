@@ -7,7 +7,7 @@ import { getImageUrl } from "@/utils";
 const router = useRouter();
 const route = useRoute();
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const tabList = computed(() => [
   {
     label: "北区（本部）校友",
@@ -86,4 +86,5 @@ const tabList = computed(() => [
     flex: 1;
     padding-top: 200px;
   }
-}</style>
+}
+</style>
