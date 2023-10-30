@@ -20,7 +20,7 @@ const clickItem = (index) => {
       <h3>{{ props.title }}</h3>
       <span>{{ props.subTitle }}</span>
     </div>
-    <div class="tab-list">
+    <div v-if="tabList" class="tab-list">
       <div
         class="tab-item"
         :class="{ active: index === props.activeIndex }"

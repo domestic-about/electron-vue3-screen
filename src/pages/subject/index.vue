@@ -26,10 +26,13 @@ onMounted(() => {});
         <span>Subject Specialty</span>
       </div>
       <div class="tab-list">
-        <div class="tab-item"  :class="{ active: route.path === tab.route }"
+        <div
+          class="tab-item"
+          :class="{ active: route.path === tab.route }"
           v-for="tab in tabList"
           :key="tab.label"
-          @click="router.push(tab.route)">
+          @click="router.push(tab.route)"
+        >
           {{ tab.label }}
         </div>
       </div>

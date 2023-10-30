@@ -5,7 +5,7 @@ import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   {
     img: "teacher/list4.png",
@@ -69,9 +69,7 @@ const list = [
           <div class="page3-wrap">
             <div class="left-img-text-wrap">
               <a-image :src="getImageUrl('teacher/list4.png')" alt="" />
-              <p>
-                赵书红教授指导同学们开展科学研究
-              </p>
+              <p>赵书红教授指导同学们开展科学研究</p>
             </div>
             <div class="right-img-text-list">
               <h5>立德树人育英才</h5>
@@ -82,11 +80,12 @@ const list = [
                 近五年来，团队在人才培养上成效卓著，荣获国家教学成果二等奖等教学奖励4项，入选国家级一流课程9门，建成国家级虚拟仿真教学项目3项，主持和完成中国工程院高等农业人才培养战略咨询项目等30余项，发表教研论文26篇。
               </p>
               <p>
-
-培养的学生以第一作者在Nature Genetics、Cell Host & Microbe等刊物发表科研论文600余篇，荣获iGEM、“互联网+”“挑战杯”“创青春”等国内外重要竞赛金奖等81项，1人获评全国百名研究生党员标兵，1人获评中国青年志愿者优秀个人奖等。</p>
+                培养的学生以第一作者在Nature Genetics、Cell Host &
+                Microbe等刊物发表科研论文600余篇，荣获iGEM、“互联网+”“挑战杯”“创青春”等国内外重要竞赛金奖等81项，1人获评全国百名研究生党员标兵，1人获评中国青年志愿者优秀个人奖等。
+              </p>
               <p>
-
-团队开创的“三创”人才培养的模式被光明日报、人民日报（海外版）等媒体报道，引起强烈社会反响；团队支撑的动物科学、动物医学专业入选首批国家一流专业建设点。</p>
+                团队开创的“三创”人才培养的模式被光明日报、人民日报（海外版）等媒体报道，引起强烈社会反响；团队支撑的动物科学、动物医学专业入选首批国家一流专业建设点。
+              </p>
             </div>
           </div>
         </swiper-slide>
@@ -170,23 +169,23 @@ const list = [
         width: 380px;
         height: 560px;
       }
-      p{
+      p {
         font-weight: 500;
         margin-top: 10px;
       }
     }
 
     .right-img-text-list {
-     h5{
-      background-color: #CBE6FF;
-      font-size: 32px;
-      font-weight: 500;
-      padding: 5px 0;
-     }
-     p{
-      margin: 20px 0;
-      font-size: 24px;
-     }
+      h5 {
+        background-color: #cbe6ff;
+        font-size: 32px;
+        font-weight: 500;
+        padding: 5px 0;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 24px;
+      }
     }
   }
   .page3-wrap {
@@ -205,23 +204,24 @@ const list = [
         width: 546px;
         height: 360px;
       }
-      p{
+      p {
         font-weight: 500;
       }
     }
 
     .right-img-text-list {
       flex: 1;
-     h5{
-      background-color: #CBE6FF;
-      font-size: 32px;
-      font-weight: 500;
-      padding: 5px 0;
-     }
-     p{
-      margin: 20px 0;
-      font-size: 24px;
-     }
+      h5 {
+        background-color: #cbe6ff;
+        font-size: 32px;
+        font-weight: 500;
+        padding: 5px 0;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 24px;
+      }
     }
   }
-}</style>
+}
+</style>
