@@ -15,6 +15,8 @@ import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 const props = defineProps({
   isPagination: { default: true },
+  isNavigation: { default: true },
+
   isAuto: { default: false },
 });
 const emit = defineEmits(["onSlideChange"]);
@@ -69,7 +71,7 @@ defineExpose({ slideTo });
       @swiper="onSwiper"
       @slideChange="onSlideChange"
       :spaceBetween="10"
-      :navigation="true"
+      :navigation="isNavigation"
       :modules="modules"
       class="mySwiper2"
       ref="swiperRef"

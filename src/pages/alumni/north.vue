@@ -34,8 +34,10 @@ onMounted(() => {});
 </template>
 <style scoped lang="less">
 .north-wrap {
-  padding-top: 30px;
+  padding-top: 20px;
+  height: 100%;
   :deep(.van-tabs) {
+    height: 100%;
     .van-tab {
       padding: 0 20px;
     }

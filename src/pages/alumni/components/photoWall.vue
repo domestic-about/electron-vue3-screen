@@ -29,11 +29,13 @@ const imgWidth = computed(() => {
 });
 const imgHeight = computed(() => {
   if (props.imgLength === 1) {
-    return "60vh";
-  } else if (props.imgLength > 3) {
+    return "50vh";
+  } else if (props.imgLength > 10) {
+    return "20vh";
+  } else if (props.imgLength >= 3) {
     return "30vh";
   } else {
-    return "60vh";
+    return "50vh";
   }
 });
 
@@ -51,6 +53,7 @@ onMounted(() => {});
           :key="i"
         >
           <a-image
+            :style="{ height: `${imgHeight}` }"
             :src="getImageUrl(`alumni/${props.type}/${props.year}/${i}.jpg`)"
             alt=""
           />
