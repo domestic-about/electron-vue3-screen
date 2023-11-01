@@ -1,30 +1,52 @@
 <script setup>
+import PageTitle from "@/components/PageTitle.vue";
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
 
-
+const tabList = [
+  {
+    label: '团学活动',
+    route: '',
+    component: ''
+  },
+  {
+    label: '团学活动',
+    route: '',
+    component: ''
+  },
+]
+const goToSlide = (index) => {
+  console.log(swiperRef.value, index, "value");
+  swiperRef.value && swiperRef.value.slideTo(index);
+};
 </script>
 <template>
   <div class="wrap">
-    <div class="title-wrap">
-      <div class="title-info">
-        <h3>学院概况</h3>
-        <span>College Overview</span>
-      </div>
-      <div class="tab-list">
-        <div class="tab-item">
-          团学活动
-        </div>
-        <div class="tab-item">
-          文化活动
-        </div>
-      </div>
-    </div>
+    <PageTitle title="文化活动" subTitle="Cultural activities" :tabList="tabList" :activeIndex="activeIndex"
+      @changeIndex="goToSlide" />
     <div class="content-wrap">
       <SwiperPage>
+        <SwiperSlide>
+          <div class="page2-wrap">
+            <div class="left-info">
+              <h5>一、两季三节---迎新季</h5>
+              <p class="label">
+                学院积极响应学校号召，鼓励全院毕业生参加毕业典礼、毕业巡游、毕业荧光跑以及毕业集市等系列活动，同时，学院结合自身专业特色，在毕业巡游队伍中增加了独特的马队，祝福毕业生们在未来的学习中一马当先、马到成功，给学生的大学生涯画上完美句号。
+              </p>
+              <div class="img-item">
+                <a-image :src="getImageUrl('culture/list3.png')" />
+                <p>动科动医学院毕业巡游马队</p>
+              </div>
+            </div>
+            <div class="right-info">
+              <a-image :src="getImageUrl('culture/list4.png')" />
+              <p>高翅书记在毕业典礼上发言</p>
+            </div>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>
           <div class="page1-wrap">
             <div class="left-info">
@@ -62,7 +84,7 @@ import { getImageUrl } from "@/utils";
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="page2-wrap">
+          <div class="page3-wrap">
             <div class="left-info">
               <h5>一、两季三节---迎新季</h5>
               <p class="label">
@@ -140,6 +162,45 @@ import { getImageUrl } from "@/utils";
         .label {
           margin-top: 20px;
           width: 866px;
+          background-color: #F7FAF8;
+          padding: 12px;
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        .img-item {
+          margin-top: 68px;
+          width: 100%;
+
+          :deep(.ant-image) {
+            width: 100%;
+            height: 310px;
+          }
+        }
+      }
+
+      .right-info {
+        :deep(.ant-image-img) {
+          height: 600px;
+        }
+      }
+    }
+
+    .page3-wrap {
+      .flex-row;
+      gap: 55px;
+      align-items: flex-start;
+
+      .left-info {
+
+        h5 {
+          font-size: 32px;
+          font-weight: 500;
+        }
+
+        .label {
+          margin-top: 20px;
+          width: 600px;
           background-color: #F7FAF8;
           padding: 12px;
           font-size: 24px;

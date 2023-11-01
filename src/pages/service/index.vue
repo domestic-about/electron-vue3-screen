@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
+import PageTitle from "@/components/PageTitle.vue";
 const props = defineProps({});
 onMounted(() => { });
 const list = [
@@ -23,12 +24,7 @@ const list = [
 </script>
 <template>
   <div class="wrap">
-    <div class="title-wrap">
-      <div class="title-info">
-        <h3>社会服务</h3>
-        <span>Social Services</span>
-      </div>
-    </div>
+    <PageTitle title="社会服务" subTitle="Social Services" />
     <div class="content-wrap">
       <SwiperPage>
         <SwiperSlide>
@@ -213,7 +209,7 @@ const list = [
         }
 
         h5 {
-          margin-top: 130px;
+          margin-top: 80px;
           width: 760px;
           background: #CBE6FF;
           text-align: right;

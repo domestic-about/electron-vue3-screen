@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { getImageUrl } from "@/utils";
+import PageTitle from "@/components/PageTitle.vue";
 const router = useRouter();
 const props = defineProps({});
 const route = useRoute();
@@ -28,21 +29,15 @@ const tabList = computed(() => [
         route: "/research/result",
     },
 ]);
+const goToSlide = (index) => {
+    console.log(swiperRef.value, index, "value");
+    swiperRef.value && swiperRef.value.slideTo(index);
+};
 </script>
 <template>
     <div class="research-wrap">
-        <div class="title-wrap">
-            <div class="title-info">
-                <h3>科学研究</h3>
-                <span>Scientific Research</span>
-            </div>
-            <div class="tab-list">
-                <div class="tab-item" :class="{ active: route.path === tab.route }" v-for="tab in tabList" :key="tab.label"
-                    @click="router.push(tab.route)">
-                    {{ tab.label }}
-                </div>
-            </div>
-        </div>
+        <PageTitle title="科学研究" subTitle="Scientific Research" :tabList="tabList" :activeIndex="activeIndex"
+            @changeIndex="goToSlide" />
         <div class="content-wrap">
             <router-view v-slot="{ Component }">
                 <transition name="fade">

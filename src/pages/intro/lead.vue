@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => {});
+onMounted(() => { });
 const list = [
   [
     {
@@ -128,6 +128,7 @@ const list = [
 <style scoped lang="less">
 .wrap {
   padding-top: 40px;
+
   .admin-list {
     padding: 0 100px;
     .flex-row;
@@ -137,12 +138,11 @@ const list = [
     .admin-item {
       background: #e9f3ef;
       padding: 68px 48px;
-      position: relative;
-      transition: top 0.3s ease;
+      transition: 0.3s ease;
       /* 添加过渡效果 */
 
       &:hover {
-        top: -30px;
+        transform: translateY(-30px);
       }
 
       &:last-child {

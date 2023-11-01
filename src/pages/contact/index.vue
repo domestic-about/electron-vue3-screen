@@ -4,18 +4,14 @@ import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
+import PageTitle from "@/components/PageTitle.vue";
 const props = defineProps({});
 onMounted(() => { });
 
 </script>
 <template>
   <div class="wrap">
-    <div class="title-wrap">
-      <div class="title-info">
-        <h3>国际合作与交流</h3>
-        <span>International Cooperation and Exchange</span>
-      </div>
-    </div>
+    <PageTitle title="国际合作与交流" subTitle="International Cooperation and Exchange" />
     <div class="content-wrap">
       <SwiperPage>
         <swiper-slide>
@@ -163,6 +159,8 @@ onMounted(() => { });
       .text-label {
         width: 816px;
         font-weight: 400;
+        padding: 20px;
+        background-color: #F7FAF8
       }
     }
 
@@ -203,10 +201,11 @@ onMounted(() => { });
         .flex-row;
         flex-direction: row-reverse;
         justify-content: flex-start;
+        gap: 20px;
         margin-top: 60px;
 
         .img-item {
-          width: 588px;
+          width: 502px;
 
           :deep(.ant-image) {
             width: 100%;

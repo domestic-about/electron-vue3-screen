@@ -39,28 +39,28 @@ onMounted(() => { });
       font-weight: 500;
 
       &.item1 {
-        top: -47px;
-        left: 40%;
+        top: -57px;
+        left: 35%;
       }
 
       &.item2 {
         top: 46%;
-        right: -140px;
+        right: -150px;
       }
 
       &.item3 {
-        bottom: -40px;
+        bottom: -50px;
         left: 20%;
       }
 
       &.item4 {
-        top: 60%;
+        top: 75%;
         left: -140px;
       }
 
       &.item5 {
-        top: 2%;
-        left: -20px;
+        top: 0%;
+        left: -50px;
       }
     }
   }

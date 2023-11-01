@@ -23,7 +23,7 @@ const tabList = computed(() => [
     component: Major,
   },
 ]);
-onMounted(() => {});
+onMounted(() => { });
 const onSlideChange = (swiper) => {
   const index = swiper.activeIndex;
   activeIndex.value = index;
@@ -36,22 +36,12 @@ const goToSlide = (index) => {
 </script>
 <template>
   <div class="wrap">
-    <PageTitle
-      title="学院概况"
-      subTitle="College Overview"
-      :tabList="tabList"
-      :activeIndex="activeIndex"
-      @changeIndex="goToSlide"
-    />
+    <PageTitle title="学科专业" subTitle="Subject Specialty" :tabList="tabList" :activeIndex="activeIndex"
+      @changeIndex="goToSlide" />
 
     <div class="content-wrap">
-      <SwiperPage
-        @onSlideChange="onSlideChange"
-        :isAuto="isAuto"
-        :isPagination="false"
-        :isNavigation="isNavigation"
-        ref="swiperRef"
-      >
+      <SwiperPage @onSlideChange="onSlideChange" :isAuto="isAuto" :isPagination="false" :isNavigation="isNavigation"
+        ref="swiperRef">
         <template v-for="(item, index) in tabList" :key="index">
           <swiper-slide v-if="item.component">
             <component :is="item.component" />

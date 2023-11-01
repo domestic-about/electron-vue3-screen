@@ -105,10 +105,42 @@ const list = [
     },
   ],
 ];
+const conList = [
+  {
+    img: "talent/condition/list2.png",
+    label: "动物医院",
+    gridColumn: "5 / 7",
+  },
+  {
+    img: "talent/condition/list3.png",
+    label: "实验动物中心",
+    gridColumn: "7 / 9",
+  },
+  {
+    img: "talent/condition/list4.png",
+    label: "华中农业大学动物疫病诊断中心",
+    gridColumn: "5 / 7",
+  },
+  {
+    img: "talent/condition/list5.png",
+    label: "标本馆2",
+    gridColumn: "7 / 9",
+  },
+]
 </script>
 <template>
   <div class="wrap">
-    <SwiperPage :isAuto="false">
+    <div class="img-info">
+      <img :src="getImageUrl('talent/condition/list1.png')" alt="" />
+      <p>农业部种猪质量监督检验测试中心</p>
+    </div>
+    <div class="img-list">
+      <div class="img-item" v-for="item in conList" :key="item.label">
+        <img :src="getImageUrl(item.img)" alt="" />
+        <p>{{ item.label }}</p>
+      </div>
+    </div>
+    <!-- <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
           <div class="admin-item" :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }" v-for="item in group"
@@ -122,53 +154,87 @@ const list = [
           </div>
         </div>
       </swiper-slide>
-    </SwiperPage>
+    </SwiperPage> -->
   </div>
 </template>
 
 <style scoped lang="less">
 .wrap {
-  padding-top: 60px;
+  .flex-row;
+  align-items: flex-start;
+  gap: 46px;
 
-  .admin-list {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    padding: 0 100px;
+  .img-info {
+    flex: 1;
 
-    .admin-item {
-      background-color: #fff;
-      padding: 10px;
-      .flex-col;
-      align-items: flex-start;
+    img {
+      width: 100%;
+    }
+  }
 
-      .img-list {
-        &.row {
-          .flex-row;
-          align-items: flex-start;
-        }
+  p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 24px;
+  }
 
-        &.col {
-          .flex-col;
-        }
+  .img-list {
+    width: 40%;
+    .flex-row;
+    flex-wrap: wrap;
+    gap: 40px;
 
-        gap: 10px;
-      }
+    .img-item {
+      flex: 1;
+      min-width: 40%;
 
       img {
-        max-width: 300px;
-      }
-
-      p {
-        margin-top: 10px;
-        text-align: center;
-        color: #000;
-        font-size: 24px;
-        font-weight: 500;
+        width: 100%;
       }
     }
   }
 }
+
+// .wrap {
+//   .admin-list {
+//     display: grid;
+//     grid-template-columns: repeat(8, 1fr);
+//     grid-template-rows: repeat(2, 1fr);
+//     grid-gap: 20px;
+//     width: 100%;
+//     padding: 0 100px;
+
+//     .admin-item {
+//       background-color: #fff;
+//       padding: 10px;
+//       .flex-col;
+//       align-items: flex-start;
+
+//       .img-list {
+//         &.row {
+//           .flex-row;
+//           align-items: flex-start;
+//         }
+
+//         &.col {
+//           .flex-col;
+//         }
+
+//         gap: 10px;
+//       }
+
+//       img {
+//         mix-width: 300px;
+//       }
+
+//       p {
+//         margin-top: 10px;
+//         text-align: center;
+//         color: #000;
+//         font-size: 24px;
+//         font-weight: 500;
+//       }
+//     }
+//   }
+// }
 </style>

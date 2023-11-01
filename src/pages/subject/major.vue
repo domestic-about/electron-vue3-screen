@@ -7,24 +7,16 @@ import SwiperPage from "@/components/swiper/SwiperPage.vue";
 const props = defineProps({});
 
 const activeIndex = ref(0);
-onMounted(() => {});
+onMounted(() => { });
 </script>
 <template>
   <div class="major-wrap">
     <div class="swiper-item">
       <div class="title-wrap">
-        <div
-          class="title"
-          :class="{ active: activeIndex === 0 }"
-          @click="activeIndex = 0"
-        >
+        <div class="title" :class="{ active: activeIndex === 0 }" @click="activeIndex = 0">
           畜牧学学科
         </div>
-        <div
-          class="title"
-          :class="{ active: activeIndex === 1 }"
-          @click="activeIndex = 1"
-        >
+        <div class="title" :class="{ active: activeIndex === 1 }" @click="activeIndex = 1">
           兽医学学科
         </div>
       </div>
@@ -85,15 +77,18 @@ onMounted(() => {});
 <style scoped lang="less">
 .major-wrap {
   padding-top: 30px;
+
   .swiper-item {
     .flex-row;
     align-items: stretch;
     gap: 40px;
+
     .title-wrap {
       .flex-col;
       justify-content: flex-start;
       gap: 20px;
       border-right: 1px solid #D9D9D9;
+
       .title {
         display: flex;
         width: 254px;
@@ -110,10 +105,9 @@ onMounted(() => {});
         font-weight: 500;
         color: rgba(0, 0, 0, 0.60);
         cursor: pointer;
-        filter: drop-shadow(
-          0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
-        );
+        filter: drop-shadow(0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25));
         line-height: normal;
+
         &.active {
           color: #006B5E;
         }
@@ -131,17 +125,20 @@ onMounted(() => {});
       color: #000;
       font-size: 24px;
       font-weight: 400;
+
       h4 {
         margin: 10px 0;
         font-size: 32px;
       }
+
       h5 {
         margin: 20px 0;
         font-size: 24px;
       }
+
       p {
-        margin: 5px 0;
-        font-size: 18px;
+        margin: 10px 0;
+        font-size: 24px;
       }
     }
   }

@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-
+import PageTitle from "@/components/PageTitle.vue";
 
 const list = [
   {
@@ -45,12 +45,7 @@ const pageList = [
 </script>
 <template>
   <div class="party-wrap">
-    <div class="title-wrap">
-      <div class="title-info">
-        <h3>党建与思想政治教育</h3>
-        <span>Party building and ideological and political work</span>
-      </div>
-    </div>
+    <PageTitle title="党建与思想政治教育" subTitle="Party building and ideological and political work" />
     <div class="con-wrap">
       <SwiperPage>
         <SwiperSlide>
@@ -76,7 +71,6 @@ const pageList = [
             </div>
             <p class="label">
               学院入选“全国高校党建工作标杆院系”培育创建单位，获评“全国教育系统先进集体”；学院党委获评湖北省委高校工委“先进基层党组织”、校“先进基层党组织”多次；预防兽医学系教工第二党支部获评“全国先进基层党组织”，动物遗传育种学系党支部书记工作室入选湖北省“双带头人”党支部书记工作室培育创建名单；学院学院党委书记作为高校唯一代表在全省基层党建工作调研会上作交流发言，受邀全省专题学习示范培训班上作案例分享。
-
               涌现出全国社会实践优秀团队、全国创新争先奖章获得者、全国创新争先奖状获得者、全国三八红旗手、湖北省优秀共产党员、全国科技助力精准扶贫工作先进个人、全国百名研究生党员标兵、中国青年志愿者优秀个人、“最美大学生”、湖北省抗击新冠肺炎疫情先进个人、“楚天园丁奖”获得者等一批优秀师生典型。
             </p>
           </div>
@@ -112,14 +106,20 @@ const pageList = [
       }
 
       .img-list {
-        width: 1000px;
+        flex: 1;
         .flex-row;
         gap: 40px;
         flex-wrap: wrap;
 
         .img-item {
-          width: 40%;
-          height: 300px;
+          min-width: 40%;
+          flex: 1;
+          height: 400px;
+
+          :deep(.ant-image-img) {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
