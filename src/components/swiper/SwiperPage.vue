@@ -57,10 +57,6 @@ defineExpose({ slideTo });
 <template>
   <div class="swiper-page">
     <swiper
-      :style="{
-        '--swiper-navigation-color': '#006E2F',
-        '--swiper-pagination-color': '#006E2F',
-      }"
       :pagination="
         props.isPagination
           ? {
@@ -70,8 +66,8 @@ defineExpose({ slideTo });
       "
       @swiper="onSwiper"
       @slideChange="onSlideChange"
+      :nested="true"
       :spaceBetween="10"
-      :navigation="isNavigation"
       :modules="modules"
       class="mySwiper2"
       ref="swiperRef"

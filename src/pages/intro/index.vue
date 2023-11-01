@@ -49,13 +49,7 @@ const tabList = computed(() => [
 onMounted(() => {});
 const onSlideChange = (swiper) => {
   const index = swiper.activeIndex;
-  if (index > 3) {
-    activeIndex.value = 4;
-    isNavigation.value = false;
-  } else {
-    isNavigation.value = true;
-    activeIndex.value = index;
-  }
+  activeIndex.value = index;
   console.log(swiper.activeIndex, "activeIndex");
 };
 const goToSlide = (index) => {

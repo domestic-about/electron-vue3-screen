@@ -61,7 +61,7 @@ const clickItem = (index) => {
       display: flex;
       gap: 20px;
       font-size: 30px;
-      font-weight: 600;
+      font-weight: 300;
       cursor: pointer;
 
       &::after {
@@ -77,6 +77,7 @@ const clickItem = (index) => {
       &.active {
         border-radius: 12px;
         color: #006b5e;
+        font-weight: 600;
       }
     }
   }
