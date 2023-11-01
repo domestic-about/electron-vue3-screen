@@ -40,14 +40,14 @@ onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <img  :src="getImageUrl('intro/history.png')" src="" alt="">
+    <img :src="getImageUrl('intro/history.png')" alt="" />
   </div>
 </template>
 <style scoped lang="less">
 .wrap {
   height: 100%;
   .flex-row;
-  img{
+  img {
     width: 100%;
   }
 }
