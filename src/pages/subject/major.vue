@@ -7,16 +7,24 @@ import SwiperPage from "@/components/swiper/SwiperPage.vue";
 const props = defineProps({});
 
 const activeIndex = ref(0);
-onMounted(() => { });
+onMounted(() => {});
 </script>
 <template>
   <div class="major-wrap">
     <div class="swiper-item">
       <div class="title-wrap">
-        <div class="title" :class="{ active: activeIndex === 0 }" @click="activeIndex = 0">
+        <div
+          class="title"
+          :class="{ active: activeIndex === 0 }"
+          @click="activeIndex = 0"
+        >
           畜牧学学科
         </div>
-        <div class="title" :class="{ active: activeIndex === 1 }" @click="activeIndex = 1">
+        <div
+          class="title"
+          :class="{ active: activeIndex === 1 }"
+          @click="activeIndex = 1"
+        >
           兽医学学科
         </div>
       </div>
@@ -87,7 +95,7 @@ onMounted(() => { });
       .flex-col;
       justify-content: flex-start;
       gap: 20px;
-      border-right: 1px solid #D9D9D9;
+      border-right: 1px solid #d9d9d9;
 
       .title {
         display: flex;
@@ -103,13 +111,15 @@ onMounted(() => { });
         font-size: 32px;
         font-style: normal;
         font-weight: 500;
-        color: rgba(0, 0, 0, 0.60);
+        color: rgba(0, 0, 0, 0.6);
         cursor: pointer;
-        filter: drop-shadow(0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(
+          0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
+        );
         line-height: normal;
 
         &.active {
-          color: #006B5E;
+          color: #006b5e;
         }
       }
     }

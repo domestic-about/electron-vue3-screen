@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   [
     {
@@ -126,11 +126,11 @@ const conList = [
     label: "标本馆2",
     gridColumn: "7 / 9",
   },
-]
+];
 </script>
 <template>
   <div class="wrap">
-    <div class="img-info">
+    <!-- <div class="img-info">
       <img :src="getImageUrl('talent/condition/list1.png')" alt="" />
       <p>农业部种猪质量监督检验测试中心</p>
     </div>
@@ -139,14 +139,27 @@ const conList = [
         <img :src="getImageUrl(item.img)" alt="" />
         <p>{{ item.label }}</p>
       </div>
-    </div>
-    <!-- <SwiperPage :isAuto="false">
+    </div> -->
+    <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
-          <div class="admin-item" :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }" v-for="item in group"
-            :key="item.name">
-            <div class="img-list" :class="[item.flex]" v-if="Array.isArray(item.img)">
-              <a-image v-for="imgItem in item.img" :key="imgItem" :src="getImageUrl(imgItem)" alt="" />
+          <div
+            class="admin-item"
+            :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }"
+            v-for="item in group"
+            :key="item.name"
+          >
+            <div
+              class="img-list"
+              :class="[item.flex]"
+              v-if="Array.isArray(item.img)"
+            >
+              <a-image
+                v-for="imgItem in item.img"
+                :key="imgItem"
+                :src="getImageUrl(imgItem)"
+                alt=""
+              />
             </div>
             <a-image v-else :src="getImageUrl(item.img)" alt="" />
 
@@ -154,87 +167,87 @@ const conList = [
           </div>
         </div>
       </swiper-slide>
-    </SwiperPage> -->
+    </SwiperPage>
   </div>
 </template>
 
 <style scoped lang="less">
-.wrap {
-  .flex-row;
-  align-items: flex-start;
-  gap: 46px;
-
-  .img-info {
-    flex: 1;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  p {
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  .img-list {
-    width: 40%;
-    .flex-row;
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .img-item {
-      flex: 1;
-      min-width: 40%;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
 // .wrap {
-//   .admin-list {
-//     display: grid;
-//     grid-template-columns: repeat(8, 1fr);
-//     grid-template-rows: repeat(2, 1fr);
-//     grid-gap: 20px;
-//     width: 100%;
-//     padding: 0 100px;
+//   .flex-row;
+//   align-items: flex-start;
+//   gap: 46px;
 
-//     .admin-item {
-//       background-color: #fff;
-//       padding: 10px;
-//       .flex-col;
-//       align-items: flex-start;
+//   .img-info {
+//     flex: 1;
 
-//       .img-list {
-//         &.row {
-//           .flex-row;
-//           align-items: flex-start;
-//         }
+//     img {
+//       width: 100%;
+//     }
+//   }
 
-//         &.col {
-//           .flex-col;
-//         }
+//   p {
+//     margin-top: 10px;
+//     font-weight: 600;
+//     font-size: 24px;
+//   }
 
-//         gap: 10px;
-//       }
+//   .img-list {
+//     width: 40%;
+//     .flex-row;
+//     flex-wrap: wrap;
+//     gap: 40px;
+
+//     .img-item {
+//       flex: 1;
+//       min-width: 40%;
 
 //       img {
-//         mix-width: 300px;
-//       }
-
-//       p {
-//         margin-top: 10px;
-//         text-align: center;
-//         color: #000;
-//         font-size: 24px;
-//         font-weight: 500;
+//         width: 100%;
 //       }
 //     }
 //   }
 // }
+
+.wrap {
+  .admin-list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    padding: 0 100px;
+
+    .admin-item {
+      background-color: #fff;
+      padding: 10px;
+      .flex-col;
+      align-items: flex-start;
+
+      .img-list {
+        &.row {
+          .flex-row;
+          align-items: flex-start;
+        }
+
+        &.col {
+          .flex-col;
+        }
+
+        gap: 10px;
+      }
+
+      img {
+        mix-width: 300px;
+      }
+
+      p {
+        margin-top: 10px;
+        text-align: center;
+        color: #000;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}
 </style>

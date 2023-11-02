@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   {
     img: "talent/practice/list6.png",
@@ -27,12 +27,13 @@ const list = [
     gridColumn: "7 / 9",
     gridRow: " 1 / 3",
   },
-]
+];
 </script>
 <template>
   <div class="wrap">
     <div class="img-list">
-      <div class="img-item" v-for="item in list.slice(0, 2)" :key="item.label">
+      我是实习基地
+      <!-- <div class="img-item" v-for="item in list.slice(0, 2)" :key="item.label">
         <a-image :src="getImageUrl(item.img)" alt="" />
         <p>{{ item.label }}</p>
       </div>
@@ -41,7 +42,7 @@ const list = [
           <a-image :src="getImageUrl(i.img)" alt="" />
           <p>{{ i.label }}</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -62,7 +63,6 @@ const list = [
     p {
       font-size: 24px;
       font-weight: 500;
-
     }
 
     .right-img-info {
