@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => {});
+onMounted(() => { });
 const list = [
   [
     {
@@ -130,36 +130,13 @@ const conList = [
 </script>
 <template>
   <div class="wrap">
-    <!-- <div class="img-info">
-      <img :src="getImageUrl('talent/condition/list1.png')" alt="" />
-      <p>农业部种猪质量监督检验测试中心</p>
-    </div>
-    <div class="img-list">
-      <div class="img-item" v-for="item in conList" :key="item.label">
-        <img :src="getImageUrl(item.img)" alt="" />
-        <p>{{ item.label }}</p>
-      </div>
-    </div> -->
     <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
-          <div
-            class="admin-item"
-            :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }"
-            v-for="item in group"
-            :key="item.name"
-          >
-            <div
-              class="img-list"
-              :class="[item.flex]"
-              v-if="Array.isArray(item.img)"
-            >
-              <a-image
-                v-for="imgItem in item.img"
-                :key="imgItem"
-                :src="getImageUrl(imgItem)"
-                alt=""
-              />
+          <div class="admin-item" :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }" v-for="item in group"
+            :key="item.name">
+            <div class="img-list" :class="[item.flex]" v-if="Array.isArray(item.img)">
+              <a-image v-for="imgItem in item.img" :key="imgItem" :src="getImageUrl(imgItem)" alt="" />
             </div>
             <a-image v-else :src="getImageUrl(item.img)" alt="" />
 
