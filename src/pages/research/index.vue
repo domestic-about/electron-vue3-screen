@@ -20,7 +20,7 @@ const activeIndex = ref(0);
 const isAuto = ref(true);
 const isNavigation = ref(true);
 
-onMounted(() => {});
+onMounted(() => { });
 const tabList = computed(() => [
   {
     label: "科研项目",
@@ -60,21 +60,11 @@ const goToSlide = (index) => {
 </script>
 <template>
   <div class="research-wrap">
-    <PageTitle
-      title="科学研究"
-      subTitle="Scientific Research"
-      :tabList="tabList"
-      :activeIndex="activeIndex"
-      @changeIndex="goToSlide"
-    />
+    <PageTitle title="科学研究" subTitle="Scientific Research" :tabList="tabList" :activeIndex="activeIndex"
+      @changeIndex="goToSlide" />
     <div class="content-wrap">
-      <SwiperPage
-        @onSlideChange="onSlideChange"
-        :isAuto="isAuto"
-        :isPagination="false"
-        :isNavigation="isNavigation"
-        ref="swiperRef"
-      >
+      <SwiperPage @onSlideChange="onSlideChange" :isAuto="isAuto" :isPagination="false" :isNavigation="isNavigation"
+        ref="swiperRef">
         <template v-for="(item, index) in tabList" :key="index">
           <swiper-slide v-if="item.component">
             <component :is="item.component" />

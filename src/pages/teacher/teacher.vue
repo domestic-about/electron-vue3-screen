@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => {});
+onMounted(() => { });
 const list = [
   {
     img: "teacher/list7.png",
@@ -89,6 +89,7 @@ const list = [
           h5 {
             font-size: 32px;
             font-weight: 500;
+            margin-bottom: 20px;
           }
 
           span {

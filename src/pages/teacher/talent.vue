@@ -1,55 +1,93 @@
 <script setup>
+import { ref, reactive, onMounted } from 'vue';
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
-import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {
+
+});
+const column1 = [
+  {
+    title: "人才类别",
+    dataIndex: "title",
+    key: "title",
+    align: "center",
+    width: '50%'
+  },
+  {
+    title: "人数",
+    dataIndex: "num",
+    key: "num",
+    align: "center",
+  },
+  {
+    title: "名单",
+    dataIndex: "name",
+    key: "name",
+    align: "center",
+  },
+]
+const dataSource1 = [
+  {
+    title: "中国工程院院士",
+    num: "1",
+    name: "陈焕春",
+  },
+]
+const column2 = [
+  {
+    title: "人才类别",
+    dataIndex: "title",
+    key: "title",
+    align: "center",
+    width: '50%'
+  },
+  {
+    title: "人数",
+    dataIndex: "num",
+    key: "num",
+    align: "center",
+  },
+  {
+    title: "名单",
+    dataIndex: "name",
+    key: "name",
+    align: "center",
+  },
+]
+const dataSource2 = [
+  {
+    title: "全国创新争先奖章（状）获得者",
+    num: "2",
+    name: "2017：金梅林 2022：赵书红",
+  },
+]
+
 </script>
+
 <template>
   <div class="wrap">
     <SwiperPage>
       <SwiperSlide>
-        <div class="swiper-wrap">
-          <div class="left-img-text-wrap">
-            <a-image :src="getImageUrl('teacher/list3.png')" alt="" />
-            <p>
-              团队所在党支部获“全国先进基层党组织”称号，何启盖教授作为获奖代表进京受奖（何启盖
-              供图）
-            </p>
-          </div>
-          <div class="right-img-text-list">
-            <h5>坚定信念铸师魂</h5>
-            <p>
-              华中农业大学畜禽健康养殖教师团队由家畜传染病学家陈焕春院士于上世纪90年代初组建，30多年来，团队坚持“以立德树人为根本，以强农兴农为己任”，聚焦畜禽健康养殖关键问题，深化科教产教融合，薪火传承、接续奋斗，书写了“人才立国、科技强国、产业兴国”的华农牧医华章，为我国农牧高等教育事业和畜牧业现代化建设作出了重要贡献。
-            </p>
-            <p>
-              近五年来，团队涌现了一批师德师风先进典型，1人获评全国三八红旗手，1人获评湖北省优秀共产党员，1人获评湖北省新冠疫情防控先进个人，1人获评湖北省师德先进个人，5人获得校师德师风表彰；团队所在学院和党支部分获“全国教育系统先进集体”“全国先进基层党组织"
-            </p>
-          </div>
+        <div class="table-wrap">
+          <a-table :columns="column1" :data-source="dataSource1" :pagination="{ defaultPageSize: 8 }"></a-table>
+          <a-image :src="getImageUrl('teacher/list1.png')" />
+          <p>2023</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div class="swiper-wrap">
-          <div class="left-img-text-wrap">
-            <p>赵书红教授指导同学们开展科学研究</p>
-            <a-image :src="getImageUrl('teacher/list4.png')" alt="" />
-          </div>
-          <div class="right-img-text-list">
-            <h5>立德树人育英才</h5>
-            <p>
-              团队坚持以立德树人为根本，践行陈焕春院士“三创”（创新、创造、创业）育人理念，不断创新人才培养模式和“三全育人”机制，推进课程思政建设，深化科教产教融合和实践育人，着力培养政治思想过硬、专业知识扎实、引领农牧行业健康发展的时代新人。
+        <div class="table-wrap">
+          <a-table :columns="column2" :data-source="dataSource2" :pagination="{ defaultPageSize: 8 }"></a-table>
+          <div class="user-list">
+            <p class="user-item">
+              <a-image :src="getImageUrl('teacher/list1.png')" />
+            <p>2017</p>
             </p>
-            <p>
-              近五年来，团队在人才培养上成效卓著，荣获国家教学成果二等奖等教学奖励4项，入选国家级一流课程9门，建成国家级虚拟仿真教学项目3项，主持和完成中国工程院高等农业人才培养战略咨询项目等30余项，发表教研论文26篇。
-            </p>
-            <p>
-              培养的学生以第一作者在Nature Genetics、Cell Host &
-              Microbe等刊物发表科研论文600余篇，荣获iGEM、“互联网+”“挑战杯”“创青春”等国内外重要竞赛金奖等81项，1人获评全国百名研究生党员标兵，1人获评中国青年志愿者优秀个人奖等。
-            </p>
-            <p>
-              团队开创的“三创”人才培养的模式被光明日报、人民日报（海外版）等媒体报道，引起强烈社会反响；团队支撑的动物科学、动物医学专业入选首批国家一流专业建设点。
+            <p class="user-item">
+              <a-image :src="getImageUrl('teacher/list2.png')" />
+            <p>2022</p>
             </p>
           </div>
         </div>
@@ -57,41 +95,36 @@ onMounted(() => { });
     </SwiperPage>
   </div>
 </template>
+
 <style scoped lang="less">
-.swiper-wrap {
-  .flex-row;
-  align-items: flex-start;
-  gap: 55px;
+/* 在这里添加你的 Less 样式 */
+.wrap {
 
-  .left-img-text-wrap {
-    width: 387px;
-    .flex-col;
-    gap: 17px;
+  .table-wrap {
+    text-align: center;
 
-    :deep(.ant-image) {
-      width: 400px;
-      height: 560px;
+    :deep(.ant-image-img) {
+      width: 350px;
+    }
+
+    .user-list {
+      .flex-row;
+      gap: 30px;
+
+      .user-item {
+        :deep(.ant-image-img) {
+          width: 154px;
+          height: 200px;
+        }
+
+      }
     }
 
     p {
       font-weight: 500;
       font-size: 24px;
+      margin-top: 20px;
     }
   }
-
-  .right-img-text-list {
-    h5 {
-      background-color: #cbe6ff;
-      font-size: 32px;
-      font-weight: 500;
-      padding: 5px 0;
-    }
-
-    p {
-      margin: 30px 0;
-      font-size: 24px;
-    }
-  }
-
 }
 </style>

@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => {});
+onMounted(() => { });
 
 const activeItem = ref({});
 const open = ref(false);
@@ -225,13 +225,7 @@ const clickItem = (record) => {
         </template>
       </a-table>
     </div>
-    <a-modal
-      width="60%"
-      v-model:open="open"
-      :title="activeItem.title"
-      wrapClassName="research-team-modal"
-      :footer="null"
-    >
+    <a-modal width="60%" v-model:open="open" :title="activeItem.title" wrapClassName="research-team-modal" :footer="null">
       <div class="modal-content">
         <div class="label-wrap">
           <p v-for="op in activeItem.label" :key="op">{{ op }}</p>
@@ -245,6 +239,7 @@ const clickItem = (record) => {
 <style lang="less" scoped>
 .wrap {
   padding: 0 200px;
+
   .con-wrap {
     padding-top: 40px;
 
@@ -263,17 +258,21 @@ const clickItem = (record) => {
   .ant-modal-content {
     padding: 40px;
   }
+
   .ant-modal-title {
     font-size: 24px;
   }
+
   .modal-content {
     .flex-col;
+
     .label-wrap {
       p {
         margin-top: 10px;
         font-size: 16px;
       }
     }
+
     img {
       max-width: 60%;
       margin-top: 20px;

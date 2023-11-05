@@ -4,7 +4,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => {});
+onMounted(() => { });
 const list = [
   [
     {
@@ -68,27 +68,32 @@ const list = [
 <style scoped lang="less">
 .wrap {
   height: 100%;
+
   .user-info {
     height: 100%;
-    padding: 0 100px;
     .flex-col;
     gap: 20px;
+
     .admin-list {
       .flex-row;
       flex-wrap: wrap;
       gap: 20px;
+
       .admin-item {
         .flex-col;
         gap: 10px;
         width: 250px;
+
         :deep(.ant-image) {
           width: 150px;
           height: 240px;
         }
+
         h5 {
           font-size: 24px;
           color: #006e2f;
         }
+
         p {
           font-size: 16px;
           font-weight: 500;
@@ -96,5 +101,4 @@ const list = [
       }
     }
   }
-}
-</style>
+}</style>

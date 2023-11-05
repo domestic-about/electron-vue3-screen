@@ -130,7 +130,6 @@ const list = [
   padding-top: 40px;
 
   .admin-list {
-    padding: 0 100px;
     .flex-row;
     align-items: flex-start;
     gap: 88px;
