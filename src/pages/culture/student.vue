@@ -6,6 +6,25 @@ import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
 onMounted(() => {});
+
+const list = [
+  {
+    title: "",
+    label: "",
+    smallImg: [
+      {
+        title: "狮山寻蜜活动",
+        img: "culture/list1.png",
+      },
+    ],
+    bigImg: [
+      {
+        title: "新生开学典礼暨“筑梦青春”导师面对面活动",
+        img: "culture/list2.png",
+      },
+    ],
+  },
+];
 </script>
 <template>
   <div class="student-wrap">
