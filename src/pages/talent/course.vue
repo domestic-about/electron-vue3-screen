@@ -2,6 +2,8 @@
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
+import SwiperPage from "@/components/swiper/SwiperPage.vue";
+import { SwiperSlide } from "swiper/vue";
 const props = defineProps({});
 onMounted(() => {});
 const list = [
@@ -12,30 +14,44 @@ const list = [
   },
   {
     img: "talent/course/list2.png",
-    title: "家畜育种学",
-    name: "刘榜",
+    title: "兽医外科手术学",
+    name: "胡长敏",
   },
   {
     img: "talent/course/list3.png",
-    title: "兽医外科手术学",
-    name: "胡长敏",
+    title: "动物组织胚胎学",
+    name: "曹罡、刘华珍",
   },
+
   {
     img: "talent/course/list4.png",
-    title: "兽医外科手术学",
-    name: "胡长敏",
+    title: "宠物犬鉴赏",
+    name: "熊家军",
   },
   {
     img: "talent/course/list5.png",
+    title: "畜牧学概论",
+    name: "左波",
   },
   {
     img: "talent/course/list6.png",
+    title: "动物繁殖学",
+    name: "杨利国",
   },
   {
     img: "talent/course/list7.png",
+    title: "猪遗传育种关键技能虚拟仿真综合训练",
+    name: "蒋思文",
   },
   {
     img: "talent/course/list8.png",
+    title: "动物科学专业核心技能综合训练虚拟仿真项目",
+    name: "齐智利",
+  },
+  {
+    img: "talent/course/list8.png",
+    title: "单克隆抗体制备及应用",
+    name: "石德时",
   },
 ];
 </script>
@@ -45,16 +61,56 @@ const list = [
       学院注重打造“校-省-国家”三级一流课程体系，“十三五”以来，入选国家级一流课程9门，省级一流课程8门。
     </h5>
     <p class="line"></p>
-    <div class="img-list">
-      <div class="img-item" v-for="item in list.slice(0, 4)" :key="item.img">
-        <a-image :src="getImageUrl(item.img)" alt="" />
-        <div class="text-wrap">
-          <span>课程名称</span>
-          <p class="cate">{{ item.title }}</p>
-          <span>课程负责人</span>
-          <p>{{ item.name }}</p>
-        </div>
-      </div>
+    <div class="right-wrap">
+      <SwiperPage>
+        <SwiperSlide>
+          <div class="img-list">
+            <div
+              class="img-item"
+              v-for="item in list.slice(0, 4)"
+              :key="item.img"
+            >
+              <a-image :src="getImageUrl(item.img)" alt="" />
+              <div class="text-wrap">
+                <span>课程名称</span>
+                <p class="cate">{{ item.title }}</p>
+                <span>课程负责人</span>
+                <p>{{ item.name }}</p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="img-list">
+            <div
+              class="img-item"
+              v-for="item in list.slice(4, 8)"
+              :key="item.img"
+            >
+              <a-image :src="getImageUrl(item.img)" alt="" />
+              <div class="text-wrap">
+                <span>课程名称</span>
+                <p class="cate">{{ item.title }}</p>
+                <span>课程负责人</span>
+                <p>{{ item.name }}</p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="img-list">
+            <div class="img-item" v-for="item in list.slice(8)" :key="item.img">
+              <a-image :src="getImageUrl(item.img)" alt="" />
+              <div class="text-wrap">
+                <span>课程名称</span>
+                <p class="cate">{{ item.title }}</p>
+                <span>课程负责人</span>
+                <p>{{ item.name }}</p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </SwiperPage>
     </div>
   </div>
 </template>
@@ -68,10 +124,10 @@ const list = [
 
   .title {
     width: 500px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     padding: 50px;
-    line-height: 45px;
+    line-height: 60px;
   }
 
   .line {
@@ -80,6 +136,9 @@ const list = [
     background-color: #d9d9d9;
   }
 
+  .right-wrap {
+    width: calc(100% - 500px);
+  }
   .img-list {
     flex: 1;
     .flex-row;
@@ -87,6 +146,7 @@ const list = [
     justify-content: flex-start;
     padding: 0 20px;
     gap: 30px;
+
     .img-item {
       width: 40%;
       flex: 1;

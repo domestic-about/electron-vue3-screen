@@ -41,11 +41,14 @@ const pageList = [
     img: "party/list8.png",
     text: "赵书红获评“全国三八红旗手”",
   },
-]
+];
 </script>
 <template>
   <div class="party-wrap">
-    <PageTitle title="党建与思想政治教育" subTitle="Party building and ideological and political work" />
+    <PageTitle
+      title="党建与思想政治教育"
+      subTitle="Party building and ideological and political work"
+    />
     <div class="con-wrap">
       <SwiperPage>
         <SwiperSlide>
@@ -77,18 +80,19 @@ const pageList = [
         </SwiperSlide>
       </SwiperPage>
     </div>
-
   </div>
 </template>
 <style scoped lang="less">
 .party-wrap {
-  padding: 24px;
-
+  height: 100%;
   .con-wrap {
-    padding: 88px;
+    height: calc(100% - 106px);
+    padding: 60px 80px;
 
     p {
-      font-size: 24px;
+      font-size: 20px;
+      line-height: 40px;
+
       margin-top: 12px;
       font-weight: 500;
     }
@@ -96,29 +100,29 @@ const pageList = [
     .page1-wrap {
       .flex-row;
       align-items: flex-start;
-      gap: 88px;
+      gap: 40px;
 
       .label {
         width: 600px;
-        padding: 30px;
+        padding: 20px;
         font-size: 24px;
-        background-color: #F7FAF8;
+        background-color: #f7faf8;
       }
 
       .img-list {
         flex: 1;
         .flex-row;
-        gap: 40px;
+        gap: 20px;
         flex-wrap: wrap;
 
         .img-item {
           min-width: 40%;
           flex: 1;
-          height: 400px;
+          text-align: center;
 
           :deep(.ant-image-img) {
             width: 100%;
-            height: 100%;
+            height: 300px;
           }
         }
       }
@@ -137,10 +141,11 @@ const pageList = [
 
       .label {
         margin-top: 60px;
-        padding: 30px;
-        font-size: 24px;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 40px;
         font-weight: 400;
-        background-color: #F7FAF8;
+        background-color: #f7faf8;
       }
     }
   }

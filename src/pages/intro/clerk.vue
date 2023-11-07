@@ -4,7 +4,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   {
     img: "intro/clerk/list1.png",
@@ -67,12 +67,18 @@ const list = [
   <div class="wrap">
     <div class="user-info">
       <div class="admin-list">
-        <div class="admin-item" v-for="item in list" :key="item.name">
+        <div
+          class="admin-item"
+          v-for="item in [...list, ...list]"
+          :key="item.name"
+        >
           <a-image :src="getImageUrl(item.img)" alt="" />
           <h5>{{ item.name }}</h5>
           <p>{{ item.label }}</p>
         </div>
       </div>
+      <div class="line"></div>
+      <div class="title">历任书记任职时间</div>
     </div>
   </div>
 </template>
@@ -81,13 +87,18 @@ const list = [
   height: 100%;
 
   .user-info {
+    width: 100%;
     height: 100%;
-    .flex-row;
+    padding: 100px;
+    overflow: hidden;
 
     .admin-list {
-      .flex-row;
-      flex-wrap: wrap;
+      display: inline-flex;
       gap: 20px;
+      overflow: scroll;
+
+      white-space: nowrap;
+      animation: keepScroll 20s linear infinite; /* 滚动动画 */
 
       .admin-item {
         .flex-col;
@@ -95,8 +106,8 @@ const list = [
         width: 250px;
 
         :deep(.ant-image) {
-          width: 150px;
-          height: 240px;
+          width: 140px;
+          height: 200px;
         }
 
         h5 {
@@ -110,5 +121,18 @@ const list = [
         }
       }
     }
+    .line {
+      margin: 50px 0;
+      width: 100%;
+      height: 2px;
+      background-color: #d9d9d9;
+    }
+    .title {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      color: #000;
+    }
   }
-}</style>
+}
+</style>

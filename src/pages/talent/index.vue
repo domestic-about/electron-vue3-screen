@@ -106,41 +106,14 @@ const goToSlide = (index) => {
 .talent-wrap {
   height: 100%;
   position: relative;
-  padding: 24px;
+
   .flex-col;
   justify-content: flex-start;
 
-  .title-wrap {
-    width: 100%;
-    .flex-row;
-    justify-content: space-between;
-    h3 {
-      font-size: 48px;
-      font-weight: 600;
-      color: #000;
-    }
-    .tab-list {
-      .flex-row;
-      gap: 20px;
-      .van-button {
-        border-radius: 12px;
-        background: #fff;
-        font-size: 32px;
-        font-weight: 500;
-        width: 204px;
-        height: 80px;
-        border: none;
-        &.active {
-          border-radius: 12px;
-          background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
-          color: #fff;
-        }
-      }
-    }
-  }
   .content-wrap {
     width: 100%;
-    flex: 1;
+    padding: 24px;
+    height: calc(100% - 106px);
   }
 }
 </style>

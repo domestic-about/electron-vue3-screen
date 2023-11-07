@@ -20,7 +20,7 @@ const activeIndex = ref(0);
 const isAuto = ref(true);
 const isNavigation = ref(true);
 
-onMounted(() => { });
+onMounted(() => {});
 const tabList = computed(() => [
   {
     label: "科研项目",
@@ -60,11 +60,21 @@ const goToSlide = (index) => {
 </script>
 <template>
   <div class="research-wrap">
-    <PageTitle title="科学研究" subTitle="Scientific Research" :tabList="tabList" :activeIndex="activeIndex"
-      @changeIndex="goToSlide" />
+    <PageTitle
+      title="科学研究"
+      subTitle="Scientific Research"
+      :tabList="tabList"
+      :activeIndex="activeIndex"
+      @changeIndex="goToSlide"
+    />
     <div class="content-wrap">
-      <SwiperPage @onSlideChange="onSlideChange" :isAuto="isAuto" :isPagination="false" :isNavigation="isNavigation"
-        ref="swiperRef">
+      <SwiperPage
+        @onSlideChange="onSlideChange"
+        :isAuto="isAuto"
+        :isPagination="false"
+        :isNavigation="isNavigation"
+        ref="swiperRef"
+      >
         <template v-for="(item, index) in tabList" :key="index">
           <swiper-slide v-if="item.component">
             <component :is="item.component" />
@@ -78,46 +88,11 @@ const goToSlide = (index) => {
 .research-wrap {
   height: 100%;
   position: relative;
-  padding: 24px;
-  .flex-col;
-  justify-content: flex-start;
-
-  .title-wrap {
-    width: 100%;
-    .flex-row;
-    justify-content: space-between;
-
-    h3 {
-      font-size: 48px;
-      font-weight: 600;
-      color: #000;
-    }
-
-    .tab-list {
-      .flex-row;
-      gap: 20px;
-
-      .van-button {
-        border-radius: 12px;
-        background: #fff;
-        font-size: 32px;
-        font-weight: 500;
-        width: 204px;
-        height: 80px;
-        border: none;
-
-        &.active {
-          border-radius: 12px;
-          background: linear-gradient(180deg, #f49002 0%, #d15f07 100%);
-          color: #fff;
-        }
-      }
-    }
-  }
 
   .content-wrap {
     width: 100%;
-    flex: 1;
+    padding: 24px;
+    height: calc(100% - 106px);
   }
 }
 </style>

@@ -76,9 +76,10 @@ const goToSlide = (index) => {
 .teacher-wrap {
   height: 100%;
   position: relative;
-  padding: 24px;
 
   .content-wrap {
+    padding: 0 24px;
+
     width: 100%;
     height: calc(100% - 106px);
   }

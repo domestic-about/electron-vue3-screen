@@ -6,12 +6,14 @@ import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
 import PageTitle from "@/components/PageTitle.vue";
 const props = defineProps({});
-onMounted(() => { });
-
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <PageTitle title="国际合作与交流" subTitle="International Cooperation and Exchange" />
+    <PageTitle
+      title="国际合作与交流"
+      subTitle="International Cooperation and Exchange"
+    />
     <div class="content-wrap">
       <SwiperPage>
         <swiper-slide>
@@ -52,7 +54,8 @@ onMounted(() => { });
               </div>
             </div>
             <p class="text-label">
-              邀请了西班牙皇家兽医科学院院士、马德里康普斯顿大学兽医学院Arturo Anadón教授，法国图卢兹国立兽医大学药理毒理及生物化学系主任，西班牙皇家兽医科学院外籍院士Pierre-Louis
+              邀请了西班牙皇家兽医科学院院士、马德里康普斯顿大学兽医学院Arturo
+              Anadón教授，法国图卢兹国立兽医大学药理毒理及生物化学系主任，西班牙皇家兽医科学院外籍院士Pierre-Louis
               Toutain教授等300余位国内外专家来院学术交流，有200余名师生赴国外交流、研修和开展合作研究，招收了201名外国留学生。
             </p>
           </div>
@@ -98,11 +101,11 @@ onMounted(() => { });
     padding: 40px 76px;
 
     p {
-      font-size: 24px;
+      font-size: 20px;
+      line-height: 40px;
       font-weight: 500;
       margin-top: 12px;
     }
-
 
     .page1-wrap {
       .img-list {
@@ -124,10 +127,9 @@ onMounted(() => { });
           }
         }
       }
-
       .label {
-        margin-top: 44px;
-        font-size: 24px;
+        padding: 20px;
+        background-color: #f7faf8;
       }
     }
 
@@ -158,9 +160,8 @@ onMounted(() => { });
 
       .text-label {
         width: 816px;
-        font-weight: 400;
         padding: 20px;
-        background-color: #F7FAF8
+        background-color: #f7faf8;
       }
     }
 
@@ -183,8 +184,7 @@ onMounted(() => { });
           .label {
             width: 526px;
             padding: 12px;
-            background: #F7FAF8;
-            font-weight: 400;
+            background: #f7faf8;
           }
         }
 

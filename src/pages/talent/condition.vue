@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   [
     {
@@ -105,38 +105,29 @@ const list = [
     },
   ],
 ];
-const conList = [
-  {
-    img: "talent/condition/list2.png",
-    label: "动物医院",
-    gridColumn: "5 / 7",
-  },
-  {
-    img: "talent/condition/list3.png",
-    label: "实验动物中心",
-    gridColumn: "7 / 9",
-  },
-  {
-    img: "talent/condition/list4.png",
-    label: "华中农业大学动物疫病诊断中心",
-    gridColumn: "5 / 7",
-  },
-  {
-    img: "talent/condition/list5.png",
-    label: "标本馆2",
-    gridColumn: "7 / 9",
-  },
-];
 </script>
 <template>
   <div class="wrap">
     <SwiperPage :isAuto="false">
       <swiper-slide v-for="(group, index) in list" :key="index">
         <div class="admin-list">
-          <div class="admin-item" :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }" v-for="item in group"
-            :key="item.name">
-            <div class="img-list" :class="[item.flex]" v-if="Array.isArray(item.img)">
-              <a-image v-for="imgItem in item.img" :key="imgItem" :src="getImageUrl(imgItem)" alt="" />
+          <div
+            class="admin-item"
+            :style="{ gridColumn: item.gridColumn, gridRow: item.gridRow }"
+            v-for="item in group"
+            :key="item.name"
+          >
+            <div
+              class="img-list"
+              :class="[item.flex]"
+              v-if="Array.isArray(item.img)"
+            >
+              <a-image
+                v-for="imgItem in item.img"
+                :key="imgItem"
+                :src="getImageUrl(imgItem)"
+                alt=""
+              />
             </div>
             <a-image v-else :src="getImageUrl(item.img)" alt="" />
 
@@ -149,50 +140,17 @@ const conList = [
 </template>
 
 <style scoped lang="less">
-// .wrap {
-//   .flex-row;
-//   align-items: flex-start;
-//   gap: 46px;
-
-//   .img-info {
-//     flex: 1;
-
-//     img {
-//       width: 100%;
-//     }
-//   }
-
-//   p {
-//     margin-top: 10px;
-//     font-weight: 600;
-//     font-size: 24px;
-//   }
-
-//   .img-list {
-//     width: 40%;
-//     .flex-row;
-//     flex-wrap: wrap;
-//     gap: 40px;
-
-//     .img-item {
-//       flex: 1;
-//       min-width: 40%;
-
-//       img {
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
-
 .wrap {
+  height: 100%;
+
   .admin-list {
+    height: 70%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
     width: 100%;
-    padding: 0 100px;
+    padding: 100px 100px;
 
     .admin-item {
       background-color: #fff;
@@ -200,7 +158,11 @@ const conList = [
       .flex-col;
       align-items: flex-start;
 
+      :deep(.ant-image) {
+        width: 100%;
+      }
       .img-list {
+        gap: 10px;
         &.row {
           .flex-row;
           align-items: flex-start;
@@ -209,12 +171,6 @@ const conList = [
         &.col {
           .flex-col;
         }
-
-        gap: 10px;
-      }
-
-      img {
-        mix-width: 300px;
       }
 
       p {

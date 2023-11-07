@@ -40,7 +40,7 @@ const clickItem = (index) => {
   justify-content: space-between;
   padding: 0 34px;
   height: 106px;
-
+  background-color: #f7faf8;
   .title-info {
     h3 {
       font-size: 40px;

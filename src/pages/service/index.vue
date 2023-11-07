@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
+import PageTitle from "@/components/PageTitle.vue";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
 onMounted(() => {});
@@ -114,47 +115,43 @@ const list = [
 </script>
 <template>
   <div class="wrap">
-    <div class="title-wrap">
-      <h3>社会服务</h3>
-    </div>
+    <PageTitle title="社会服务" subTitle="Social Service" />
 
-    <SwiperPage>
-      <swiper-slide v-for="(item, index) in list" :key="item.title">
-        <div class="text-img-wrap">
-          <p class="label-0" v-if="index === 0">
-            华中农业大学动物科学技术学院、动物医学院始终坚持“四个面向”，以强农兴农为己任，积极为推动畜牧业高质量发展和农业农村现代化提供人才支撑、智力支持、技术服务。
-          </p>
-          <button class="title">{{ item.title }}</button>
-          <p class="label">
-            {{ item.label }}
-          </p>
-          <div class="img-list">
-            <div
-              class="img-item"
-              v-for="imgItem in item.imgList"
-              :key="imgItem.text"
-            >
-              <a-image :src="getImageUrl(`${imgItem.img}`)" alt="" />
-              <p>{{ imgItem.text }}</p>
+    <div class="content-wrap">
+      <SwiperPage>
+        <swiper-slide v-for="(item, index) in list" :key="item.title">
+          <div class="text-img-wrap">
+            <p class="label-0" v-if="index === 0">
+              华中农业大学动物科学技术学院、动物医学院始终坚持“四个面向”，以强农兴农为己任，积极为推动畜牧业高质量发展和农业农村现代化提供人才支撑、智力支持、技术服务。
+            </p>
+            <button class="title">{{ item.title }}</button>
+            <p class="label">
+              {{ item.label }}
+            </p>
+            <div class="img-list">
+              <div
+                class="img-item"
+                v-for="imgItem in item.imgList"
+                :key="imgItem.text"
+              >
+                <a-image :src="getImageUrl(`${imgItem.img}`)" alt="" />
+                <p>{{ imgItem.text }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </swiper-slide>
-    </SwiperPage>
+        </swiper-slide>
+      </SwiperPage>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
 .wrap {
   height: 100%;
   position: relative;
-  padding: 24px;
 
-  .title-wrap {
-    h3 {
-      font-size: 48px;
-      font-weight: 600;
-      color: #000;
-    }
+  .content-wrap {
+    height: calc(100% - 106px);
+    padding: 24px;
   }
   .text-img-wrap {
     .flex-col;

@@ -5,16 +5,25 @@ body {
   --primary-color: #006e2f;
 }
 
-.ant-table-wrapper .ant-table-thead>tr,
-.ant-table-wrapper .ant-table-thead>tr>th,
-.ant-table-wrapper .ant-table-thead>tr>td {
-  background-color: #00A08E;
+.ant-table-wrapper .ant-table-thead > tr,
+.ant-table-wrapper .ant-table-thead > tr > th,
+.ant-table-wrapper .ant-table-thead > tr > td {
+  background-color: #00a08e;
   color: #fff;
   font-size: 20px;
 }
 
 .ant-table-cell {
   font-size: 20px;
-  background: var(--material-theme-sys-light-surface-bright, #F7FAF8);
-  box-shadow: 0px -1px 0px 0px rgba(0, 110, 47, 0.30) inset;
+  background: var(--material-theme-sys-light-surface-bright, #f7faf8);
+  box-shadow: 0px -1px 0px 0px rgba(0, 110, 47, 0.3) inset;
+}
+
+@keyframes keepScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 将所有的卡片向左移动自身的100%（完全移出视线） */
+  }
 }
