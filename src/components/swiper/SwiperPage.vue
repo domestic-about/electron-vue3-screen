@@ -92,7 +92,6 @@ defineExpose({ slideTo });
 
   :deep(.swiper) {
     height: 100%;
-    padding-bottom: 40px;
     .swiper-button-prev,
     .swiper-button-next {
       width: 64px;

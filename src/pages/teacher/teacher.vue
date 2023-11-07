@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   {
     img: "teacher/list7.png",
@@ -21,7 +21,29 @@ const list = [
 ];
 </script>
 <template>
-  <div class="wrap">
+  <div class="teacher-wrap">
+    <div class="swiper-item">
+      <div class="title-wrap">
+        <div
+          class="title"
+          :class="{ active: activeIndex === 0 }"
+          @click="activeIndex = 0"
+        >
+          畜牧学学科
+        </div>
+        <div
+          class="title"
+          :class="{ active: activeIndex === 1 }"
+          @click="activeIndex = 1"
+        >
+          兽医学学科
+        </div>
+      </div>
+
+      <div class="info-wrap"></div>
+    </div>
+  </div>
+  <!-- <div class="wrap">
     <div class="title-wrap">
       <h5>临床兽医学系</h5>
       <span>Department of Clinical Veterinary Medicine</span>
@@ -40,9 +62,79 @@ const list = [
         </p>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 <style scoped lang="less">
+.major-wrap {
+  padding-top: 30px;
+
+  .swiper-item {
+    .flex-row;
+    align-items: stretch;
+    gap: 40px;
+
+    .title-wrap {
+      .flex-col;
+      justify-content: flex-start;
+      gap: 20px;
+      border-right: 1px solid #d9d9d9;
+
+      .title {
+        display: flex;
+        width: 254px;
+        height: 80px;
+        padding: 18.425px 18.607px;
+        justify-content: center;
+        align-items: center;
+        gap: 18.425px;
+        flex-shrink: 0;
+        background: transparent;
+        font-family: PingFang SC;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        filter: drop-shadow(
+          0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
+        );
+        line-height: normal;
+
+        &.active {
+          color: #006b5e;
+        }
+      }
+    }
+
+    .info-wrap {
+      height: calc(100vh - 340px);
+      overflow: auto;
+
+      padding: 24px 24px 0px 24px;
+
+      border-radius: 12px;
+      background: #fff;
+      color: #000;
+      font-size: 24px;
+      font-weight: 400;
+
+      h4 {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+
+      h5 {
+        margin: 20px 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
 .wrap {
   .title-wrap {
     display: flex;

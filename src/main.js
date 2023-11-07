@@ -11,6 +11,7 @@ import {
   Modal,
   FloatButtonGroup,
   FloatButton,
+  Timeline,
 } from "ant-design-vue";
 
 // 1. 引入你需要的组件
@@ -51,6 +52,7 @@ app.use(Modal);
 app.use(Table);
 app.use(FloatButtonGroup);
 app.use(FloatButton);
+app.use(Timeline);
 app.use(router);
 app
   .mount("#app")

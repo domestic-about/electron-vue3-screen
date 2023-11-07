@@ -36,75 +36,70 @@ const list = [
     label: "学院更名为动物科学技术学院和动物医学院",
   },
 ];
-onMounted(() => { });
+onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <SwiperPage>
-      <SwiperSlide>
-        <div class="show-time">
-          <div class="history-list">
-            <div class="history-item" v-for="item in list.slice(0, 4)" :key="item.time">
-              <h5 class="title">{{ item.label }}</h5>
-              <span class="shu"></span>
-              <span class="xian"></span>
-              <h5> {{ item.time }}</h5>
-            </div>
-          </div>
+    <div class="history-list">
+      <div v-for="item in list" :key="item.time" class="list-item">
+        <h4>{{ item.time }}</h4>
+        <div class="line-wrap">
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="line"></div>
         </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div class="show-time">
-          <div class="history-list">
-            <div class="history-item" v-for="item in list.slice(4, 8)" :key="item.time">
-              <h5 class="title">{{ item.label }}</h5>
-              <span class="shu"></span>
-              <span class="xian"></span>
-              <h5> {{ item.time }}</h5>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-    </SwiperPage>
+        <p class="autoline">{{ item.label }}</p>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
 .wrap {
-  .show-time {
-    .history-list {
-      .flex-row;
+  height: 100%;
+  .flex-col;
 
-      .history-item {
-        flex: 1;
-        .flex-col;
+  .history-list {
+    margin-bottom: 80px;
+    .flex-row;
+    width: 85%;
+    align-items: flex-start;
+    .list-item {
+      flex: 1;
 
-        h5 {
-          font-size: 32px;
-          font-weight: 500;
-          margin-top: 10px;
+      .flex-col;
+      justify-content: flex-start;
+      gap: 30px;
+      h4 {
+        font-size: 32px;
+        font-family:
+          PingFangSC-Medium,
+          PingFang SC;
+        font-weight: 500;
+        color: #1d2129;
+      }
+      .line-wrap {
+        width: 100%;
+        .flex-row;
 
+        .line {
+          flex: 1;
+          height: 1px;
+          background: #d7dde9;
         }
-
-        .title {
-          width: 260px;
-
+        .circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 5px;
+          background: #b2bccf;
         }
-
-        .shu {
-          width: 4px;
-          height: 18px;
-          background-color: #006B5E;
-          margin-top: 10px;
-        }
-
-        .xian {
-          width: 100%;
-          height: 5px;
-          background: #006B5E;
-        }
+      }
+      p {
+        font-size: 24px;
+        color: #1d2129;
+        padding: 0 30px;
+        text-align: center;
       }
     }
   }
 }
 </style>
-

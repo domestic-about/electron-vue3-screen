@@ -21,7 +21,7 @@ const tabList = [
     component: Student,
   },
   {
-    label: "团学活动",
+    label: "教工活动",
     route: "",
     component: Teacher,
   },

@@ -5,7 +5,7 @@ const props = defineProps({});
 import { SwiperSlide } from "swiper/vue";
 import SwiperPage from "@/components/swiper/SwiperPage.vue";
 import { getImageUrl } from "@/utils";
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   [
     {

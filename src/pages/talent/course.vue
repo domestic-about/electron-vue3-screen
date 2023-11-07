@@ -3,27 +3,27 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { getImageUrl } from "@/utils";
 const props = defineProps({});
-onMounted(() => { });
+onMounted(() => {});
 const list = [
   {
     img: "talent/course/list1.png",
-    title: '家畜育种学',
-    name: '刘榜'
+    title: "家畜育种学",
+    name: "刘榜",
   },
   {
     img: "talent/course/list2.png",
-    title: '家畜育种学',
-    name: '刘榜'
+    title: "家畜育种学",
+    name: "刘榜",
   },
   {
     img: "talent/course/list3.png",
-    title: '兽医外科手术学',
-    name: '胡长敏'
+    title: "兽医外科手术学",
+    name: "胡长敏",
   },
   {
     img: "talent/course/list4.png",
-    title: '兽医外科手术学',
-    name: '胡长敏'
+    title: "兽医外科手术学",
+    name: "胡长敏",
   },
   {
     img: "talent/course/list5.png",
@@ -44,7 +44,7 @@ const list = [
     <h5 class="title">
       学院注重打造“校-省-国家”三级一流课程体系，“十三五”以来，入选国家级一流课程9门，省级一流课程8门。
     </h5>
-    <p class="shu"></p>
+    <p class="line"></p>
     <div class="img-list">
       <div class="img-item" v-for="item in list.slice(0, 4)" :key="item.img">
         <a-image :src="getImageUrl(item.img)" alt="" />
@@ -61,30 +61,32 @@ const list = [
 
 <style scoped lang="less">
 .wrap {
+  height: 100%;
   .flex-row;
-  align-items: flex-start;
   gap: 30px;
-  background-color: #F7FAF8;
+  background-color: #f7faf8;
 
   .title {
-    width: 256px;
+    width: 500px;
     font-size: 32px;
     font-weight: 500;
-    flex: 1;
+    padding: 50px;
+    line-height: 45px;
   }
 
-  .shu {
-    width: 6px;
+  .line {
+    width: 2px;
     height: 600px;
-    background-color: red;
+    background-color: #d9d9d9;
   }
 
   .img-list {
-    width: 1200px;
+    flex: 1;
     .flex-row;
     flex-wrap: wrap;
     justify-content: flex-start;
-
+    padding: 0 20px;
+    gap: 30px;
     .img-item {
       width: 40%;
       flex: 1;
@@ -109,6 +111,5 @@ const list = [
       }
     }
   }
-
 }
 </style>
