@@ -40,7 +40,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <div class="history-list">
+    <div class="history-list wow bounceInDown">
       <div v-for="item in list" :key="item.time" class="list-item">
         <h4>{{ item.time }}</h4>
         <div class="line-wrap">

@@ -10,13 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "ant-design-vue": "4.x",
     "lodash": "^4.17.21",
     "pinia": "^2.1.6",
     "swiper": "^10.2.0",
     "vant": "^4.6.8",
     "vue": "^3.2.47",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.2",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.4.0",

@@ -1,9 +1,17 @@
-<script setup lang="ts">
+<script setup>
 import MenuFloat from "@/components/MenuFloat.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import { useRoute } from "vue-router";
+import WOW from "wow.js";
+import { onMounted } from "vue";
 const route = useRoute();
+onMounted(() => {
+  new WOW({
+    live: true,
+    offset: 0,
+  }).init();
+});
 </script>
 
 <template>

@@ -4,6 +4,12 @@ import router from "./router";
 import App from "./App.vue";
 import "./assets/css/index.less";
 import "@/utils/rem";
+
+import "animate.css";
+// 这块一定要加,否者会有部分动画无法执行
+import "animate.css/animate.compat.css";
+// ..
+
 import {
   Image,
   Table,
