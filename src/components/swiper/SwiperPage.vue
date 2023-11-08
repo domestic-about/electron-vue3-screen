@@ -5,7 +5,7 @@ import { getImageUrl } from "@/utils";
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
+import WOW from "@/utils/wow";
 // Import Swiper styles
 import "swiper/css";
 
@@ -20,6 +20,8 @@ const props = defineProps({
   isAuto: { default: false },
 });
 const emit = defineEmits(["onSlideChange"]);
+
+const wowIndexArr = ref([]);
 
 const modules = [Navigation];
 if (props.isPagination) {
@@ -46,9 +48,21 @@ const slideTo = (index) => {
 const onSwiper = (swiper) => {
   console.log(swiper, "onSwiper");
   swiperRef.value = swiper;
+  initWow(swiper.activeIndex);
 };
 const onSlideChange = (swiper) => {
   emit("onSlideChange", swiper);
+  console.log(swiper, "swiper");
+  initWow(swiper.activeIndex);
+};
+const initWow = (activeIndex) => {
+  if (!wowIndexArr.value.includes(activeIndex)) {
+    new WOW({
+      live: true,
+      offset: 0,
+    }).init();
+  }
+  wowIndexArr.value.push(activeIndex);
 };
 console.log(props, "props");
 

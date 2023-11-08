@@ -11,7 +11,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="agency-wrap">
-    <img :src="getImageUrl('intro/agency.png')" />
+    <img class="wow bounceInDown" :src="getImageUrl('intro/agency.png')" />
   </div>
 </template>
 <style scoped lang="less">
