@@ -18,6 +18,7 @@ import {
   FloatButtonGroup,
   FloatButton,
   Timeline,
+  Card,
 } from "ant-design-vue";
 
 // 1. 引入你需要的组件
@@ -44,6 +45,15 @@ pinia.use(
 
 const app = createApp(App);
 app.use(pinia);
+app.use(Image);
+app.use(Empty);
+app.use(Modal);
+app.use(Table);
+app.use(FloatButtonGroup);
+app.use(FloatButton);
+app.use(Timeline);
+app.use(Card);
+
 app.use(Button);
 app.use(Swipe);
 app.use(SwipeItem);
@@ -52,13 +62,6 @@ app.use(Tabs);
 app.use(Tab);
 app.use(FloatingBubble);
 
-app.use(Image);
-app.use(Empty);
-app.use(Modal);
-app.use(Table);
-app.use(FloatButtonGroup);
-app.use(FloatButton);
-app.use(Timeline);
 app.use(router);
 app
   .mount("#app")
