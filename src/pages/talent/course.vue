@@ -138,11 +138,13 @@ const list = [
 
   .right-wrap {
     width: calc(100% - 500px);
+    height: 100%;
   }
   .img-list {
     flex: 1;
     .flex-row;
     flex-wrap: wrap;
+    height: 100%;
     justify-content: flex-start;
     padding: 0 20px;
     gap: 30px;

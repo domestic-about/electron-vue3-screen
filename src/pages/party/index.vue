@@ -53,10 +53,10 @@ const pageList = [
       <SwiperPage>
         <SwiperSlide>
           <div class="page1-wrap">
-            <p class="label">
+            <p class="label wow fadeInLeft">
               近年来，动物科学技术学院、动物医学院充分发挥党组织的政治引领作用，坚持以立德树人为根本，以强农兴农为己任，立足培养高层次创新型农牧人才，瞄准服务农牧行业高质量发展，积极探索构建新时代高校党建和思想政治工作体系，凝心聚力推进“三大建设”，全面从严把好“三大关口”，扎实有效推动“五大融合”，形成了“党建引领、师生奋进、学院发展”的良好态势。
             </p>
-            <div class="img-list">
+            <div class="img-list wow fadeInRight">
               <div class="img-item" v-for="item in list" :key="item.img">
                 <a-image :src="getImageUrl(item.img)" />
                 <p>{{ item.text }}</p>
@@ -136,6 +136,7 @@ const pageList = [
 
         .img-item {
           flex: 1;
+          text-align: center;
         }
       }
 

@@ -66,6 +66,46 @@ const dataSource = [
     title: "预防兽医学湖北省重点实验室",
     name: "肖少波",
   },
+  {
+    title: "农业部种猪质量监督检验测试中心(武汉)",
+    name: "赵书红",
+  },
+  {
+    title: "农业部猪遗传育种重点开放实验室",
+    name: "赵书红",
+  },
+  {
+    title: "动物疾病防控国际联合研究中心",
+    name: "周锐",
+  },
+  {
+    title: "动物遗传育种与繁殖国际联合研究中心",
+    name: "杨利国",
+  },
+  {
+    title: "国家兽药残留基准实验室",
+    name: "黄玲利",
+  },
+  {
+    title: "国家兽药安全评价实验室",
+    name: "黄玲利",
+  },
+  {
+    title: "农业农村部兽药残留检测重点实验室",
+    name: "黄玲利",
+  },
+  {
+    title: "农业部畜禽产品质量安全风险评估实验室（武汉）",
+    name: "黄玲利",
+  },
+  {
+    title: "农业农村部农业微生物资源利用重点实验室",
+    name: "陈焕春",
+  },
+  {
+    title: "农业农村部兽用诊断制剂创制重点实验室",
+    name: "何启盖",
+  },
 ];
 </script>
 
@@ -77,7 +117,8 @@ const dataSource = [
           <a-table
             :columns="column"
             :data-source="dataSource"
-            :pagination="{ defaultPageSize: 8 }"
+            :pagination="false"
+            :scroll="{ y: '70vh' }"
           ></a-table>
         </div>
       </SwiperSlide>
@@ -113,6 +154,7 @@ const dataSource = [
 
 <style lang="less" scoped>
 .wrap {
+  height: 100%;
   .page1-wrap {
     .flex-row;
 
@@ -158,6 +200,18 @@ const dataSource = [
       font-weight: 500;
       text-align: center;
       margin-bottom: 30px;
+    }
+  }
+  .page3-wrap {
+    .flex-col;
+    :deep(.ant-table-wrapper) {
+      width: 80%;
+
+      .ant-table-cell {
+        &:nth-child(1) {
+          font-weight: bold;
+        }
+      }
     }
   }
 }

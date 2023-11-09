@@ -15,6 +15,7 @@ const columns = [
     dataIndex: "title",
     key: "title",
     align: "center",
+    width: "50%",
   },
   {
     title: "获批类别与时间",
@@ -217,7 +218,12 @@ const clickItem = (record) => {
   <div class="wrap">
     <div class="con-wrap">
       <h3>科研团队一览</h3>
-      <a-table :dataSource="dataSource" :columns="columns">
+      <a-table
+        :dataSource="dataSource"
+        :columns="columns"
+        :pagination="false"
+        :scroll="{ y: '70vh' }"
+      >
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'operation' && record.label">
             <a @click="clickItem(record)">查看详情</a>
@@ -244,16 +250,22 @@ const clickItem = (record) => {
 
 <style lang="less" scoped>
 .wrap {
-  padding: 0 200px;
-
   .con-wrap {
-    padding-top: 40px;
+    padding-top: 20px;
 
     .flex-col;
     gap: 30px;
 
     h3 {
       font-size: 32px;
+    }
+    :deep(.ant-table-wrapper) {
+      width: 80%;
+      .ant-table-cell {
+        &:nth-child(1) {
+          font-weight: bold;
+        }
+      }
     }
   }
 }

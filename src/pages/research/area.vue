@@ -46,7 +46,7 @@ onMounted(() => {});
     <SwiperPage>
       <SwiperSlide v-for="item in list" :key="item.title">
         <div class="area-item">
-          <a-image :src="getImageUrl(item.img)" />
+          <a-image class="wow" :src="getImageUrl(item.img)" />
           <div class="text-info">
             <h3>{{ item.title }}</h3>
             <p class="label">{{ item.text }}</p>

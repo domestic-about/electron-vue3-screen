@@ -19,13 +19,13 @@ const column = [
     dataIndex: "num",
     key: "num",
     align: "center",
-    width: "100",
+    width: 200,
   },
   {
     title: "名单",
     dataIndex: "name",
     key: "name",
-    align: "center",
+    align: "left",
   },
 ];
 const dataSource = [
@@ -212,37 +212,24 @@ const dataSource = [
     <a-table
       :columns="column"
       :data-source="dataSource"
-      :pagination="{ defaultPageSize: 8 }"
+      :pagination="false"
+      :scroll="{ y: '70vh' }"
     ></a-table>
   </div>
 </template>
 
 <style scoped lang="less">
 /* 在这里添加你的 Less 样式 */
-.wrap {
-  .table-wrap {
-    text-align: center;
-
-    :deep(.ant-image-img) {
-      width: 350px;
-    }
-
-    .user-list {
-      .flex-row;
-      gap: 30px;
-
-      .user-item {
-        :deep(.ant-image-img) {
-          width: 154px;
-          height: 200px;
-        }
+.table-wrap {
+  padding-top: 40px;
+  text-align: center;
+  .flex-col;
+  :deep(.ant-table-wrapper) {
+    width: 80%;
+    .ant-table-cell {
+      &:nth-child(1) {
+        font-weight: bold;
       }
-    }
-
-    p {
-      font-weight: 500;
-      font-size: 24px;
-      margin-top: 20px;
     }
   }
 }

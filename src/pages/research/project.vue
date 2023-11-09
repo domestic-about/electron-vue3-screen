@@ -11,6 +11,7 @@ const column = [
     dataIndex: "title",
     key: "title",
     align: "center",
+    width: "30%",
   },
   {
     title: "项目批准号/项目编号",
@@ -330,7 +331,8 @@ onMounted(() => {});
     <a-table
       :columns="column"
       :data-source="dataSource"
-      :pagination="{ defaultPageSize: 8 }"
+      :pagination="false"
+      :scroll="{ y: '70vh' }"
     ></a-table>
   </div>
 </template>
@@ -338,12 +340,19 @@ onMounted(() => {});
 <style lang="less" scoped>
 .wrap {
   height: 100%;
-  padding: 60px 100px;
+  padding: 20px 100px;
   h4 {
     font-size: 28px;
     line-height: 60px;
     font-weight: 500;
     text-align: center;
+  }
+  :deep(.ant-table-wrapper) {
+    .ant-table-cell {
+      &:nth-child(1) {
+        font-weight: bold;
+      }
+    }
   }
 }
 </style>

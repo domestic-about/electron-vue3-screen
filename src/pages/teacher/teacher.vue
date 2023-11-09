@@ -5,11 +5,18 @@ import { getImageUrl } from "@/utils";
 import constData from "./constant";
 const props = defineProps({});
 
+const open = ref(false);
+const activeCard = ref({});
 const activeIndex = ref(0);
 
 const activeItem = computed(() => constData[activeIndex.value]);
 const teachers = computed(() => activeItem.value.teachers);
 onMounted(() => {});
+const clickItem = (record) => {
+  console.log(record);
+  open.value = true;
+  activeCard.value = record;
+};
 </script>
 <template>
   <div class="teacher-wrap">
@@ -27,7 +34,12 @@ onMounted(() => {});
       </div>
 
       <div class="info-wrap">
-        <a-card v-for="item in teachers" :key="item.title" hoverable>
+        <a-card
+          v-for="item in teachers"
+          :key="item.title"
+          hoverable
+          @click="clickItem(item)"
+        >
           <template #cover>
             <img :src="getImageUrl(item.img)" />
           </template>
@@ -37,6 +49,26 @@ onMounted(() => {});
         </a-card>
       </div>
     </div>
+    <a-modal
+      width="60%"
+      v-model:open="open"
+      wrapClassName="teacher-teacher-modal"
+      :footer="null"
+    >
+      <div class="admin-list">
+        <div class="admin-item">
+          <div class="top-admin">
+            <a-image :src="getImageUrl(`${activeCard.img}`)" alt="" />
+            <div class="admin-info">
+              <h4 class="admin-name">{{ activeCard.title }}</h4>
+              <p>{{ activeCard.job }}</p>
+            </div>
+          </div>
+
+          <p class="label">{{ activeCard.label }}</p>
+        </div>
+      </div>
+    </a-modal>
   </div>
   <!-- <div class="wrap">
     <div class="title-wrap">
@@ -67,34 +99,28 @@ onMounted(() => {});
     .flex-row;
     align-items: stretch;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 20px;
 
     .title-wrap {
       .flex-col;
       justify-content: flex-start;
-      gap: 20px;
       border-right: 1px solid #d9d9d9;
+      gap: 10px;
 
       .title {
-        display: flex;
+        padding: 0 12px;
         width: 254px;
         height: 80px;
-        padding: 18.425px 18.607px;
-        justify-content: center;
-        align-items: center;
-        gap: 18.425px;
+        text-align: center;
         flex-shrink: 0;
-        background: transparent;
         font-family: PingFang SC;
-        font-size: 32px;
-        font-style: normal;
+        font-size: 24px;
         font-weight: 500;
         color: rgba(0, 0, 0, 0.6);
         cursor: pointer;
         filter: drop-shadow(
           0px 3.047619104385376px 3.047619104385376px rgba(0, 0, 0, 0.25)
         );
-        line-height: normal;
 
         &.active {
           color: #006b5e;
@@ -107,7 +133,7 @@ onMounted(() => {});
       height: calc(100vh - 340px);
       overflow: auto;
 
-      padding: 24px 24px 0px 24px;
+      padding: 0 12px;
 
       border-radius: 12px;
       background: #fff;
@@ -117,11 +143,75 @@ onMounted(() => {});
       .flex-row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      gap: 20px;
+      gap: 15px;
       align-items: stretch;
       :deep(.ant-card) {
         width: 180px;
+        .ant-card-cover {
+          height: 250px;
+          img {
+            height: 100%;
+          }
+        }
+        .ant-card-meta-title {
+          font-size: 20px;
+        }
+        .ant-card-meta-description {
+          color: #666;
+          .ellipsis3;
+        }
       }
+    }
+  }
+}
+</style>
+
+<style lang="less">
+.teacher-teacher-modal {
+  .ant-modal-content {
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  .admin-item {
+    border-radius: 8px;
+    background: #e9f3ef;
+    padding: 68px 48px;
+
+    .top-admin {
+      .flex-row;
+
+      gap: 33px;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .ant-image {
+        width: 150px;
+        height: auto;
+      }
+
+      .admin-info {
+        flex: 1;
+        .admin-name {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          color: #000;
+          font-size: 20px;
+          line-height: 36px;
+          font-weight: 500;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 36px;
     }
   }
 }

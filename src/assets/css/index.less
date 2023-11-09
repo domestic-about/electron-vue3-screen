@@ -15,8 +15,15 @@ body {
 
 .ant-table-cell {
   font-size: 20px;
-  background: var(--material-theme-sys-light-surface-bright, #f7faf8);
-  box-shadow: 0px -1px 0px 0px rgba(0, 110, 47, 0.3) inset;
+}
+.ant-table-row {
+  font-size: 20px;
+  background: var(--material-theme-white, #fff);
+  box-shadow: 0px -1px 0px 0px rgba(0, 110, 47, 0.2) inset;
+  &:nth-child(2n) {
+    background: #f7faf8;
+    box-shadow: 0px -1px 0px 0px rgba(0, 110, 47, 0.2) inset;
+  }
 }
 
 @keyframes keepScroll {

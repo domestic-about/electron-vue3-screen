@@ -13,33 +13,40 @@ const column = [
   {
     title: "姓名",
     key: "name",
+    width: "20%",
     dataIndex: "name",
+    align: "center",
   },
 
   {
     title: "职务",
     key: "admin",
     dataIndex: "admin",
+    align: "center",
   },
   {
     title: "邮箱",
 
     key: "email",
     dataIndex: "email",
+    align: "center",
   },
   {
     title: "办公地点",
     key: "address",
     dataIndex: "address",
+    align: "center",
   },
   {
     title: "办公电话",
     key: "phone",
     dataIndex: "phone",
+    align: "center",
   },
   {
     title: "操作",
     key: "operation",
+    align: "center",
   },
 ];
 const list = [
@@ -85,7 +92,7 @@ const list = [
     admin: "副院长",
     email: "penggq@mail.hzau.edu.cn",
     address: "第四综合楼D308",
-    phone: "87281303（办）87285816（实））",
+    phone: "87281303（办）87285816（实）",
     info: "协助院长负责兽医学科建设。负责研究生人才培养、博士后、国际合作与交流等工作。协管动物医学专业建设。",
   },
   {
@@ -137,7 +144,7 @@ const clickItem = (record) => {
       <template #bodyCell="{ column, record }">
         <template v-if="column.key === 'name'">
           <div class="name-column">
-            <a-image :src="getImageUrl(record.img)"></a-image>
+            <img :src="getImageUrl(record.img)" />
             <span>{{ record.name }}</span>
           </div>
         </template>
@@ -179,12 +186,25 @@ const clickItem = (record) => {
 .wrap {
   height: 100%;
   .flex-row;
-  :deep(.ant-table) {
+  :deep(.ant-table-wrapper) {
+    width: 80%;
+    box-shadow: 0px 8px 24px 0px rgba(10, 62, 56, 0.15);
+    .ant-table-cell {
+      font-size: 16px;
+      padding: 12px 16px;
+    }
     .name-column {
       .flex-row;
-    }
-    .ant-image {
-      width: 40px;
+      gap: 10px;
+      img {
+        width: 50px;
+
+        border-radius: 4px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
   }
 }

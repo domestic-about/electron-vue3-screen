@@ -7,9 +7,9 @@ onMounted(() => {});
 </script>
 <template>
   <div class="wrap">
-    <div class="user-img">
+    <div class="user-img wow bounceInDown">
       <a-image :src="getImageUrl('teacher/list1.png')" alt="user" />
-      <div class="text-wrap wow bounceInDown">
+      <div class="text-wrap">
         <p>
           陈焕春，男，1953年生，教授，博士生导师，中国工程院院士，1988年2月毕业于德国慕尼黑大学，获博士学位。
         </p>

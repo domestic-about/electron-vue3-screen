@@ -38,15 +38,20 @@ const changeClose = () => {
 </script>
 <template>
   <div class="wrap">
+    <div class="bg"></div>
     <div class="school-wrap">
       <img :src="getImageUrl('home/home-logo.png')" alt="" />
       <div class="welcome" @click="Navgator">
         <h3>欢迎进入主页</h3>
       </div>
-      <p>HUAZHONG AGRICULTURAL UNIVERSITY</p>
+      <!-- <p>HUAZHONG AGRICULTURAL UNIVERSITY</p> -->
     </div>
     <div class="swiper-wrap">
-      <img :src="getImageUrl('home/home-swiper.png')" alt="" />
+      <img :src="getImageUrl('home/thumb-chicken.png')" alt="" />
+      <img :src="getImageUrl('home/thumb-dog.png')" alt="" />
+      <img :src="getImageUrl('home/thumb-pig.png')" alt="" />
+      <img :src="getImageUrl('home/thumb-cow.png')" alt="" />
+      <img :src="getImageUrl('home/thumb-sheep.png')" alt="" />
     </div>
   </div>
 </template>
@@ -54,16 +59,28 @@ const changeClose = () => {
 .wrap {
   width: 100vw;
   height: 100vh;
-  background: #006b5e;
-  .flex-row;
+  background: rgba(#006b5e, 0.5);
 
+  background: linear-gradient(to bottom, #006b5e, rgba(#006b5e, 0.3));
+  position: relative;
+
+  .bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    background: url("@img/home/bg.png") lightgray 50% / cover no-repeat;
+    background-size: auto 100%;
+    z-index: -1;
+  }
   .school-wrap {
-    position: relative;
-    padding: 345px 113px 345px 76px;
     color: #fff;
-
+    .flex-col;
+    padding-top: 100px;
     img {
-      width: 100%;
+      height: 180px;
     }
 
     .welcome {
@@ -81,23 +98,53 @@ const changeClose = () => {
         cursor: pointer;
       }
     }
-
-    p {
-      position: absolute;
-      bottom: 0px;
-      font-size: 24px;
-    }
   }
 
   .swiper-wrap {
-    height: 100%;
-    width: 40%;
-    min-width: 600px;
-
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    .flex-row;
+    justify-content: space-evenly;
     img {
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      animation: bounce 10s linear infinite;
+      &:nth-child(1) {
+        animation-delay: 6s;
+      }
+      &:nth-child(2) {
+        animation-delay: 2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0;
+      }
+      &:nth-child(4) {
+        animation-delay: 4s;
+      }
+      &:nth-child(5) {
+        animation-delay: 8s;
+      }
     }
+  }
+}
+@keyframes bounce {
+  80% {
+    transform: translateY(0) scale(1);
+  }
+  85% {
+    transform: translateY(-40px) scale(1.2);
+  }
+  90% {
+    transform: translateY(0) scale(1);
+  }
+  95% {
+    transform: translateY(40px) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
   }
 }
 </style>

@@ -128,7 +128,7 @@ const list = [
             <p class="label">
               {{ item.label }}
             </p>
-            <div class="img-list">
+            <div class="img-list wow fadeInUp">
               <div
                 class="img-item"
                 v-for="imgItem in item.imgList"
