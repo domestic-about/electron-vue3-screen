@@ -137,8 +137,9 @@ onMounted(() => {});
       font-weight: 400;
 
       h4 {
-        margin: 10px 0;
+        margin: 20px 0;
         font-size: 32px;
+        line-height: 60px;
       }
 
       h5 {
@@ -148,7 +149,8 @@ onMounted(() => {});
 
       p {
         margin: 10px 0;
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 40px;
       }
     }
   }

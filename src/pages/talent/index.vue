@@ -32,10 +32,10 @@ const tabList = computed(() => [
     route: "/talent/condition",
     component: Condition,
   },
-  {
-    label: "实习基地",
-    component: PracticeBase,
-  },
+  // {
+  //   label: "实习基地",
+  //   component: PracticeBase,
+  // },
 
   {
     label: "课程建设",
@@ -47,11 +47,11 @@ const tabList = computed(() => [
     route: "/talent/result",
     component: Result,
   },
-  {
-    label: "学生科研",
-    route: "/talent/result",
-    component: StudentResearch,
-  },
+  // {
+  //   label: "学生科研",
+  //   route: "/talent/result",
+  //   component: StudentResearch,
+  // },
 
   {
     label: "竞赛获奖",
@@ -112,7 +112,6 @@ const goToSlide = (index) => {
 
   .content-wrap {
     width: 100%;
-    padding: 24px;
     height: calc(100% - 106px);
   }
 }

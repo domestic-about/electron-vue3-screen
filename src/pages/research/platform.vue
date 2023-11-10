@@ -19,6 +19,7 @@ const column = [
     dataIndex: "name",
     key: "name",
     align: "center",
+    width: "30%",
   },
 ];
 const dataSource = [
@@ -204,8 +205,9 @@ const dataSource = [
   }
   .page3-wrap {
     .flex-col;
+    padding-top: 20px;
     :deep(.ant-table-wrapper) {
-      width: 80%;
+      width: 60%;
 
       .ant-table-cell {
         &:nth-child(1) {

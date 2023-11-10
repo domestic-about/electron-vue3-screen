@@ -41,6 +41,12 @@ onMounted(() => {});
     .van-tab {
       padding: 0 20px;
     }
+    .van-tabs__content {
+      height: calc(100% - 50px);
+      .van-tab__panel {
+        height: 100%;
+      }
+    }
     .van-tab__text {
       font-size: 32px;
       font-weight: 500;

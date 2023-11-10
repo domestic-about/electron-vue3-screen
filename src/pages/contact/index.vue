@@ -97,21 +97,24 @@ onMounted(() => {});
 </template>
 <style scoped lang="less">
 .wrap {
+  height: 100%;
   .content-wrap {
-    padding: 40px 76px;
-
+    height: 100%;
     p {
       font-size: 20px;
       line-height: 40px;
       font-weight: 500;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .page1-wrap {
+      padding: 20px 50px;
+      height: 100%;
+
       .img-list {
         .flex-row;
         align-items: flex-start;
-        gap: 48px;
+        gap: 40px;
 
         .img-item1 {
           :deep(.ant-image) {
@@ -128,12 +131,14 @@ onMounted(() => {});
         }
       }
       .label {
-        padding: 20px;
+        padding: 18px;
+        line-height: 36px;
         background-color: #f7faf8;
       }
     }
 
     .page2-wrap {
+      padding: 20px 50px;
       .img-list {
         .flex-row;
         gap: 42px;
@@ -166,6 +171,7 @@ onMounted(() => {});
     }
 
     .page3-wrap {
+      padding: 20px 50px;
       .top-wrap {
         .flex-row;
         gap: 155px;

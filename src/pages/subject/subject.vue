@@ -56,6 +56,9 @@ onMounted(() => {});
         h5 {
           color: #006b5e;
         }
+        .icon {
+          width: 200px;
+        }
       }
     }
 
@@ -73,47 +76,12 @@ onMounted(() => {});
         position: absolute;
         right: 62px;
         top: -32px;
+        width: 120px;
       }
 
       h5 {
         font-size: 48px;
         font-weight: 500;
-      }
-
-      .label {
-        font-weight: 500;
-      }
-
-      p {
-        margin-top: 24px;
-        font-size: 24px;
-      }
-    }
-  }
-
-  .subject-item2 {
-    position: relative;
-    height: 875px;
-    flex: 1;
-    padding: 180px 275px 0 46px;
-    background:
-      linear-gradient(rgba(244, 255, 251, 0.9), rgba(244, 255, 251, 0.5)),
-      url("@/assets/img/subject/list3.png") 0px -121.5px / 100% 131.959% no-repeat;
-
-    .text-wrap {
-      background-color: #fff;
-      padding: 36px;
-
-      .icon {
-        position: absolute;
-        right: 302px;
-        top: 200px;
-      }
-
-      h5 {
-        font-size: 48px;
-        font-weight: 500;
-        color: #006b5e;
       }
 
       .label {

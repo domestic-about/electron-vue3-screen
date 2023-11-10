@@ -50,87 +50,91 @@ const column = [
   },
 ];
 const list = [
-  {
-    img: "intro/lead/list1.png",
-    name: "刘兴斌",
-    admin: "党委书记",
-    email: "xbl2001@mail.hzau.edu.cn",
-    address: "第四综合楼D319",
-    phone: "87281238（办）",
-    info: "主持党委全面工作。负责组织统战、思想政治、意识形态、党风廉政、班子建设、人力资源、离退休等工作。对接职能部门：组织部、统战部、人力资源部、教师工作部。联系党支部、系（中心、室）：动物遗传育种学系教工党支部、动物遗传育种学系",
-  },
-  {
-    img: "intro/lead/list2.png",
-    name: "赵书红",
-    admin: "院长",
-    email: "shzhao@mail.hzau.edu.cn",
-    address: "第四综合楼D319",
-    phone: "87280471（办） 87389480（实）",
-    info: "主持行政全面工作。负责发展规划、学科与专业建设等工作。对接职能部门：发展规划部。联系党支部、系（中心、室）：预防兽医学系第一教工党支部、国家家畜工程技术研究中心教工党支部、预防兽医学系、国家家畜工程技术研究中心",
-  },
-  {
-    img: "intro/lead/list3.png",
-    name: "杨冬凯",
-    admin: "党委副书记",
-    email: "xbl2001@mail.hzau.edu.cn",
-    address: "第四综合楼D310",
-    phone: "87280730（办）",
-    info: "协助书记负责组织统战、思想政治、意识形态、党风廉政等工作。负责文化建设、学生教育管理、宣传、网络安全与信息化、纪检监察、共青团等工作。协管人才培养、校友与基金会。对接职能部门：组织部、统战部、宣传部、网络安全和信息化办公室（信息技术中心）、纪委办公室、监察室、巡察工作办公室、本科生院（学生工作部、武装部）、研究生院（研究生工作部）、团委、图书馆。联系党支部、系（中心、室）：基础兽医学系教工党支部、基础兽医学系",
-  },
-  {
-    img: "intro/lead/list4.png",
-    name: "晏向华",
-    admin: "党委副书记",
-    email: "xhyan@mail.hzau.edu.cn",
-    address: "第四综合楼D305",
-    phone: "87280302（办）87287685（实）",
-    info: "协助院长负责畜牧学科建设。负责科学研究、学术交流、科研平台基地等工作。协管动物科学专业建设。对接职能部门：科学技术发展研究院、农业微生物重大基础设施建设办公室。联系党支部、系（中心、室）：公共卫生学系教工党支部、公共卫生学系",
-  },
-  {
-    img: "intro/lead/list5.png",
-    name: "彭贵青",
-    admin: "副院长",
-    email: "penggq@mail.hzau.edu.cn",
-    address: "第四综合楼D308",
-    phone: "87281303（办）87285816（实）",
-    info: "协助院长负责兽医学科建设。负责研究生人才培养、博士后、国际合作与交流等工作。协管动物医学专业建设。",
-  },
-  {
-    img: "intro/lead/list6.png",
-    name: "任竹青",
-    admin: "副院长",
-    email: "renzq@mail.hzau.edu.cn",
-    address: "第四综合楼D309",
-    phone: "87280730（办）",
-    info: "协助院长负责动物科学专业建设。负责本科生人才培养、实验教学中心、教学基地等工作。协管畜牧学科建设。",
-  },
-  {
-    img: "intro/lead/list7.png",
-    name: "李家奎",
-    admin: "副院长",
-    email: "lijk210@mail.hzau.edu.cn",
-    address: "第四综合楼D307",
-    phone: "87281303（办）",
-    info: "协助院长负责动物医学专业建设。负责仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等工作。协管兽医学科建设。",
-  },
-  {
-    img: "intro/lead/list8.png",
-    name: "胡丽华",
-    admin: "副院长",
-    email: "hulh@mail.hzau.edu.cn",
-    address: "第四综合楼D306",
-    phone: "87280302（办）",
-    info: "协助书记负责离退休工作。负责社会服务、财务与审计、教育培训、校友与基金会、实验动物基地管理、安全保卫、保密、学院办公室、动物医院、纪检监察日常事务等工作。协管科学研究、仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等。",
-  },
-  {
-    img: "intro/lead/list9.png",
-    name: "易丹",
-    admin: "副院长",
-    email: "yidan810204@163.com",
-    address: "第四综合楼D304",
-    phone: "87280302（办）",
-    info: "协助分管人才培养工作",
-  },
+  [
+    {
+      img: "intro/lead/1.jpg",
+      name: "刘兴斌",
+      admin: "党委书记",
+      email: "xbl2001@mail.hzau.edu.cn",
+      address: "第四综合楼D319",
+      phone: "87281238（办）",
+      info: "主持党委全面工作。负责组织统战、思想政治、意识形态、党风廉政、班子建设、人力资源、离退休等工作。对接职能部门：组织部、统战部、人力资源部、教师工作部。联系党支部、系（中心、室）：动物遗传育种学系教工党支部、动物遗传育种学系",
+    },
+    {
+      img: "intro/lead/2.jpg",
+      name: "赵书红",
+      admin: "院长",
+      email: "shzhao@mail.hzau.edu.cn",
+      address: "第四综合楼D319",
+      phone: "87280471（办） 87389480（实）",
+      info: "主持行政全面工作。负责发展规划、学科与专业建设等工作。对接职能部门：发展规划部。联系党支部、系（中心、室）：预防兽医学系第一教工党支部、国家家畜工程技术研究中心教工党支部、预防兽医学系、国家家畜工程技术研究中心",
+    },
+    {
+      img: "intro/lead/3.jpg",
+      name: "杨冬凯",
+      admin: "党委副书记",
+      email: "xbl2001@mail.hzau.edu.cn",
+      address: "第四综合楼D310",
+      phone: "87280730（办）",
+      info: "协助书记负责组织统战、思想政治、意识形态、党风廉政等工作。负责文化建设、学生教育管理、宣传、网络安全与信息化、纪检监察、共青团等工作。协管人才培养、校友与基金会。对接职能部门：组织部、统战部、宣传部、网络安全和信息化办公室（信息技术中心）、纪委办公室、监察室、巡察工作办公室、本科生院（学生工作部、武装部）、研究生院（研究生工作部）、团委、图书馆。联系党支部、系（中心、室）：基础兽医学系教工党支部、基础兽医学系",
+    },
+    {
+      img: "intro/lead/4.jpg",
+      name: "晏向华",
+      admin: "党委副书记",
+      email: "xhyan@mail.hzau.edu.cn",
+      address: "第四综合楼D305",
+      phone: "87280302（办）87287685（实）",
+      info: "协助院长负责畜牧学科建设。负责科学研究、学术交流、科研平台基地等工作。协管动物科学专业建设。对接职能部门：科学技术发展研究院、农业微生物重大基础设施建设办公室。联系党支部、系（中心、室）：公共卫生学系教工党支部、公共卫生学系",
+    },
+  ],
+  [
+    {
+      img: "intro/lead/5.jpg",
+      name: "彭贵青",
+      admin: "副院长",
+      email: "penggq@mail.hzau.edu.cn",
+      address: "第四综合楼D308",
+      phone: "87281303（办）87285816（实）",
+      info: "协助院长负责兽医学科建设。负责研究生人才培养、博士后、国际合作与交流等工作。协管动物医学专业建设。",
+    },
+    {
+      img: "intro/lead/6.jpg",
+      name: "任竹青",
+      admin: "副院长",
+      email: "renzq@mail.hzau.edu.cn",
+      address: "第四综合楼D309",
+      phone: "87280730（办）",
+      info: "协助院长负责动物科学专业建设。负责本科生人才培养、实验教学中心、教学基地等工作。协管畜牧学科建设。",
+    },
+    {
+      img: "intro/lead/7.jpg",
+      name: "李家奎",
+      admin: "副院长",
+      email: "lijk210@mail.hzau.edu.cn",
+      address: "第四综合楼D307",
+      phone: "87281303（办）",
+      info: "协助院长负责动物医学专业建设。负责仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等工作。协管兽医学科建设。",
+    },
+    {
+      img: "intro/lead/8.jpg",
+      name: "胡丽华",
+      admin: "副院长",
+      email: "hulh@mail.hzau.edu.cn",
+      address: "第四综合楼D306",
+      phone: "87280302（办）",
+      info: "协助书记负责离退休工作。负责社会服务、财务与审计、教育培训、校友与基金会、实验动物基地管理、安全保卫、保密、学院办公室、动物医院、纪检监察日常事务等工作。协管科学研究、仪器平台建设、实验室与基地建设、国有资产管理、采购与招标、工会等。",
+    },
+    {
+      img: "intro/lead/9.jpg",
+      name: "易丹",
+      admin: "副院长",
+      email: "yidan810204@163.com",
+      address: "第四综合楼D304",
+      phone: "87280302（办）",
+      info: "协助分管人才培养工作",
+    },
+  ],
 ];
 const clickItem = (record) => {
   console.log(record);
@@ -140,21 +144,28 @@ const clickItem = (record) => {
 </script>
 <template>
   <div class="wrap">
-    <a-table :columns="column" :data-source="list" :pagination="false">
-      <template #bodyCell="{ column, record }">
-        <template v-if="column.key === 'name'">
-          <div class="name-column">
-            <img :src="getImageUrl(record.img)" />
-            <span>{{ record.name }}</span>
-          </div>
-        </template>
-        <template v-if="column.key === 'operation'">
-          <div class="name-column">
-            <a @click="clickItem(record)">查看详情</a>
-          </div>
-        </template>
-      </template>
-    </a-table>
+    <div class="user-info">
+      <div class="admin-list" v-for="(group, index) in list" :key="index">
+        <a-card
+          class="admin-item"
+          v-for="item in group"
+          :key="item.name"
+          hoverable
+          @click="clickItem(item)"
+        >
+          <template #cover>
+            <!-- <div
+              class="img"
+              :style="{ backgroundImage: `url(${getImageUrl(item.img)})` }"
+            ></div> -->
+            <img class="img" :src="getImageUrl(item.img)" />
+          </template>
+          <a-card-meta :title="item.name">
+            <template #description>职务：{{ item.admin }}</template>
+          </a-card-meta>
+        </a-card>
+      </div>
+    </div>
     <a-modal
       width="60%"
       v-model:open="open"
@@ -186,24 +197,39 @@ const clickItem = (record) => {
 .wrap {
   height: 100%;
   .flex-row;
-  :deep(.ant-table-wrapper) {
-    width: 80%;
-    box-shadow: 0px 8px 24px 0px rgba(10, 62, 56, 0.15);
-    .ant-table-cell {
-      font-size: 16px;
-      padding: 7px 16px;
-    }
-    .name-column {
-      .flex-row;
-      gap: 10px;
-      img {
-        width: 50px;
+  .user-info {
+    height: 100%;
+    .flex-col;
+    gap: 40px;
 
-        border-radius: 4px;
+    .admin-list {
+      .flex-row;
+      flex-wrap: wrap;
+      gap: 40px;
+      :deep(.ant-card) {
+        width: 100%;
+        .ant-card-cover {
+          width: 100%;
+          .img {
+            width: 100%;
+            height: 250px;
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        .ant-card-meta-title {
+          font-size: 24px;
+        }
+        .ant-card-meta-description {
+          color: #666;
+          font-size: 16px;
+          .ellipsis3;
+        }
       }
-      span {
-        font-size: 20px;
-        font-weight: bold;
+
+      .admin-item {
+        width: 220px;
       }
     }
   }

@@ -332,7 +332,7 @@ onMounted(() => {});
       :columns="column"
       :data-source="dataSource"
       :pagination="false"
-      :scroll="{ y: '70vh' }"
+      :scroll="{ y: '62vh' }"
     ></a-table>
   </div>
 </template>
@@ -341,13 +341,17 @@ onMounted(() => {});
 .wrap {
   height: 100%;
   padding: 20px 100px;
+  .flex-col;
+  justify-content: flex-start;
   h4 {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 60px;
     font-weight: 500;
     text-align: center;
   }
   :deep(.ant-table-wrapper) {
+    margin-top: 20px;
+    width: 80%;
     .ant-table-cell {
       &:nth-child(1) {
         font-weight: bold;

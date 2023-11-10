@@ -67,18 +67,12 @@ const list = [
   <div class="wrap">
     <div class="user-info">
       <div class="admin-list">
-        <div
-          class="admin-item"
-          v-for="item in [...list, ...list]"
-          :key="item.name"
-        >
+        <div class="admin-item" v-for="item in list" :key="item.name">
           <a-image :src="getImageUrl(item.img)" alt="" />
           <h5>{{ item.name }}</h5>
           <p>{{ item.label }}</p>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="title">历任书记任职时间</div>
     </div>
   </div>
 </template>
@@ -87,18 +81,13 @@ const list = [
   height: 100%;
 
   .user-info {
-    width: 100%;
     height: 100%;
-    padding: 100px;
-    overflow: hidden;
-
+    .flex-row;
+    padding: 0 100px;
     .admin-list {
-      display: inline-flex;
+      .flex-row;
+      flex-wrap: wrap;
       gap: 20px;
-      overflow: scroll;
-
-      white-space: nowrap;
-      animation: keepScroll 20s linear infinite; /* 滚动动画 */
 
       .admin-item {
         .flex-col;
@@ -106,8 +95,8 @@ const list = [
         width: 250px;
 
         :deep(.ant-image) {
-          width: 140px;
-          height: 200px;
+          width: 150px;
+          height: 240px;
         }
 
         h5 {
@@ -120,18 +109,6 @@ const list = [
           font-weight: 500;
         }
       }
-    }
-    .line {
-      margin: 50px 0;
-      width: 100%;
-      height: 2px;
-      background-color: #d9d9d9;
-    }
-    .title {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
-      color: #000;
     }
   }
 }

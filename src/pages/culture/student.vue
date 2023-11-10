@@ -348,10 +348,11 @@ const list = [
 }
 h5 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
 }
 p {
   font-size: 24px;
+  line-height: 40px;
   margin-top: 12px;
   font-weight: 500;
 }

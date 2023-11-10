@@ -251,8 +251,9 @@ const clickItem = (record) => {
 <style lang="less" scoped>
 .wrap {
   .con-wrap {
+    padding-top: 20px;
     .flex-col;
-    gap: 30px;
+    gap: 20px;
 
     h3 {
       font-size: 32px;

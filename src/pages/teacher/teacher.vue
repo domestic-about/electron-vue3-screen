@@ -41,11 +41,12 @@ const clickItem = (record) => {
           @click="clickItem(item)"
         >
           <template #cover>
-            <div
+            <!-- <div
               class="img"
               :style="{ backgroundImage: `url(${getImageUrl(item.img)})` }"
-            ></div>
-            <!-- <img :src="getImageUrl(item.img)" /> -->
+            ></div> -->
+
+            <img class="img" :src="getImageUrl(item.img)" />
           </template>
           <a-card-meta :title="item.title">
             <template #description>{{ item.job }}</template>

@@ -116,6 +116,8 @@ const list = [
   height: 100%;
   .con-wrap {
     height: 100%;
+    width: 100%;
+    padding: 20px 100px;
     h4 {
       font-size: 32px;
     }
@@ -130,6 +132,7 @@ const list = [
         :deep(.ant-image) {
           img {
             width: auto;
+            max-width: 100%;
             max-height: 50vh;
           }
         }

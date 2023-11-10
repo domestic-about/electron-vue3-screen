@@ -13,14 +13,14 @@ const swiperRef = ref(null);
 const activeIndex = ref(0);
 const tabList = computed(() => [
   {
-    label: "专业介绍",
-    route: "/subject/subject",
-    component: Subject,
-  },
-  {
     label: "学科介绍",
     route: "/subject/major",
     component: Major,
+  },
+  {
+    label: "专业介绍",
+    route: "/subject/subject",
+    component: Subject,
   },
 ]);
 onMounted(() => {});

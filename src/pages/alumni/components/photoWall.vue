@@ -68,6 +68,7 @@ onMounted(() => {});
 <style scoped lang="less">
 .photo-wall {
   padding: 20px;
+  height: 100%;
   .img-list {
     .flex-row;
     flex-wrap: wrap;

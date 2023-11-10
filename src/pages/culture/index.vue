@@ -39,7 +39,7 @@ const goToSlide = (index) => {
 <template>
   <div class="wrap">
     <PageTitle
-      title="学院概况"
+      title="文化活动"
       subTitle="College Overview"
       :tabList="tabList"
       :activeIndex="activeIndex"
