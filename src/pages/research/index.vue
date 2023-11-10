@@ -91,7 +91,6 @@ const goToSlide = (index) => {
 
   .content-wrap {
     width: 100%;
-    padding: 24px;
     height: calc(100% - 106px);
   }
 }

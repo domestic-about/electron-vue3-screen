@@ -221,7 +221,8 @@ const dataSource = [
 <style scoped lang="less">
 /* 在这里添加你的 Less 样式 */
 .table-wrap {
-  padding-top: 40px;
+  padding-top: 20px;
+  height: 100%;
   text-align: center;
   .flex-col;
   :deep(.ant-table-wrapper) {

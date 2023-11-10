@@ -18,6 +18,10 @@ const props = defineProps({
     default: () => [],
     type: Array,
   },
+  num: {
+    default: 8,
+    type: Number,
+  },
 });
 
 const modules = [FreeMode, Navigation, Thumbs, Autoplay];
@@ -32,20 +36,23 @@ const setThumbsSwiper = (swiper) => {
   thumbsSwiper.value = swiper;
 };
 
+const onSlideChange = (swiper) => {
+  const index = swiper.clickedIndex;
+  const skipNumber = Math.floor(props.num / 2);
+  console.log(skipNumber, props.num);
+  const total = props.list.length;
+  thumbsSwiper.value.slideTo(index - skipNumber);
+  console.log(swiper, "swiper");
+};
 onMounted(() => {});
 </script>
 <template>
-  <div class="wrap">
+  <div class="swiper-thumb">
     <swiper
       :style="{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#fff',
+        '--swiper-navigation-color': '#006e2f',
+        '--swiper-pagination-color': '#006e2f',
       }"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
-      @autoplayTimeLeft="onAutoplayTimeLeft"
       :loop="true"
       :spaceBetween="10"
       :navigation="true"
@@ -54,7 +61,7 @@ onMounted(() => {});
       class="mySwiper2"
     >
       <swiper-slide v-for="item in list" :key="item.img">
-        <img :src="getImageUrl(item.img)" />
+        <slot name="con" :record="item"></slot>
       </swiper-slide>
       <template #container-end>
         <div class="autoplay-progress">
@@ -69,28 +76,26 @@ onMounted(() => {});
       :autoPlay="true"
       :loop="true"
       @swiper="setThumbsSwiper"
+      @click="onSlideChange"
       :spaceBetween="10"
-      :slidesPerView="5"
+      :slidesPerView="8"
       :freeMode="true"
       :watchSlidesProgress="true"
       :modules="modules"
       class="mySwiper"
     >
       <swiper-slide v-for="(item, index) in list" :key="index">
-        <img :src="getImageUrl(item.img)" />
+        <slot name="thumb" :record="item"></slot>
       </swiper-slide>
     </swiper>
   </div>
 </template>
 <style scoped lang="less">
-.wrap {
-  height: 100vh;
+.swiper-thumb {
+  height: 100%;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
-
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -147,7 +152,6 @@ onMounted(() => {});
 .mySwiper {
   height: 15%;
   box-sizing: border-box;
-  padding: 10px 0;
 
   .swiper-slide {
     width: 20%;

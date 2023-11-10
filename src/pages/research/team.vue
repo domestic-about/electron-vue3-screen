@@ -222,7 +222,7 @@ const clickItem = (record) => {
         :dataSource="dataSource"
         :columns="columns"
         :pagination="false"
-        :scroll="{ y: '70vh' }"
+        :scroll="{ y: '65vh' }"
       >
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'operation' && record.label">
@@ -251,8 +251,6 @@ const clickItem = (record) => {
 <style lang="less" scoped>
 .wrap {
   .con-wrap {
-    padding-top: 20px;
-
     .flex-col;
     gap: 30px;
 

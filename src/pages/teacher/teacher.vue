@@ -41,7 +41,11 @@ const clickItem = (record) => {
           @click="clickItem(item)"
         >
           <template #cover>
-            <img :src="getImageUrl(item.img)" />
+            <div
+              class="img"
+              :style="{ backgroundImage: `url(${getImageUrl(item.img)})` }"
+            ></div>
+            <!-- <img :src="getImageUrl(item.img)" /> -->
           </template>
           <a-card-meta :title="item.title">
             <template #description>{{ item.job }}</template>
@@ -148,9 +152,11 @@ const clickItem = (record) => {
       :deep(.ant-card) {
         width: 180px;
         .ant-card-cover {
-          height: 250px;
-          img {
-            height: 100%;
+          .img {
+            height: 250px;
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
           }
         }
         .ant-card-meta-title {

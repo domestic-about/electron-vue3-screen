@@ -83,7 +83,7 @@ defineExpose({ slideTo });
       :nested="true"
       :spaceBetween="10"
       :modules="modules"
-      class="mySwiper2"
+      class="swiper-page-content"
       ref="swiperRef"
     >
       <slot />
@@ -104,7 +104,7 @@ defineExpose({ slideTo });
   width: 100%;
   height: 100%;
 
-  :deep(.swiper) {
+  :deep(.swiper-page-content) {
     height: 100%;
     .swiper-button-prev,
     .swiper-button-next {

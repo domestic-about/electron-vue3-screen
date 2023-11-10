@@ -191,7 +191,7 @@ const clickItem = (record) => {
     box-shadow: 0px 8px 24px 0px rgba(10, 62, 56, 0.15);
     .ant-table-cell {
       font-size: 16px;
-      padding: 12px 16px;
+      padding: 7px 16px;
     }
     .name-column {
       .flex-row;
