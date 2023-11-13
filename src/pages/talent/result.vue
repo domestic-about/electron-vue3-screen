@@ -20,32 +20,28 @@ const list = [
     <h4>
       学院大力推进教育教学改革，成果丰硕，“十三五”以来，主持获得国家级教学成果二等奖3项、国家级实践教学成果一等奖1项，获得湖北省级教学成果特等奖2项、一等奖1项、二等奖2项。
     </h4>
-    <SwiperPage :isAuto="false">
-      <swiper-slide>
-        <div class="text-wrap">
-          <a-image :src="getImageUrl('talent/result/list1.png')" alt="" />
-          <a-image :src="getImageUrl('talent/result/list5.png')" alt="" />
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="admin-list">
-          <a-image
-            v-for="imgItem in list"
-            :key="imgItem"
-            :src="getImageUrl(imgItem)"
-            alt=""
-          />
-        </div>
-      </swiper-slide>
-    </SwiperPage>
+
+    <div class="text-wrap">
+      <a-image :src="getImageUrl('talent/result/list1.png')" alt="" />
+      <a-image :src="getImageUrl('talent/result/list5.png')" alt="" />
+    </div>
+    <div class="admin-list">
+      <a-image
+        v-for="imgItem in list"
+        :key="imgItem"
+        :src="getImageUrl(imgItem)"
+        alt=""
+      />
+    </div>
   </div>
 </template>
 
 <style scoped lang="less">
 .result-wrap {
-  padding-top: 60px;
+  padding: 60px 100px;
   height: 100%;
   text-align: center;
+  overflow: scroll;
   h4 {
     font-size: 28px;
     font-weight: 500;

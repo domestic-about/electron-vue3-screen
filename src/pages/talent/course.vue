@@ -62,55 +62,17 @@ const list = [
     </h5>
     <p class="line"></p>
     <div class="right-wrap">
-      <SwiperPage>
-        <SwiperSlide>
-          <div class="img-list">
-            <div
-              class="img-item"
-              v-for="item in list.slice(0, 4)"
-              :key="item.img"
-            >
-              <a-image :src="getImageUrl(item.img)" alt="" />
-              <div class="text-wrap">
-                <span>课程名称</span>
-                <p class="cate">{{ item.title }}</p>
-                <span>课程负责人</span>
-                <p>{{ item.name }}</p>
-              </div>
-            </div>
+      <div class="img-list">
+        <div class="img-item" v-for="item in list" :key="item.img">
+          <a-image :src="getImageUrl(item.img)" alt="" />
+          <div class="text-wrap">
+            <span>课程名称</span>
+            <p class="cate">{{ item.title }}</p>
+            <span>课程负责人</span>
+            <p>{{ item.name }}</p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="img-list">
-            <div
-              class="img-item"
-              v-for="item in list.slice(4, 8)"
-              :key="item.img"
-            >
-              <a-image :src="getImageUrl(item.img)" alt="" />
-              <div class="text-wrap">
-                <span>课程名称</span>
-                <p class="cate">{{ item.title }}</p>
-                <span>课程负责人</span>
-                <p>{{ item.name }}</p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="img-list">
-            <div class="img-item" v-for="item in list.slice(8)" :key="item.img">
-              <a-image :src="getImageUrl(item.img)" alt="" />
-              <div class="text-wrap">
-                <span>课程名称</span>
-                <p class="cate">{{ item.title }}</p>
-                <span>课程负责人</span>
-                <p>{{ item.name }}</p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      </SwiperPage>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -139,6 +101,8 @@ const list = [
   .right-wrap {
     width: calc(100% - 500px);
     height: 100%;
+    overflow: scroll;
+    padding: 50px 0;
   }
   .img-list {
     flex: 1;

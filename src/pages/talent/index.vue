@@ -10,8 +10,7 @@ import Condition from "./condition.vue";
 import Course from "./course.vue";
 import Result from "./result.vue";
 import Award from "./award.vue";
-import PracticeBase from "./practice-base.vue";
-import StudentResearch from "./student-research.vue";
+
 import Graduation from "./graduation.vue";
 
 const router = useRouter();
@@ -32,10 +31,6 @@ const tabList = computed(() => [
     route: "/talent/condition",
     component: Condition,
   },
-  // {
-  //   label: "实习基地",
-  //   component: PracticeBase,
-  // },
 
   {
     label: "课程建设",
@@ -47,11 +42,6 @@ const tabList = computed(() => [
     route: "/talent/result",
     component: Result,
   },
-  // {
-  //   label: "学生科研",
-  //   route: "/talent/result",
-  //   component: StudentResearch,
-  // },
 
   {
     label: "竞赛获奖",

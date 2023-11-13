@@ -49,7 +49,7 @@ const clickItem = (record) => {
             <img class="img" :src="getImageUrl(item.img)" />
           </template>
           <a-card-meta :title="item.title">
-            <template #description>{{ item.job }}</template>
+            <!-- <template #description>{{ item.job }}</template> -->
           </a-card-meta>
         </a-card>
       </div>
@@ -161,7 +161,8 @@ const clickItem = (record) => {
           }
         }
         .ant-card-meta-title {
-          font-size: 20px;
+          font-size: 24px;
+          text-align: center;
         }
         .ant-card-meta-description {
           color: #666;

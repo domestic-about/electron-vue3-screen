@@ -6,13 +6,13 @@ const props = defineProps({});
 onMounted(() => {});
 </script>
 <template>
-  <div class="wrap">
+  <div class="academician-wrap">
     <div class="user-img wow bounceInDown">
       <a-image :src="getImageUrl('teacher/list1.png')" alt="user" />
       <div class="text-wrap">
-        <p>
+        <h3>
           陈焕春，男，1953年生，教授，博士生导师，中国工程院院士，1988年2月毕业于德国慕尼黑大学，获博士学位。
-        </p>
+        </h3>
         <p>
           现任中国兽医协会会长、农业微生物发掘与利用全国重点实验室学术委员会主任、中国农业科学院哈尔滨兽医研究所兽医生物技术国家重点实验室学术委员会主任、教育部高等学校教学指导委员会动物生产类专业教学指导委员会主任委员、国务院突发事件应急专家委员会委员、科技部973传染病专家组副组长、863现代农业技术领域专家组副组长、农业部科技委专家委员会委员、教育部科技委专家委员会委员、农业农村部部新兽药评审委员会委员、农业部转基因专项技术副总师等职。
         </p>
@@ -29,27 +29,21 @@ onMounted(() => {});
   </div>
 </template>
 <style scoped lang="less">
-.wrap {
-  margin-top: 40px;
-  .flex-row;
-  gap: 40px;
-  align-items: flex-start;
-
+.academician-wrap {
+  padding: 20px 100px;
   .user-img {
     .flex-row;
-    flex: 1;
-    align-items: flex-start;
-    gap: 20px;
-    background-color: #f7faf8;
-    padding: 24px;
-
+    gap: 40px;
     :deep(.ant-image-img) {
-      width: 305px;
+      width: 250px;
     }
 
     .text-wrap {
-      p {
+      h3 {
+        font-size: 32px;
         margin-bottom: 20px;
+      }
+      p {
         font-weight: 500;
         font-size: 24px;
         line-height: 45px;
@@ -58,9 +52,11 @@ onMounted(() => {});
   }
 
   .user-info {
-    flex: 1;
-    font-size: 22px;
+    margin-top: 20px;
+    font-size: 20px;
     line-height: 40px;
+    background-color: #f7faf8;
+    padding: 20px;
   }
 }
 </style>
