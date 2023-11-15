@@ -32,10 +32,9 @@ const list = [
         <img :src="getImageUrl('talent/list2.png')" alt="" />
         <span class="item1">留学生85</span>
         <span class="item2">本科生1701</span>
-        <span class="item3">在校学生人数（截止2017年12月）</span>
+        <span class="item3">在校学生人数 3842</span>
         <span class="item4">硕士生 1409</span>
         <span class="item5">博士生 732</span>
-        总数3842
       </div>
       <p class="label wow lightSpeedInRight">
         学院具有普通本科，学术型硕、博士研究生，专业型硕士研究生，留学生等全日制学历教育培养体系，并面向社会开设成人教育本专科、自学考试本专科、农业硕士（养殖方向）和兽医硕士在职硕士学位研究生等学历教育。累计培养各类全日制学生20余万人，现有各类全日制在校学生3840人。
@@ -55,7 +54,7 @@ const list = [
 
     .zero-img {
       position: relative;
-      // width: 30%;
+      width: 30%;
       span {
         position: absolute;
         font-size: 24px;
@@ -68,12 +67,12 @@ const list = [
 
         &.item2 {
           top: 46%;
-          right: -150px;
+          right: -120px;
         }
 
         &.item3 {
           bottom: -100px;
-          left: 0;
+          left: 20%;
         }
 
         &.item4 {

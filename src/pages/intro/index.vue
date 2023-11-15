@@ -86,12 +86,11 @@ const goToSlide = (index) => {
 </template>
 <style scoped lang="less">
 .intro-wrap {
-  height: 100%;
   position: relative;
 
   .content-wrap {
     width: 100%;
-    height: calc(100% - 106px);
+    height: calc(100vh - 206px);
   }
 }
 </style>

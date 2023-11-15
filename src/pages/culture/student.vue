@@ -290,7 +290,7 @@ const list = [
 </script>
 <template>
   <div class="student-wrap">
-    <SwiperPage>
+    <SwiperPage direction="vertical">
       <SwiperSlide v-for="(item, index) in list" :key="index">
         <div v-if="item.bigImg" class="page-wrap">
           <div class="left-info">
@@ -365,6 +365,11 @@ p {
   font-weight: 400;
   line-height: 40px;
 }
+:deep(.ant-image) {
+  .ant-image-img {
+    border-radius: 8px;
+  }
+}
 
 .page-wrap {
   .flex-row;
@@ -382,6 +387,7 @@ p {
         flex: 1;
         .flex-col;
         max-width: 50%;
+        border-radius: 8px;
       }
     }
   }
@@ -403,6 +409,7 @@ p {
       flex: 1;
       .flex-col;
       max-width: 50%;
+      border-radius: 8px;
     }
   }
 }

@@ -85,12 +85,10 @@ onMounted(() => {});
 <style scoped lang="less">
 .major-wrap {
   padding-top: 30px;
-
   .swiper-item {
     .flex-row;
     align-items: stretch;
     gap: 40px;
-
     .title-wrap {
       .flex-col;
       justify-content: flex-start;
@@ -125,7 +123,7 @@ onMounted(() => {});
     }
 
     .info-wrap {
-      height: calc(100vh - 340px);
+      height: calc(100vh - 280px);
       overflow: auto;
 
       padding: 24px 24px 0px 24px;

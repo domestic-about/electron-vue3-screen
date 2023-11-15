@@ -178,6 +178,7 @@ export default class WOW {
         options.scrollContainer,
       );
     }
+    console.log(this.config.scrollContainer, "scrollContainer");
     // Map of elements to animation names:
     this.animationNameCache = new WeakMap();
     this.wowEvent = createEvent(this.config.boxClass);

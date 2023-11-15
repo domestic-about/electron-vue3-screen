@@ -16,7 +16,7 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 const props = defineProps({
   isPagination: { default: true },
   isNavigation: { default: true },
-
+  direction: { default: "horizontal" },
   isAuto: { default: false },
 });
 const emit = defineEmits(["onSlideChange"]);
@@ -48,12 +48,12 @@ const slideTo = (index) => {
 const onSwiper = (swiper) => {
   console.log(swiper, "onSwiper");
   swiperRef.value = swiper;
-  initWow(swiper.activeIndex);
+  // initWow(swiper.activeIndex);
 };
 const onSlideChange = (swiper) => {
   emit("onSlideChange", swiper);
   console.log(swiper, "swiper");
-  initWow(swiper.activeIndex);
+  // initWow(swiper.activeIndex);
 };
 const initWow = (activeIndex) => {
   if (!wowIndexArr.value.includes(activeIndex)) {
@@ -71,6 +71,7 @@ defineExpose({ slideTo });
 <template>
   <div class="swiper-page">
     <swiper
+      :direction="props.direction"
       :pagination="
         props.isPagination
           ? {

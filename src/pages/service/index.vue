@@ -118,8 +118,12 @@ const list = [
     <PageTitle title="社会服务" subTitle="Social Service" />
 
     <div class="content-wrap">
-      <SwiperPage>
-        <swiper-slide v-for="(item, index) in list" :key="item.title">
+      <div class="content-list">
+        <div
+          class="content-item"
+          v-for="(item, index) in list"
+          :key="item.title"
+        >
           <div class="text-img-wrap">
             <p class="label-0" v-if="index === 0">
               华中农业大学动物科学技术学院、动物医学院始终坚持“四个面向”，以强农兴农为己任，积极为推动畜牧业高质量发展和农业农村现代化提供人才支撑、智力支持、技术服务。
@@ -139,8 +143,8 @@ const list = [
               </div>
             </div>
           </div>
-        </swiper-slide>
-      </SwiperPage>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -152,6 +156,10 @@ const list = [
   .content-wrap {
     height: calc(100% - 106px);
     padding: 24px;
+    overflow: scroll;
+    .content-list {
+      padding: 0 100px;
+    }
   }
   .text-img-wrap {
     .flex-col;
@@ -183,6 +191,7 @@ const list = [
     }
   }
   .img-list {
+    width: 100%;
     height: 100%;
     .flex-row;
     flex-wrap: wrap;
@@ -191,13 +200,13 @@ const list = [
     gap: 16px;
     margin-top: 10px;
     .img-item {
-      width: 410px;
+      width: calc(25% - 12px);
       height: 321px;
       padding: 12px;
       background-color: #fff;
       border-radius: 10px;
       :deep(.ant-image) {
-        width: 386px;
+        width: 100%;
         height: 217px;
         border-radius: 10px;
         .ant-image-img {

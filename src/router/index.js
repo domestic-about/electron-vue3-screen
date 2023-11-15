@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import WOW from "@/utils/wow";
 // import disclaimers from "@/pages/home/disclaimers.vue";
 const routes = [
   {
@@ -176,6 +177,19 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // 始终滚动到顶部
+    return { top: 0 };
+  },
+});
+
+router.afterEach((to, from, next) => {
+  setTimeout(() => {
+    new WOW({
+      live: true,
+      offset: 0,
+    }).init();
+  }, 500);
 });
 
 export default router;

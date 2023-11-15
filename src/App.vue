@@ -3,15 +3,9 @@ import MenuFloat from "@/components/MenuFloat.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import { useRoute } from "vue-router";
-import WOW from "@/utils/wow";
+import { nextTick } from "vue";
 import { onMounted } from "vue";
 const route = useRoute();
-onMounted(() => {
-  new WOW({
-    live: true,
-    offset: 0,
-  }).init();
-});
 </script>
 
 <template>
@@ -33,11 +27,9 @@ onMounted(() => {
 
 <style scoped lang="less">
 .app-wrap {
-  height: 100vh;
   .flex-col;
   overflow: hidden;
   .app-main-wrap {
-    height: calc(100vh - 100px);
     overflow: hidden;
     width: 100%;
     color: #000;

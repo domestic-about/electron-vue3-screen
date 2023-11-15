@@ -27,11 +27,11 @@ const tabList = computed(() => [
     route: "/research/project",
     component: Project,
   },
-  {
-    label: "科研领域",
-    route: "/research/area",
-    component: Area,
-  },
+  // {
+  //   label: "科研领域",
+  //   route: "/research/area",
+  //   component: Area,
+  // },
   {
     label: "基地平台",
     route: "/research/platform",
@@ -86,12 +86,11 @@ const goToSlide = (index) => {
 </template>
 <style scoped lang="less">
 .research-wrap {
-  height: 100%;
   position: relative;
 
   .content-wrap {
     width: 100%;
-    height: calc(100% - 106px);
+    height: calc(100vh - 206px);
   }
 }
 </style>

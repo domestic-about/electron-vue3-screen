@@ -73,36 +73,46 @@ const clickItem = (item) => {
 };
 </script>
 <template>
-  <div class="wrap" v-if="isShowHeader">
-    <img
-      @click="router.push('/')"
-      class="logo"
-      src="@img/common/logo-white.svg"
-      alt=""
-    />
-    <div class="right-menu" @click="show = true">
-      <img :src="getImageUrl('home/menu.png')" alt="" />
-      <span>目录</span>
-    </div>
-    <van-popup v-model:show="show" position="right">
-      <div class="menu-list">
-        <div
-          class="menu-item"
-          :class="{ active: activeRouteIndex === index }"
-          v-for="(item, index) in list"
-          :key="item.label"
-          @click="clickItem(item)"
-        >
-          {{ item.label }}
-        </div>
+  <div class="app-header-wrap">
+    <div class="app-header" v-if="isShowHeader">
+      <img
+        @click="router.push('/')"
+        class="logo"
+        src="@img/common/logo-white.svg"
+        alt=""
+      />
+      <div class="right-menu" @click="show = true">
+        <img :src="getImageUrl('home/menu.png')" alt="" />
+        <span>目录</span>
       </div>
-    </van-popup>
+      <van-popup v-model:show="show" position="right">
+        <div class="menu-list">
+          <div
+            class="menu-item"
+            :class="{ active: activeRouteIndex === index }"
+            v-for="(item, index) in list"
+            :key="item.label"
+            @click="clickItem(item)"
+          >
+            {{ item.label }}
+          </div>
+        </div>
+      </van-popup>
+    </div>
   </div>
 </template>
 <style scoped lang="less">
-.wrap {
+.app-header-wrap {
+  height: 100px;
+}
+.app-header {
   width: 100%;
   height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   background: #00a08e;
   .flex-row;
   justify-content: space-between;
@@ -125,7 +135,7 @@ const clickItem = (item) => {
 }
 </style>
 <style scoped lang="less">
-.wrap {
+.app-header {
   :deep(.van-popup) {
     height: 100%;
     width: 320px;
