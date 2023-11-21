@@ -12,7 +12,7 @@ const list = [
   "talent/result/list2.png",
   "talent/result/list3.png",
   "talent/result/list4.png",
-  "talent/result/list6.png",
+  // "talent/result/list6.png",
 ];
 </script>
 <template>

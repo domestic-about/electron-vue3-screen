@@ -61,7 +61,8 @@ onMounted(() => {});
 </template>
 <style scoped lang="less">
 .teacher-wrap {
-  height: 100%;
+  height: calc(100vh - 206px);
+  overflow: scroll;
   padding: 40px;
   .img-wrap {
     .flex-row;
@@ -70,12 +71,17 @@ onMounted(() => {});
     align-items: flex-start;
     gap: 40px 0;
     .img-item {
-      width: 19%;
+      width: 24%;
 
       .flex-col;
+      &:nth-last-child(1) {
+        margin-right: auto;
+        margin-left: 20px;
+      }
       :deep(.ant-image) {
         img {
           height: 28vh;
+          border-radius: 8px;
         }
       }
       p {

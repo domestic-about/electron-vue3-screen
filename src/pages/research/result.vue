@@ -158,15 +158,18 @@ const list = [
   height: 100%;
 
   .con-wrap {
+    height: 100%;
+
     .flex-row;
     align-items: flex-start;
     gap: 40px;
-    padding-right: 100px;
+    padding: 40px 100px 40px 0;
 
     :deep(.ant-image) {
       width: 40%;
       img {
         width: auto;
+        max-width: 100%;
         max-height: 60vh;
       }
     }

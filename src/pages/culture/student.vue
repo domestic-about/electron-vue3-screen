@@ -343,8 +343,8 @@ const list = [
 </template>
 <style scoped lang="less">
 .student-wrap {
-  height: 100%;
-  padding: 40px;
+  height: calc(100vh - 206px);
+  padding: 40px 60px;
 }
 h5 {
   font-size: 32px;
@@ -373,6 +373,7 @@ p {
 
 .page-wrap {
   .flex-row;
+  height: 100%;
   gap: 55px;
   align-items: flex-start;
 
@@ -381,11 +382,14 @@ p {
 
     .img-wrap {
       .flex-row;
+      align-items: stretch;
+      flex-wrap: wrap;
       gap: 20px;
       margin-top: 60px;
       .img-item {
         flex: 1;
         .flex-col;
+        justify-content: flex-start;
         max-width: 50%;
         border-radius: 8px;
       }

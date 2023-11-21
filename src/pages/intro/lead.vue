@@ -210,12 +210,15 @@ const clickItem = (record) => {
         width: 100%;
         .ant-card-cover {
           width: 100%;
+          background-color: var(--bg);
+
           .img {
             width: 100%;
             height: 250px;
-            background-size: auto 100%;
-            background-position: center;
-            background-repeat: no-repeat;
+            border-radius: 8px;
+            // background-size: 100% auto;
+            // background-position: top;
+            // background-repeat: no-repeat;
           }
         }
         .ant-card-meta-title {

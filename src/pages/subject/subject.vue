@@ -8,7 +8,7 @@ onMounted(() => {});
 <template>
   <div class="subject-wrap">
     <div class="subject-item">
-      <div class="text-wrap wow fadeInLeft">
+      <div class="text-wrap">
         <img class="icon" :src="getImageUrl('subject/list2.png')" alt="动物" />
         <h5>动物科学专业</h5>
         <p class="label">首批国家一流本科专业建设点国家卓越农林人才计划</p>
@@ -18,7 +18,7 @@ onMounted(() => {});
       </div>
     </div>
     <div class="subject-item">
-      <div class="text-wrap wow fadeInRight">
+      <div class="text-wrap">
         <img class="icon" :src="getImageUrl('subject/list4.png')" alt="动物" />
         <h5>动物医学专业</h5>
         <p class="label">首批国家一流本科专业建设点</p>

@@ -108,9 +108,8 @@ const list = [
     flex: 1;
     .flex-row;
     flex-wrap: wrap;
-    height: 100%;
     justify-content: flex-start;
-    padding: 0 20px;
+    padding: 40px 20px;
     gap: 30px;
 
     .img-item {

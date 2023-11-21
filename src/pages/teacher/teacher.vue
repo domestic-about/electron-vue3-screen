@@ -153,8 +153,10 @@ const clickItem = (record) => {
       :deep(.ant-card) {
         width: 180px;
         .ant-card-cover {
+          background-color: var(--bg);
           .img {
             height: 250px;
+            background-color: var(--bg);
             background-size: auto 100%;
             background-position: center;
             background-repeat: no-repeat;

@@ -52,6 +52,14 @@ const list = [
       {
         img: "talent/condition/list6.jpg",
         label: "第四综合楼",
+        gridColumn: "1 / 3",
+        gridRow: " 1 / 2",
+      },
+      {
+        img: "talent/condition/list13.jpg",
+        label: "智慧教室",
+        gridColumn: "3 / 5",
+        gridRow: " 1 / 2",
       },
       {
         img: [
@@ -61,40 +69,30 @@ const list = [
           "talent/condition/list10.jpg",
         ],
         label: "四综会议室",
+        gridColumn: "1 / 5",
+        gridRow: " 2 / 3",
       },
 
       {
         img: ["talent/condition/list11.jpg", "talent/condition/list12.jpg"],
         label: "四综实验室",
         flex: "row",
-        gridColumn: "4 / 8",
-        gridRow: " 7 / 9",
-      },
-
-      {
-        img: "talent/condition/list13.jpg",
-        label: "智慧教室",
-        gridColumn: "7 / 9",
+        gridColumn: "1 / 5",
+        gridRow: " 3 / 4",
       },
     ],
   },
   {
-    title: "标本馆",
+    title: "其他",
     con: [
       {
-        img: "talent/condition/list14.jpg",
+        img: [
+          "talent/condition/list14.jpg",
+          "talent/condition/list15.jpg",
+          "talent/condition/list16.jpg",
+        ],
 
         label: "标本馆",
-      },
-      {
-        img: "talent/condition/list15.jpg",
-
-        label: "标本馆",
-      },
-      {
-        img: "talent/condition/list16.jpg",
-        label: "标本馆",
-        gridColumn: "7 / 9",
       },
     ],
   },
@@ -121,7 +119,16 @@ const list = [
               gridRow: item.gridRow,
             }"
           >
-            <a-image :src="getImageUrl(item.img)" alt="" />
+            <div class="img-item-list" v-if="Array.isArray(item.img)">
+              <a-image
+                :src="getImageUrl(imgItem)"
+                alt=""
+                v-for="imgItem in item.img"
+                :key="imgItem"
+              />
+            </div>
+            <a-image v-else :src="getImageUrl(item.img)" alt="" />
+
             <p>{{ item.label }}</p>
           </div>
         </div>
@@ -138,7 +145,7 @@ const list = [
   .admin-list {
     grid-gap: 20px;
     width: 100%;
-    padding: 100px 100px;
+    padding: 50px 100px;
 
     .admin-item {
       background-color: #fff;
@@ -170,6 +177,11 @@ const list = [
               border-radius: 8px;
               height: 100%;
             }
+          }
+          .img-item-list {
+            .flex-row;
+            align-items: stretch;
+            gap: 20px;
           }
           p {
             margin-top: 10px;

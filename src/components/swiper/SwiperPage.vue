@@ -48,12 +48,12 @@ const slideTo = (index) => {
 const onSwiper = (swiper) => {
   console.log(swiper, "onSwiper");
   swiperRef.value = swiper;
-  // initWow(swiper.activeIndex);
+  initWow(swiper.activeIndex);
 };
 const onSlideChange = (swiper) => {
   emit("onSlideChange", swiper);
   console.log(swiper, "swiper");
-  // initWow(swiper.activeIndex);
+  initWow(swiper.activeIndex);
 };
 const initWow = (activeIndex) => {
   if (!wowIndexArr.value.includes(activeIndex)) {
