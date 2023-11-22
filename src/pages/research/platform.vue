@@ -22,13 +22,14 @@ const column = [
     dataIndex: "title",
     key: "title",
     align: "left",
-    width: "40%",
+    width: "35%",
   },
   {
     title: "批建部门",
     dataIndex: "department",
     key: "department",
     align: "center",
+    width: "20%",
   },
   {
     title: "负责人",
@@ -52,7 +53,6 @@ const column = [
     title: "操作",
     key: "operation",
     // fixed: "right",
-    width: 200,
     align: "center",
   },
 ];

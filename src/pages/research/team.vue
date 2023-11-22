@@ -14,7 +14,7 @@ const columns = [
     title: "团队名称",
     dataIndex: "title",
     key: "title",
-    align: "center",
+    align: "left",
     width: "50%",
   },
   {

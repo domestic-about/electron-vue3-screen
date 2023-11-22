@@ -50,7 +50,6 @@ const goToSlide = (index) => {
       <SwiperPage
         @onSlideChange="onSlideChange"
         :isAuto="isAuto"
-        :isPagination="false"
         :isNavigation="isNavigation"
         ref="swiperRef"
       >

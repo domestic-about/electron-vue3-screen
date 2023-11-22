@@ -190,8 +190,14 @@ const changeClose = () => {
       <img :src="getImageUrl('home/home-logo.png')" alt="" />
       <div class="welcome" @click="router.push('/intro')">
         <h3>欢迎进入主页</h3>
+        <p>
+          <span>团结</span>
+          <span>严谨</span>
+          <span>求实</span>
+          <span>创新</span>
+        </p>
       </div>
-      <p>HUAZHONG AGRICULTURAL UNIVERSITY</p>
+      <p class="school-name">HUAZHONG AGRICULTURAL UNIVERSITY</p>
     </div>
     <div class="swiper-wrap">
       <img :src="getImageUrl('home/home-swiper-1.webp')" alt="" />
@@ -204,19 +210,21 @@ const changeClose = () => {
   height: 100vh;
   background: #006b5e;
   .flex-row;
+  align-items: stretch;
 
   .school-wrap {
     position: relative;
-    padding: 345px 113px 345px 76px;
     color: #fff;
-
+    padding: 0 50px;
+    .flex-col;
+    align-items: flex-end;
     img {
       width: 100%;
     }
 
     .welcome {
-      .flex-row;
-      justify-content: flex-end;
+      .flex-col;
+      align-items: flex-end;
 
       h3 {
         color: #fff;
@@ -228,11 +236,18 @@ const changeClose = () => {
         border-bottom: 1px solid #fff;
         cursor: pointer;
       }
+      p {
+        margin-top: 50px;
+        font-size: 24px;
+        .flex-row;
+        gap: 40px;
+      }
     }
 
-    p {
+    .school-name {
       position: absolute;
-      bottom: 0px;
+      bottom: 50px;
+      left: 50px;
       font-size: 24px;
     }
   }

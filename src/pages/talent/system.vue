@@ -55,6 +55,9 @@ const list = [
     .zero-img {
       position: relative;
       width: 30%;
+      img {
+        width: 100%;
+      }
       span {
         position: absolute;
         font-size: 24px;

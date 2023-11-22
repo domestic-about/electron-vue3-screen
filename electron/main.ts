@@ -26,10 +26,10 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false,
     },
-    // fullscreen: true,
-    // frame:false
+    fullscreen: true,
+    frame:false
   })
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
   // Test active push message to Renderer-process.
   win.webContents.on('did-finish-load', () => {

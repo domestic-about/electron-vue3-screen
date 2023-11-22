@@ -157,6 +157,7 @@ const list = [
     height: calc(100% - 106px);
     padding: 24px;
     overflow: scroll;
+
     .content-list {
       padding: 0 100px;
     }
@@ -169,7 +170,7 @@ const list = [
       background-color: #f7faf8;
       padding: 12px 24px;
       font-size: 32px;
-      line-height: 40px;
+      line-height: 50px;
     }
     .label {
       padding: 12px 24px;

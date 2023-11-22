@@ -67,18 +67,20 @@ const initWow = (activeIndex) => {
 console.log(props, "props");
 
 defineExpose({ slideTo });
+const pagination = props.isPagination
+  ? {
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    }
+  : null;
 </script>
 <template>
   <div class="swiper-page">
     <swiper
       :direction="props.direction"
-      :pagination="
-        props.isPagination
-          ? {
-              type: 'fraction',
-            }
-          : null
-      "
+      :pagination="pagination"
       @swiper="onSwiper"
       @slideChange="onSlideChange"
       :nested="true"
@@ -123,6 +125,21 @@ defineExpose({ slideTo });
     }
     .swiper-pagination {
       font-size: 16px;
+    }
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 14px;
+      color: #000;
+      opacity: 1;
+      background: #ccc;
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      background: var(--primary-color);
     }
   }
 
