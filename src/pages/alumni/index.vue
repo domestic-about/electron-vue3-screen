@@ -13,7 +13,14 @@ onMounted(() => {});
 </script>
 <template>
   <div class="teacher-wrap">
-    <PageTitle title="校友风采" subTitle="Alumni style" />
+    <PageTitle title="校友风采" subTitle="Alumni style">
+      <template #right="">
+        <div class="right-wrap">
+          <h4>学院邮箱：myoffice@mail.hzau.edu.cn</h4>
+          <p>可向学院邮箱提供校友图片</p>
+        </div>
+      </template>
+    </PageTitle>
     <div class="content-wrap">
       <router-view v-slot="{ Component }">
         <transition name="fade">
@@ -31,6 +38,17 @@ onMounted(() => {});
   .content-wrap {
     width: 100%;
     height: calc(100% - 106px);
+  }
+  .right-wrap {
+    .flex-col;
+    align-items: flex-end;
+    gap: 10px;
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }
 </style>

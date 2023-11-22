@@ -11,7 +11,7 @@ onMounted(() => {});
 </script>
 <template>
   <div class="agency-wrap">
-    <img class="wow fadeInUp" :src="getImageUrl('intro/agency.png')" />
+    <img class="wow fadeInUp" :src="getImageUrl('intro/agency.svg')" />
   </div>
 </template>
 <style scoped lang="less">
@@ -20,7 +20,7 @@ onMounted(() => {});
   height: 100%;
   .flex-col;
   img {
-    width: 100%;
+    width: 80%;
   }
 }
 </style>

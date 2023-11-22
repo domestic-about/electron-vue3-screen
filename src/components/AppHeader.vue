@@ -73,8 +73,8 @@ const clickItem = (item) => {
 };
 </script>
 <template>
-  <div class="app-header-wrap">
-    <div class="app-header" v-if="isShowHeader">
+  <div class="app-header-wrap" v-if="isShowHeader">
+    <div class="app-header">
       <img
         @click="router.push('/')"
         class="logo"

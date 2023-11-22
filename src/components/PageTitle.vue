@@ -32,6 +32,7 @@ const clickItem = (index) => {
           {{ tab.label }}
         </div>
       </div>
+      <slot name="right" />
     </div>
   </div>
 </template>

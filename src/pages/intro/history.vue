@@ -9,7 +9,7 @@ const props = defineProps({});
 const list = [
   {
     time: "1898年",
-    label: "创办湖北衣务学堂，“研求种植畜牧之学”",
+    label: "创办湖北农务学堂，“研求种植畜牧之学”",
   },
   {
     time: "1902年",
